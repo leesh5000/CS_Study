@@ -2,7 +2,7 @@
 
 ## Contents
 
-- [Computer System](#Computer System)
+- [Computer System](#Computer-System)
 - Part I : 선형구조
   - [Array](#Array)
   - [LinkedList](#LinkedList)
