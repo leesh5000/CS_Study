@@ -39,7 +39,7 @@ Deletion : O(n) [배열의 첫 번째 요소를 삭제하고 빈 공간을 없�
 - 삽입/삭제 시에 이사비용이 발생한다.
 
 #### Implementation ####
-1. 배열을 이용하여 리스트 구현 [C](https://github.com/leesh5000/Data-Structure/blob/master/C/C/ArrayList/ArrayList.c)
+1. 배열을 이용하여 리스트 구현 [C](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C/ArrayList/ArrayList.c)
 2. 동적배열 구현
 
 #### Applications of array ####
@@ -67,7 +67,7 @@ Deletion : O(1)
 - 삽입 및 삭제가 쉽다.
 
 #### Implementation ####
-1. 단방향 연결리스트 구현 (Singly LinkedList) [C](https://github.com/leesh5000/Data-Structure/blob/master/C/C/LinkedList/LinkedList.c)
+1. 단방향 연결리스트 구현 (Singly LinkedList) [C](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C/LinkedList/SinglyLinkedList.c)
 2. 원형 연결리스트 구현 (Circular LinkedList)
 3. 양방향 연결리스트 구현 (Doubly LinkedList)
 
