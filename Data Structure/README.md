@@ -49,7 +49,7 @@ Deletion : O(n) [배열의 첫 번째 요소를 삭제하고 빈 공간을 없�
 1. 이진탐색(Binary Search) 구현
 
 [위로](#Contents)
-</br>
+</br></br>
 
 ## LinkedList
 
@@ -78,7 +78,7 @@ Deletion : O(1)
 #### Applications of LinkedList ####
 
 [위로](#Contents)
-</br>
+</br></br>
 
 ## Stack
 
@@ -104,7 +104,7 @@ Deletion : O(1) [Top에서 삭제가 이루어지므로]
 2. 백트래킹 문제
 
 [위로](#Contents)
-</br>
+</br></br>
 
 ## Queue
 
@@ -135,4 +135,4 @@ Deletion : O(1) [Rear에서 삭제가 이루어지므로]
 3. 데크 구현
 
 [위로](#Contents)
-</br>
+</br></br>
