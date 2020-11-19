@@ -2,9 +2,12 @@
 #include <limits.h>
 #include <stdlib.h>
 
-/* Implementation ArrayList using Array
+/* Implementation of ArrayList using Array
  
- ** Abstract Data Type in ArrayList **
+ ***************************************
+ *** Abstract Data Type in ArrayList ***
+ ***************************************
+ 
  1. ArrayList* createArrayList(unsigned capacity) : 주어진 크기로 리스트를 생성하는 함수
  2. void Add(ArrayList* arrayList, Data data) : 리스트의 맨 끝에 데이터 추가하는 함수
  3. void Insert(ArrayList* arrayList, Data data, int index) : 리스트의 중간에 데이터를 삽입하는 함수
@@ -76,17 +79,17 @@ void Insert(ArrayList* arrayList, Data data, int index)
 
 Data Remove(ArrayList* arrayList)
 {
-    if (IsEmpty(arrayList)) return INT_MIN;
+    if (IsEmpty(arrayList)) exit(1);
     
     return arrayList->array[--arrayList->count];
 }
 
 Data RemoveAt(ArrayList* arrayList, int index)
 {
-    if (IsEmpty(arrayList)) return INT_MIN;
+    if (IsEmpty(arrayList)) exit(1);
 
     int lastIndex = arrayList->count - 1;
-    if (index > lastIndex && index < 0) return INT_MIN;
+    if (index > lastIndex && index < 0) exit(1);
     
     Data removeData = arrayList->array[index];
     
@@ -98,6 +101,11 @@ Data RemoveAt(ArrayList* arrayList, int index)
     arrayList->count--;
     
     return removeData;
+}
+
+void Clear(ArrayList* arrayList)
+{
+    free(arrayList->array);
 }
 
 int main()
@@ -117,6 +125,9 @@ int main()
     for (int i=0; i<arrayList->count; i++)
         printf("%d ", arrayList->array[i]);
     puts("\n");
+    
+    Clear(arrayList);
+    free(arrayList);
     
     return 0;
 }

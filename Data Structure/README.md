@@ -37,15 +37,18 @@ Deletion : O(n) [배열의 첫 번째 요소를 삭제하고 빈 공간을 없�
 - 임의접근(Random Access) 가능하다.
 - 삽입/삭제 시에 이사비용이 발생한다.
 
-#### Example in Array ####
+#### Implementation ####
 1. [배열을 이용하여 리스트 구현](https://github.com/leesh5000/Data-Structure/blob/master/C/C/ArrayList/ArrayList.c)
-2. [이진탐색(Binary Search) 구현]
+2. [동적배열 구현]
+
+#### Applications of array ####
+1. [이진탐색(Binary Search) 구현]
 
 </br></br>
 
 ## LinkedList
 
-연결리스트는 데이터와 포인터를 갖는 노드를 포인터를 사용하여 연결한 자료구조이다. 포인터를 사용하여 연결되므로 인접한 위치에 저장되지는 않는다. 일반적으로 연결리스트의 가장 첫 노드를 `head`라고 한다. 연결리스트에서 데이터들은 인접한 위치에 저장되지 않기 때문에 각 데이터의 위치(주소)를 예측할 수 없다. 즉, 연결리스트에서 어떤 데이터에 접근하기 위해서는 무조건 head의 포인터를 통해서 `차례대로` 접근해야한다. 이것은 순차접근 (Sequential Access)라고 한다. 
+연결리스트는 데이터와 포인터를 갖는 노드를 포인터를 사용하여 연결한 자료구조이다. 포인터를 사용하여 연결되므로 인접한 위치에 저장되지 않는다. 이는 곧 각 데이터의 위치(주소)를 예측할 수 없음을 의미한다. 즉, 연결리스트에서 어떤 데이터에 접근하기 위해서는 무조건 첫번째 노드의 포인터를 통해서 `차례대로` 접근해야한다. 이것을 순차접근 (Sequential Access)라고 한다. 일반적으로 연결리스트의 첫 번째 노드를 `head`라고 한다. 
 
 연결리스트는 포인터를 이용하여 연결되므로 삽입 및 삭제에 `O(1)`의 시간복잡도를 갖는다. 또한, 데이터 저장공간 이외에 포인터 저장공간도 필요하기 때문에 배열보다 저장효율이 떨어진다.
 
@@ -62,7 +65,65 @@ Deletion : O(1)
 - 임의접근이 불가능하다.
 - 삽입 및 삭제가 쉽다.
 
-#### Example in LinkedList
+#### Implementation ####
 1. [단방향 연결리스트 구현 (Singly LinkedList)](https://github.com/leesh5000/Data-Structure/blob/master/C/C/LinkedList/LinkedList.c)
 2. [원형 연결리스트 구현 (Circular LinkedList)]
 3. [양방향 연결리스트 구현 (Doubly LinkedList)]
+
+#### Applications of LinkedList ####
+
+</br></br>
+
+## Stack
+
+스택은 LIFO(Last-In First-Out) 순서를 따르는 선형 자료구조이다. 일반적으로, 스택의 맨 위를 `Top`라고 하며, `Push`, `Pop`, `Peek` 연산(Operation)을 제공한다.
+
+#### Time Complexity ####
+```
+Access : O(n) [Sequential Access]
+Search : O(n)
+Insertion : O(1) [Top에서 삽입이 이루어지므로]
+Deletion : O(1) [Top에서 삭제가 이루어지므로]
+```
+
+#### Summary ####
+- 스택은 LIFO 순서를 따르는 자료구조이다.
+
+#### Implementation  ####
+1. [배열을 이용하여 스택 구현]
+2. [연결리스트를 이용하여 스택 구현]
+
+#### Applications of Stack ####
+1. [스택 계산기 구현]
+2. [백트래킹 문제]
+
+</br></br>
+
+## Queue
+
+큐는 FIFO(First-In First-Out) 순서를 따르는 선형 자료구조이다. 스택은 LIFO 순서를 따르는 자료구조로 데이터가 즉시 처리될 필요는 없지만, LIFO 순서로 처리되야 할 때 사용된다. 예를들어, 여러 소비자가 자원을 공유하는 경우와 두 프로세스 간에 데이터가 비동기적으로 전송되는 경우(데이터가 반드시 동시에 처리될 필요가 없을때)가 있다. 첫번째 경우는  `CPU 스케줄링` 이나 `디스크 스케줄링` 등이 있고, 두번째 경우는 `IO버퍼`, `파이프`, `서버` 등이 있다.
+
+일반적으로 큐의 맨 앞과 맨 뒤를 `Front`, `Rear` 라고 하며, `Enqueu` 와 `Dequeue`  연산(Operation)을 제공한다.
+
+
+#### Time Complexity ####
+```
+Access : O(n)
+Search : O(n)
+Insertion : O(1) [Front에서 삽입이 이루어지므로]
+Deletion : O(1) [Rear에서 삭제가 이루어지므로]
+```
+
+#### Summary ####
+- 큐는 FIFO 순서를 따르는 선형 자료구조이다.
+
+#### Implementation #####
+1. [배열을 이용한 큐의 구현]
+2. [연결리스트를 이용한 큐의 구현]
+3. [원형 큐 구현]
+
+#### Applications of Queue ####
+1. [LRU 캐시 구현]
+2. [연결리스트를 이용하여 우선순위 큐 구현]
+3. [데크 구현]
+
