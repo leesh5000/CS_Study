@@ -96,7 +96,7 @@ Deletion : O(1) [Top에서 삭제가 이루어지므로]
 - 스택은 LIFO 순서를 따르는 자료구조이다.
 
 #### Implementation  ####
-1. 배열을 이용하여 스택 구현 C[https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C/Stack/StackUsingArray.c]
+1. 배열을 이용하여 스택 구현 [C](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C/Stack/StackUsingArray.c)
 2. 연결리스트를 이용하여 스택 구현
 
 #### Applications of Stack ####
