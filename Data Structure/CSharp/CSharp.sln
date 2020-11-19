@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp", "CSharp\CSharp.csproj", "{183C20CD-B287-4D39-8AA8-AC766390841D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayList", "ArrayList\ArrayList.csproj", "{56591368-E6FD-484D-95C4-5FD4E5B053AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,9 +9,11 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{183C20CD-B287-4D39-8AA8-AC766390841D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{183C20CD-B287-4D39-8AA8-AC766390841D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{183C20CD-B287-4D39-8AA8-AC766390841D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{183C20CD-B287-4D39-8AA8-AC766390841D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56591368-E6FD-484D-95C4-5FD4E5B053AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56591368-E6FD-484D-95C4-5FD4E5B053AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56591368-E6FD-484D-95C4-5FD4E5B053AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56591368-E6FD-484D-95C4-5FD4E5B053AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 EndGlobal
