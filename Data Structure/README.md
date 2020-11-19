@@ -10,7 +10,7 @@
   - [Queue](#Queue)
 - Part II : 비선형구조
 
-[Home](#https://github.com/leesh5000/ComputerScience_Study)
+[Home](https://github.com/leesh5000/ComputerScience_Study)
 
 </br></br>
 
@@ -48,8 +48,8 @@ Deletion : O(n) [배열의 첫 번째 요소를 삭제하고 빈 공간을 없�
 #### Applications of array ####
 1. 이진탐색(Binary Search) 구현
 
-#### [위로](#Contents)
-</br></br>
+[위로](#Contents)
+</br>
 
 ## LinkedList
 
