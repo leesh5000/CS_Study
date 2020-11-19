@@ -6,6 +6,8 @@
 - Part I : 선형구조
   - [Array](#Array)
   - [LinkedList](#LinkedList)
+  - [Stack](#Stack)
+  - [Queue](#Queue)
 - Part II : 비선형구조
 
 </br></br></br>
