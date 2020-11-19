@@ -45,6 +45,8 @@ Deletion : O(n) [배열의 첫 번째 요소를 삭제하고 빈 공간을 없�
 #### Applications of array ####
 1. 이진탐색(Binary Search) 구현
 
+#### Examples in array ####
+
 </br>[Contents](#Contents)</br></br>
 
 ## LinkedList
@@ -73,6 +75,8 @@ Deletion : O(1)
 
 #### Applications of LinkedList ####
 
+#### Examples in LinkedList ####
+
 </br>[Contents](#Contents)</br></br>
 
 ## Stack
@@ -97,6 +101,8 @@ Deletion : O(1) [Top에서 삭제가 이루어지므로]
 #### Applications of Stack ####
 1. 계산기 구현
 2. 백트래킹 문제
+
+#### Examples in Stack ####
 
 </br>[Contents](#Contents)</br></br>
 
@@ -127,6 +133,8 @@ Deletion : O(1) [Rear에서 삭제가 이루어지므로]
 1. LRU 캐시 구현
 2. 배열/연결리스트/힙을 이용하여 우선순위 큐 구현
 3. 데크 구현
+
+#### Examples in Queue ####
 
 </br>[Contents](#Contents)</br></br>
 
