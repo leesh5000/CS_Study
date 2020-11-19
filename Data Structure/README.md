@@ -38,11 +38,11 @@ Deletion : O(n) [배열의 첫 번째 요소를 삭제하고 빈 공간을 없�
 - 삽입/삭제 시에 이사비용이 발생한다.
 
 #### Implementation ####
-1. [배열을 이용하여 리스트 구현](https://github.com/leesh5000/Data-Structure/blob/master/C/C/ArrayList/ArrayList.c)
-2. [동적배열 구현]
+1. 배열을 이용하여 리스트 구현 [C](https://github.com/leesh5000/Data-Structure/blob/master/C/C/ArrayList/ArrayList.c)
+2. 동적배열 구현
 
 #### Applications of array ####
-1. [이진탐색(Binary Search) 구현]
+1. 이진탐색(Binary Search) 구현
 
 </br></br>
 
@@ -66,9 +66,9 @@ Deletion : O(1)
 - 삽입 및 삭제가 쉽다.
 
 #### Implementation ####
-1. [단방향 연결리스트 구현 (Singly LinkedList)](https://github.com/leesh5000/Data-Structure/blob/master/C/C/LinkedList/LinkedList.c)
-2. [원형 연결리스트 구현 (Circular LinkedList)]
-3. [양방향 연결리스트 구현 (Doubly LinkedList)]
+1. 단방향 연결리스트 구현 (Singly LinkedList) [C](https://github.com/leesh5000/Data-Structure/blob/master/C/C/LinkedList/LinkedList.c)
+2. 원형 연결리스트 구현 (Circular LinkedList)
+3. 양방향 연결리스트 구현 (Doubly LinkedList)
 
 #### Applications of LinkedList ####
 
@@ -90,12 +90,12 @@ Deletion : O(1) [Top에서 삭제가 이루어지므로]
 - 스택은 LIFO 순서를 따르는 자료구조이다.
 
 #### Implementation  ####
-1. [배열을 이용하여 스택 구현]
-2. [연결리스트를 이용하여 스택 구현]
+1. 배열을 이용하여 스택 구현
+2. 연결리스트를 이용하여 스택 구현
 
 #### Applications of Stack ####
-1. [스택 계산기 구현]
-2. [백트래킹 문제]
+1. 계산기 구현
+2. 백트래킹 문제
 
 </br></br>
 
@@ -118,12 +118,12 @@ Deletion : O(1) [Rear에서 삭제가 이루어지므로]
 - 큐는 FIFO 순서를 따르는 선형 자료구조이다.
 
 #### Implementation #####
-1. [배열을 이용한 큐의 구현](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C%2B%2B/Queue/QueueUsingArray.cpp)
-2. [연결리스트를 이용한 큐의 구현]
-3. [원형 큐 구현]
+1. 배열을 이용한 큐의 구현 [Cpp](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C%2B%2B/Queue/QueueUsingArray.cpp)
+2. 연결리스트를 이용한 큐의 구현
+3. 원형 큐 구현
 
 #### Applications of Queue ####
-1. [LRU 캐시 구현]
-2. [연결리스트를 이용하여 우선순위 큐 구현]
-3. [데크 구현]
+1. LRU 캐시 구현
+2. 연결리스트를 이용하여 우선순위 큐 구현
+3. 데크 구현
 
