@@ -10,9 +10,7 @@
   - [Queue](#Queue)
 - Part II : 비선형구조
 
-[Home](https://github.com/leesh5000/ComputerScience_Study)
-
-</br></br>
+<br>[Home](https://github.com/leesh5000/ComputerScience_Study)</br></br>
 
 ## 자료구조란?
 
@@ -76,8 +74,7 @@ Deletion : O(1)
 
 #### Applications of LinkedList ####
 
-[위로](#Contents)
-</br></br>
+</br>[Contents](#Contents)</br></br>
 
 ## Stack
 
@@ -102,8 +99,7 @@ Deletion : O(1) [Top에서 삭제가 이루어지므로]
 1. 계산기 구현
 2. 백트래킹 문제
 
-[위로](#Contents)
-</br></br>
+</br>[Contents](#Contents)</br></br>
 
 ## Queue
 
@@ -133,5 +129,5 @@ Deletion : O(1) [Rear에서 삭제가 이루어지므로]
 2. 연결리스트를 이용하여 우선순위 큐 구현
 3. 데크 구현
 
-[위로](#Contents)
-</br></br>
+</br>[Contents](#Contents)</br></br>
+
