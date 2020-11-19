@@ -125,7 +125,7 @@ Deletion : O(1) [Rear에서 삭제가 이루어지므로]
 
 #### Applications of Queue ####
 1. LRU 캐시 구현
-2. 연결리스트를 이용하여 우선순위 큐 구현
+2. 배열/연결리스트/힙을 이용하여 우선순위 큐 구현
 3. 데크 구현
 
 </br>[Contents](#Contents)</br></br>
