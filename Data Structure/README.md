@@ -118,7 +118,7 @@ Deletion : O(1) [Rear에서 삭제가 이루어지므로]
 - 큐는 FIFO 순서를 따르는 선형 자료구조이다.
 
 #### Implementation #####
-1. [배열을 이용한 큐의 구현]
+1. [배열을 이용한 큐의 구현](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C%2B%2B/Queue/QueueUsingArray.cpp)
 2. [연결리스트를 이용한 큐의 구현]
 3. [원형 큐 구현]
 
