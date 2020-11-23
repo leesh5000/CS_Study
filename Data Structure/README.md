@@ -43,7 +43,7 @@ Deletion : O(n) [배열의 첫 번째 요소를 삭제하고 빈 공간을 없�
 ### Implementation ###
 1. 배열을 이용하여 리스트 구현 [C](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C/ArrayList/ArrayList.c)
 2. 동적배열 구현
-3. 이진탐색(Binary Search) 구현
+3. 이진탐색(Binary Search) 구현 [C](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C/ArrayList/BinarySearch.c)
 
 </br>[Contents](#Contents)</br></br>
 
