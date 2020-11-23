@@ -3,13 +3,14 @@
 ## Contents
 
 - [자료구조란?](#자료구조란?)
-- Part I : 선형구조
+- Part 1 : 선형구조
   - [Array](#Array)
   - [LinkedList](#LinkedList)
   - [Stack](#Stack)
   - [Queue](#Queue)
-- Part II : 비선형구조
+- Part 2 : 비선형구조
     - [Tree](#Tree)
+- Part 3 : 시간복잡도 증명
 - [Reference](#Reference)
 
 <br>[Home](https://github.com/leesh5000/ComputerScience_Study)</br></br>
