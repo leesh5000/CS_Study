@@ -11,11 +11,11 @@ package Tree;
 | data  |  x   A   B   C   D   E       F  |				     
 				     
 		
-      A(1)    
-     /   \
-    B(2)  C(3)  
-  /   \      \              left child's index = parent's index * 2 
- D(4)  E(5)   F(7)          right child's index = parent's index * 2 + 1
+        A(0)    
+     /      \
+    B(1)    C(2)  
+  /   \       \              left child's index = (parent's index * 2) + 1 
+ D(3)  E(4)   F(5)          right child's index = (parent's index * 2) + 2
 
 */
 
