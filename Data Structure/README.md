@@ -26,6 +26,7 @@
 
 배열의 크기는 고정되어있다. 배열이 확장을 위해 크기를 변경해야할때, 다음 메모리의 위치가 사용중인지 아닌지를 확신할 수 없기 때문에 마음대로 확장할 수 없다. 또한 배열이 고정된 크기를 받아 처음 선언될 때, 컴파일러는 이 크기를 가져와 배열의 파괴에 사용하기 때문에 마음대로 배열을 축소할 수 없다. 따라서, 배열이 확장/축소될때에는 더 큰/작은 사이즈를 갖는 다른 배열을 새로 생성한 후 배열 내의 모든 데이터들을 이동해야하는데 이때, 이사비용이 발생한다. 
 
+</br>
 #### Time Complexity ####
 ```
 Access : O(1) [데이터들이 모두 인접한 위치에 저장되있기 떄문에]
@@ -34,19 +35,23 @@ Insertion : O(n) [배열의 첫 번째 공간에 데이터를 삽입하여 이�
 Deletion : O(n) [배열의 첫 번째 요소를 삭제하고 빈 공간을 없애기 위해 이사비용이 발생할 때]
 ```
 
+</br>
 #### Summary ####
 - 배열은 같은 종류의 데이터를 연속된 위치에 저장하는 자료구조이다.
 - 고정된 크기를 갖는다.
 - 임의접근(Random Access) 가능하다.
 - 삽입/삭제 시에 이사비용이 발생한다.
 
+</br>
 #### Implementation ####
 1. 배열을 이용하여 리스트 구현 [C](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C/ArrayList/ArrayList.c)
 2. 동적배열 구현
 
+</br>
 #### Applications of array ####
 1. 이진탐색(Binary Search) 구현
 
+</br>
 #### Examples in array ####
 
 </br>[Contents](#Contents)</br></br>
