@@ -197,7 +197,7 @@ Deletion : O(1) [Rear에서 삭제가 이루어지므로]
 
 #### Implementation #####
 트리는 배열과 연결리스트로 구현할 수 있다. 연결리스트가 유연하기 때문에 연결리스트로 트리를 구현하는 것이 편하다. 하지만, 완성된 트리가 빈번한 탐색이 이루어지는 트리라면 배열로 구현하는 것도 좋은 선택이다.
-1. 배열을 이용한 이진트리 구현 
+1. 배열을 이용한 이진트리 구현 [Java](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/Java/src/Tree/TreeUsingArray.java)
 2. 연결리스트를 이용한 이진트리 구현
 3. 이진트리 확인 알고리즘
 
