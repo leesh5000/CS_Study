@@ -1,8 +1,3 @@
-<script type="text/javascript" async
-src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js? 
-config=TeX-MML-AM_CHTML"
-</script>
-
 # Data-Structure
 
 ## Contents
@@ -185,7 +180,7 @@ Deletion : O(1) [Rear에서 가 이루어지므로]
 ```
 
 ### 트리의 특징 ###
-- 이진트리의 레벨 n에서 최대 노드의 수는 $$ 2^n $$ 이다.
+- 이진트리의 레벨 n에서 최대 노드의 수는 2^n 이다.
 - 높이 h를 가지는 이진트리의 최대 노드의 수는 2^(h+1)-1 이다. (루트노드의 레벨이 1로 시작하면, 2^(h-1) 이다.)
 
 ### Time Complexity ###
