@@ -10,7 +10,7 @@
   - [Queue](#Queue)
 - Part II : 비선형구조
     - [Tree](#Tree)
-- Reference(#Reference)
+- [Reference](#Reference)
 
 <br>[Home](https://github.com/leesh5000/ComputerScience_Study)</br></br>
 
