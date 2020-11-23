@@ -47,7 +47,7 @@ void Push(Stack* stack, Data data)
 
 Data Pop(Stack* stack)
 {
-    if (stack->top == -1) exit(1); // Stack is empty when top is equal to -1
+    if (stack->top == -1) exit(-1); // Stack is empty when top is equal to -1
     
     printf("%c popped from stack\n", stack->arr[stack->top]);
     return stack->arr[stack->top--];
@@ -55,7 +55,7 @@ Data Pop(Stack* stack)
 
 Data Peek(Stack* stack)
 {
-    if (stack->top == -1) exit(1); // Stack is empty when top is equal to -1
+    if (stack->top == -1) exit(-1); // Stack is empty when top is equal to -1
     
     return stack->arr[stack->top];
 }
