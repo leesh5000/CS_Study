@@ -33,14 +33,12 @@ Search : O(n) [배열이 모두 정렬되어있는 경우, 이진탐색을 이�
 Insertion : O(n) [배열의 첫 번째 공간에 데이터를 삽입하여 이사비용이 발생할 때]
 Deletion : O(n) [배열의 첫 번째 요소를 삭제하고 빈 공간을 없애기 위해 이사비용이 발생할 때]
 ```
-</br>
 
 #### Summary ####
 - 배열은 같은 종류의 데이터를 연속된 위치에 저장하는 자료구조이다.
 - 고정된 크기를 갖는다.
 - 임의접근(Random Access) 가능하다.
 - 삽입/삭제 시에 이사비용이 발생한다.
-</br>
 
 #### Implementation ####
 1. 배열을 이용하여 리스트 구현 [C](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C/ArrayList/ArrayList.c)
@@ -73,10 +71,6 @@ Deletion : O(1)
 2. 원형 연결리스트 구현 (Circular LinkedList)
 3. 양방향 연결리스트 구현 (Doubly LinkedList)
 
-#### Applications of LinkedList ####
-
-#### Examples in LinkedList ####
-
 </br>[Contents](#Contents)</br></br>
 
 ## Stack
@@ -97,12 +91,8 @@ Deletion : O(1) [Top에서 삭제가 이루어지므로]
 #### Implementation  ####
 1. 배열을 이용하여 스택 구현 [C](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C/Stack/StackUsingArray.c)
 2. 연결리스트를 이용하여 스택 구현
-
-#### Applications of Stack ####
-1. 계산기 구현
-2. 백트래킹 문제
-
-#### Examples in Stack ####
+3. 계산기 구현
+4. 백트래킹 문제
 
 </br>[Contents](#Contents)</br></br>
 
@@ -127,13 +117,9 @@ Deletion : O(1) [Rear에서 가 이루어지므로]
 1. 배열을 이용한 큐의 구현 [Cpp](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C%2B%2B/Queue/QueueUsingArray.cpp)
 2. 연결리스트를 이용한 큐의 구현
 3. 원형 큐 구현
-
-#### Applications of Queue ####
-1. LRU 캐시 구현
-2. 배열/연결리스트/힙을 이용하여 우선순위 큐 구현
-3. 데크 구현
-
-#### Examples in Queue ####
+4. LRU 캐시 구현
+5. 배열/연결리스트/힙을 이용하여 우선순위 큐 구현
+6. 데크 구현
 
 </br>[Contents](#Contents)</br></br>
 
@@ -213,15 +199,7 @@ Deletion : O(1) [Rear에서 삭제가 이루어지므로]
 트리는 배열과 연결리스트로 구현할 수 있다. 연결리스트가 유연하기 때문에 연결리스트로 트리를 구현하는 것이 편하다. 하지만, 완성된 트리가 빈번한 탐색이 이루어지는 트리라면 배열로 구현하는 것도 좋은 선택이다.
 1. 배열을 이용한 이진트리 구현 
 2. 연결리스트를 이용한 이진트리 구현
-3. 원형 큐 구현
-
-#### Applications of Tree ####
-1. LRU 캐시 구현
-2. 배열/연결리스트/힙을 이용하여 우선순위 큐 구현
-3. 데크 구현
-
-#### Examples in Tree ####
-1. 이진트리 확인 알고리즘
+3. 이진트리 확인 알고리즘
 
 </br>[Contents](#Contents)</br></br>
 
