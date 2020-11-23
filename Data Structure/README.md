@@ -9,6 +9,8 @@
   - [Stack](#Stack)
   - [Queue](#Queue)
 - Part II : 비선형구조
+    - [Tree](#Tree)
+- Reference(#Reference)
 
 <br>[Home](https://github.com/leesh5000/ComputerScience_Study)</br></br>
 
@@ -112,7 +114,6 @@ Deletion : O(1) [Top에서 삭제가 이루어지므로]
 
 일반적으로 큐의 맨 앞과 맨 뒤를 `Front`, `Rear` 라고 하며, `Enqueu` 와 `Dequeue`  연산(Operation)을 제공한다.
 
-
 #### Time Complexity ####
 ```
 Access : O(n)
@@ -138,3 +139,63 @@ Deletion : O(1) [Rear에서 삭제가 이루어지므로]
 
 </br>[Contents](#Contents)</br></br>
 
+## Tree
+
+트리는 계층적 관계(Hierarchical Relationship)를 표현하는 비선형 자료구조이다. 즉, 트리는 다른 자료구조들과 달리 데이터의 저장과 삭제가 아닌 데이터의 '표현'에 초점이 맞춰져있는 자료구조이다. 트리의 활용 분야로는 컴퓨터의 디렉터리 구조, 라우터(Router) 알고리즘 등이 있다.  
+
+#### 트리 관련 용어 ####
+- 노드 (node) : 트리를 구성하고 있는 요소
+- 간선 (edge) : 노드와 노드를 연결하는 선
+- 루트 노드 (root node) : 트리 구조에서 최상위에 존재하는 노드
+- 단말 노드 (terminal node) : 자식 노드가 없는 노드로 잎사귀 노드(leaf node)라고도 한다.
+- 내부 노드 (Internal node) : 단말 노드를 제외한 모든 노드로 비단말 노드(nonterminal node)라고도 한다.
+- 형제 (sibling) : 같은 부모를 가지는 노드
+- 노드의 차수 (degree) : 노드의 부속 트리의 수
+- 트리의 차수 (degree of tree) : 트리의 최대 차수
+- 노드의 깊이 : 루트노드로부터 어떤노드 까지 거쳐야하는 간선의 수
+- 레벨 (level) : 같은 깊이를 가지는 노드들의 집합
+- 트리의 높이 : 트리의 최고 레벨
+
+#### 이진 트리 (binary tree) ####
+
+이진트리는 각각의 노드가 공집합을 포함하여 최대 2개의 노드를 갖는 트리를 말한다. 이 정의에는 재귀적 의미가 포함되어 있다. 이진트리에는 포화이진트리와 완전이진트리가 있다.
+- 포화이진트리 (Full Binary Tree) : 모든 레벨이 꽉 찬 이진트리
+- 완전이진트리 (Complete Binary Tree) : 모든 레벨이 꽉 찬 상태는 아니지만, 모든 노드들이 위에서 아래로, 왼쪽에서 오른쪽의 순서대로 채워진 노드를 말한다.
+
+#### Properties ####
+- 이진트리의 레벨 n에서 최대 노드의 수는 2^{n} 이다.
+- 높이 h를 가지는 이진트리의 최대 노드의 수는 2^{h +1} - 1 이다. (루트노드의 레벨이 1로 시작하면, 2^{h} - 1 이다.)
+
+#### Time Complexity ####
+```
+Access : O(n)
+Search : O(n)
+Insertion : O(1) [Front에서 삽입이 이루어지므로]
+Deletion : O(1) [Rear에서 삭제가 이루어지므로]
+```
+
+#### Summary ####
+- 트리는 계층적 관계를 표현하는 자료구조이다.
+- 트리는 데이터의 표현에 집중하는 자료구조이다.
+- 이진트리는 각각의 노드가 공집합을 포함하여 최대 2개의 노드를 갖는 트리를 말한다.
+
+#### Implementation #####
+
+트리는 배열과 연결리스트로 구현할 수 있다. 연결리스트가 유연하기 때문에 연결리스트로 트리를 구현하는 것이 편하다. 하지만, 완성된 트리가 빈번한 탐색이 이루어지는 트리라면 배열로 구현하는 것도 좋은 선택이다.
+1. 배열을 이용한 이진트리 구현 
+2. 연결리스트를 이용한 이진트리 구현
+3. 원형 큐 구현
+
+#### Applications of Tree ####
+1. LRU 캐시 구현
+2. 배열/연결리스트/힙을 이용하여 우선순위 큐 구현
+3. 데크 구현
+
+#### Examples in Tree ####
+1. 이진트리 확인 알고리즘
+
+</br>[Contents](#Contents)</br></br>
+
+## Reference
+- 윤성우의 열혈 자료구조
+- GeeksforGeeks
