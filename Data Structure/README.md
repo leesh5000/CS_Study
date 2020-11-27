@@ -92,10 +92,10 @@ Deletion : O(n) [배열의 첫 번째 요소를 삭제하고 빈 공간을 없�
 
 이 ADT를 기반으로 배열 자료구조를 직접 구현해본다. 이 시점에서는 어떻게 구현하는가는 중요하지 않다. 나중에는 어떻게 구현하는가에 따라 많은 성능상의 차이가 있겠지만 현재 시점에서 중요한 점은 구현한 배열이 위에서 정의한 ADT를 올바르게 수행할 수 있는가이다. 
 
-1. 배열 구현 [C](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C/ArrayList/ArrayList.c)
+- 배열 구현 [C](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C/ArrayList/ArrayList.c)
 
 ### Applications of Array ###
-1. 동적배열 구현 : 배열을 응용하여 동적배열을 구현할 수 있다. 동적배열은 배열의 사이즈가 동적으로 늘어나고 줄어들 수 있는 배열을 말하며 프로그래밍 언어마다 vector(C++), list(C#), ArrayList(java), list(python)로 제공된다.
+1. 동적배열 : 동적배열은 배열의 사이즈가 동적으로 늘어나고 줄어들 수 있는 배열을 말하며 프로그래밍 언어마다 vector(C++), list(C#), ArrayList(java), list(python)로 제공된다.
 2. 이진탐색(Binary Search) 구현 [C](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C/ArrayList/BinarySearch.c)
 
 ### Summary ###
