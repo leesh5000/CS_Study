@@ -8,10 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		E2A96A412566553A00FFE7BD /* QueueUsingArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2A96A402566553A00FFE7BD /* QueueUsingArray.cpp */; };
+		E2B9C247256E351F00A19A7B /* HeapUsingArr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2B9C237256E34FC00A19A7B /* HeapUsingArr.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		E2A96A3C2566553A00FFE7BD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		E2B9C23A256E351200A19A7B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -25,10 +35,19 @@
 /* Begin PBXFileReference section */
 		E2A96A3E2566553A00FFE7BD /* Queue */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Queue; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A96A402566553A00FFE7BD /* QueueUsingArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = QueueUsingArray.cpp; sourceTree = "<group>"; };
+		E2B9C237256E34FC00A19A7B /* HeapUsingArr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HeapUsingArr.cpp; sourceTree = "<group>"; };
+		E2B9C23C256E351200A19A7B /* HeapUsingArr */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HeapUsingArr; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E2A96A3B2566553A00FFE7BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2B9C239256E351200A19A7B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +60,7 @@
 		E293D1F8255ECA7C00921D07 = {
 			isa = PBXGroup;
 			children = (
+				E2B9C235256E34C100A19A7B /* Tree */,
 				E2A96A3F2566553A00FFE7BD /* Queue */,
 				E293D202255ECA7C00921D07 /* Products */,
 			);
@@ -50,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				E2A96A3E2566553A00FFE7BD /* Queue */,
+				E2B9C23C256E351200A19A7B /* HeapUsingArr */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +81,22 @@
 				E2A96A402566553A00FFE7BD /* QueueUsingArray.cpp */,
 			);
 			path = Queue;
+			sourceTree = "<group>";
+		};
+		E2B9C235256E34C100A19A7B /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				E2B9C236256E34D200A19A7B /* Heap */,
+			);
+			path = Tree;
+			sourceTree = "<group>";
+		};
+		E2B9C236256E34D200A19A7B /* Heap */ = {
+			isa = PBXGroup;
+			children = (
+				E2B9C237256E34FC00A19A7B /* HeapUsingArr.cpp */,
+			);
+			path = Heap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +119,23 @@
 			productReference = E2A96A3E2566553A00FFE7BD /* Queue */;
 			productType = "com.apple.product-type.tool";
 		};
+		E2B9C23B256E351200A19A7B /* HeapUsingArr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2B9C240256E351200A19A7B /* Build configuration list for PBXNativeTarget "HeapUsingArr" */;
+			buildPhases = (
+				E2B9C238256E351200A19A7B /* Sources */,
+				E2B9C239256E351200A19A7B /* Frameworks */,
+				E2B9C23A256E351200A19A7B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeapUsingArr;
+			productName = HeapUsingArr;
+			productReference = E2B9C23C256E351200A19A7B /* HeapUsingArr */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -91,6 +145,9 @@
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					E2A96A3D2566553A00FFE7BD = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					E2B9C23B256E351200A19A7B = {
 						CreatedOnToolsVersion = 12.2;
 					};
 				};
@@ -109,6 +166,7 @@
 			projectRoot = "";
 			targets = (
 				E2A96A3D2566553A00FFE7BD /* Queue */,
+				E2B9C23B256E351200A19A7B /* HeapUsingArr */,
 			);
 		};
 /* End PBXProject section */
@@ -119,6 +177,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2A96A412566553A00FFE7BD /* QueueUsingArray.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2B9C238256E351200A19A7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2B9C247256E351F00A19A7B /* HeapUsingArr.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +324,28 @@
 			};
 			name = Release;
 		};
+		E2B9C241256E351200A19A7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QZPZJC3WF4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E2B9C242256E351200A19A7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QZPZJC3WF4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -275,6 +363,15 @@
 			buildConfigurations = (
 				E2A96A422566553A00FFE7BD /* Debug */,
 				E2A96A432566553A00FFE7BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2B9C240256E351200A19A7B /* Build configuration list for PBXNativeTarget "HeapUsingArr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2B9C241256E351200A19A7B /* Debug */,
+				E2B9C242256E351200A19A7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
