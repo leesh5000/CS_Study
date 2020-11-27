@@ -15,7 +15,6 @@
     - [Tree](#Tree)
         - [Heap](#Heap)
         - [Priority Queue](#Priority-Queue)
-- Set 3 : 시간복잡도 증명
 - [Reference](#Reference)
 
 <br>[Home](https://github.com/leesh5000/ComputerScience_Study)</br></br>
