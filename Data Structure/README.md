@@ -35,7 +35,7 @@
 - Composite data types (복합 자료형) : 복합 자료형은 둘 이상의 자료형을 조합한 것을 말한다. 이 조합 방법을 자료구조라고 한다. 기본 자료형을 복합 자료형으로 구성하면 새로운 유형이 된다. 예를들어, 정수형 데이터형을 여러개 조합하면 정수 배열을 만들어내며 이 둘은 다른 유형이다.
 
 ### Summary ###
-자료형(Data Types)은 컴퓨터에게 프로그래머가 데이터를 어떻게 사용하는지 미리 알려주는 데이터 속성이다.
+- 자료형(Data Types)은 컴퓨터에게 프로그래머가 데이터를 어떻게 사용하는지 미리 알려주는 데이터 속성이다.
 
 </br>[Contents](#Contents)</br></br>
 
@@ -44,7 +44,7 @@
 자료구조(Data Structure)란 데이터들을 효율적으로 사용하기 위해 컴퓨터에 데이터를 저장, 관리, 조직하는 여러가지 방법을 말한다. 자료형의 관점에서 보면 자료구조란, 둘 이상의 자료형을 조합하는 방법을 말한다. 자료구조는 데이터를 정리하는 방식에 따라 선형구조와 비선형구조로 나뉜다.
 
 ### Summary ###
-자료구조(Data Structure)란 데이터들을 효율적으로 사용하기 위해 컴퓨터에 데이터를 저장, 관리, 조직하는 여러가지 방법이다.
+- 자료구조(Data Structure)란 데이터들을 효율적으로 사용하기 위해 컴퓨터에 데이터를 저장, 관리, 조직하는 여러가지 방법이다.
 
 </br>[Contents](#Contents)</br></br>
 
@@ -67,7 +67,7 @@
 - Peek( ) : Top을 삭제하지 않고 조회만 하는 연산
 
 ### Summary ###
-추상 자료형(ADT)은 어떤 대상이 가지는 값과 연산을 구체적인 구현 과정에 대한 언급은 하지않고 기능에만 집중해서 사용자 입장에서 나열한 것을 말한다.   
+- 추상 자료형(ADT)은 어떤 대상이 가지는 값과 연산을 구체적인 구현 과정에 대한 언급은 하지않고 기능에만 집중해서 사용자 입장에서 나열한 것을 말한다.   
 
 </br>[Contents](#Contents)</br></br>
 
@@ -93,7 +93,7 @@ Deletion : O(n) [배열의 첫 번째 요소를 삭제하고 빈 공간을 없�
 2. 이진탐색(Binary Search) : 이진탐색이란, 정렬된 배열내에서 특정 값을 찾는 탐색 알고리즘을 말한다. [C](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C/ArrayList/BinarySearch.c)
 
 ### Summary ###
-배열은 같은 종류의 데이터를 연속된 위치에 저장하는 자료구조이며, 이러한 특징 때문에 임의접근(Random Access) 가능하다. 또한, 배열은 고정된 크기를 갖기 때문에 삽입/삭제 시에 이사비용이 발생한다.
+- 배열은 같은 종류의 데이터를 연속된 위치에 저장하는 자료구조이며, 이러한 특징 때문에 임의접근(Random Access) 가능하다. 또한, 배열은 고정된 크기를 갖기 때문에 삽입/삭제 시에 이사비용이 발생한다.
 
 </br>[Contents](#Contents)</br></br>
 
@@ -117,7 +117,7 @@ Deletion : O(1)
 2. 원형 연결리스트
 
 ### Summary ###
-연결리스트는 여러 개의 노드가 포인터에 의해 연결되어 있는 자료구조이다. 포인터에 의해 연결되어있으므로 순차접근을 하며, 데이터의 추가와 삭제가 간편하다.
+- 연결리스트는 여러 개의 노드가 포인터에 의해 연결되어 있는 자료구조이다. 포인터에 의해 연결되어있으므로 순차접근을 하며, 데이터의 추가와 삭제가 간편하다.
 
 </br>[Contents](#Contents)</br></br>
 
@@ -135,8 +135,8 @@ Deletion : O(1) [Top에서 삭제가 이루어지므로]
 
 ### Implementation ###
 스택은 배열과 연결리스트를 이용하여 구현할 수 있다.
-1. 배열을 이용하여 스택 구현 [C](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C/Stack/StackUsingArray.c)
-2. 연결리스트를 이용하여 스택 구현
+- 배열을 이용하여 스택 구현 [C](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C/Stack/StackUsingArray.c)
+- 연결리스트를 이용하여 스택 구현
 
 ### Applications of Stack ###
 스택은 LIFO 순서 따르는 특징때문에 메모리의 스택영역, CPU 인터럽트 사이클, Redo/Undo, String Reversal, 계산기 구현 등에 응용된다.
@@ -163,9 +163,9 @@ Deletion : O(1) [Rear에서 가 이루어지므로]
 
 ### Implementation ####
 큐는 배열과 연결리스트로 구현할 수 있다. 배열로 큐를 구현할때는 배열이 비어있게(empty) 되는 문제 때문에 주로 원형 큐를 구현한다.
-1. 배열을 이용한 큐의 구현 [Cpp](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C%2B%2B/Queue/QueueUsingArray.cpp)
-2. 연결리스트를 이용한 큐의 구현
-3. 원형 큐 구현
+- 배열을 이용한 큐의 구현 [Cpp](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C%2B%2B/Queue/QueueUsingArray.cpp)
+- 연결리스트를 이용한 큐의 구현
+- 원형 큐 구현
 
 ### Applications ###
 큐는 선형 자료구조로 데이터가 즉시 처리될 필요는 없지만, LIFO 순서로 처리되야 할 때 사용된다. 예를들어, 여러 소비자가 자원을 공유하는 경우와 두 프로세스 간에 데이터가 비동기적으로 전송되는 경우(데이터가 반드시 동시에 처리될 필요가 없을때)가 있다. 첫번째 경우는  `CPU 스케줄링` 이나 `디스크 스케줄링` 등이 있고, 두번째 경우는 `IO버퍼`, `파이프`, `서버` 등이 있다. 이와 같이 큐는 운영체제와 네트워크와 관련된 소프트웨어 구현에 있어서 중요한 역할을 하는 자료구조이다.
@@ -257,9 +257,9 @@ Deletion : O(n) [특정 노드에 자식노드를 삭제하려한다면, 먼저 
 
 ### Implementation ####
 트리는 배열과 연결리스트로 구현할 수 있다. 연결리스트가 유연하기 때문에 연결리스트로 트리를 구현하는 것이 일반적이다. 하지만, 완성된 트리가 빈번한 탐색이 이루어지는 트리라면 배열로 구현하는 것도 좋은 선택이다.
-1. 트리 구현 (재귀적으로 순회, 루트노드가 주어졌을 때 해당 트리의 높이를 반환하는 함수 구현)
-2. 배열을 이용한 이진트리 구현 (연결리스트를 이용한 이진트리와 시간복잡도 비교해보기) [Java](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/Java/src/Tree/TreeUsingArray.java)
-3. 연결리스트를 이용하여 이진트리 구현
+- 트리 구현 (재귀적으로 순회, 루트노드가 주어졌을 때 해당 트리의 높이를 반환하는 함수 구현)
+- 배열을 이용한 이진트리 구현 (연결리스트를 이용한 이진트리와 시간복잡도 비교해보기) [Java](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/Java/src/Tree/TreeUsingArray.java)
+- 연결리스트를 이용하여 이진트리 구현
 
 ### Applications of Tree ###
 트리는 주로 계층적 데이터를 조작/관리하는데 많이 응용되는데 예를들면, 컴퓨터 시스템에서 파일 디렉터리 구조 등이 있다. 또한, 트리는 구현 방법에 따라 BST(Binary Search Tree), Heap, AVL/Red-Black Tree 등 여러 가지 다양한 트리로 응용될 수 있다.  
@@ -318,9 +318,9 @@ Deletion : O(log(n)) [이진힙의 데이터 삭제과정]
 
 ### Implementation ####
 이진 힙은 배열과 연결리스트를 기반으로 구현할 수 있다. 하지만, 이진 힙은 데이터를 추가한 이후에도 완전이진트리를 유지해야하는 특징 때문에 연결리스트 보다는 배열로 구현하는 것이 일반적이다.
-1. 배열을 이용하여 최대 이진힙(Max Binary Heap) 구현
-2. Binomial Heap 구현
-3. Pibonacci Heap 구현
+- 배열을 이용하여 최대 이진힙(Max Binary Heap) 구현
+- Binomial Heap 구현
+- Pibonacci Heap 구현
 
 ### Applications of Heap ###
 힙은 특별한 힙 속성으로 인해 최대/최소값을 구하고자 할 때 많이 사용된다. 이를 응용하면 우선순위 큐를 쉽게 구현할 수 있으며, Prim Algorithm 이나 Dijkstra's algorithm에 사용될 수 있다. 
@@ -356,9 +356,9 @@ Deletion : O(log(n)) [이진힙의 데이터 삭제과정]
 알고리즘의 성능에 있어서 O(log(n))과 O(n)의 차이는 어마어마하기 때문에 힙 기반 우선순위 큐가 가장 효율적인 것이다.
 
 ### Implementation ####
-1. 배열을 이용하여 우선순위 큐 구현
-2. 연결리스트를 이용하여 우선순위 큐 구현
-3. 힙을 이용하여 우선순위 큐 구현
+- 배열을 이용하여 우선순위 큐 구현
+- 연결리스트를 이용하여 우선순위 큐 구현
+- 힙을 이용하여 우선순위 큐 구현
 
 ### Applications of Priority Queue ###
 우선순위 큐는 운영체제, 여러 알고리즘에 많이 응용된다. 운영체제에서 ISR(인터럽트 서비스 루틴), A* 길찾기 알고리즘, 다익스트라 최단경로, Prim's algorithm 등에 많이 응용된다.
