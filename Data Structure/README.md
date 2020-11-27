@@ -92,7 +92,9 @@ Deletion : O(n) [배열의 첫 번째 요소를 삭제하고 빈 공간을 없�
 2. 이진탐색(Binary Search) : 이진탐색이란, 정렬된 배열내에서 특정 값을 찾는 탐색 알고리즘을 말한다. [C](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C/ArrayList/BinarySearch.c)
 
 ### Summary ###
-- 배열은 같은 종류의 데이터를 연속된 위치에 저장하는 자료구조이며, 이러한 특징 때문에 임의접근(Random Access) 가능하다. 또한, 배열은 고정된 크기를 갖기 때문에 삽입/삭제 시에 이사비용이 발생한다.
+- 배열은 같은 종류의 데이터를 연속된 위치에 저장하는 자료구조이다.
+- 배열은 임의접근(Random Access) 가능하다. 
+- 배열은 고정된 크기를 갖기 때문에 삽입/삭제 시에 이사비용이 발생한다.
 
 </br>[Contents](#Contents)</br></br>
 
@@ -317,7 +319,7 @@ Deletion : O(log(n)) [이진힙의 데이터 삭제과정]
 
 ### Implementation ####
 이진 힙은 배열과 연결리스트를 기반으로 구현할 수 있다. 하지만, 이진 힙은 데이터를 추가한 이후에도 완전이진트리를 유지해야하는 특징 때문에 연결리스트 보다는 배열로 구현하는 것이 일반적이다.
-- 배열을 이용하여 최대 이진힙(Max Binary Heap) 구현
+- 배열을 이용하여 최대 이진힙(Max Binary Heap) 구현 [C++](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C%2B%2B/Tree/Heap/HeapUsingArr.cpp)
 - Binomial Heap 구현
 - Pibonacci Heap 구현
 
