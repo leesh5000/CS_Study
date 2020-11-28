@@ -45,7 +45,8 @@
 <br>[Contents](#Contents)<br><br>
 
 ## Number System
-2진수의 4비트는 16진수 1비트로 바꿀 수 있다. `0111<sub>(2)</sub> = 7<sub>(16)</sub> , 1111<sub>(2)</sub> = F<sub>(16)</sub>` 
+2진수의 4비트는 16진수 1비트로 바꿀 수 있다.
+0111<sub>(2)</sub> = 7<sub>(16)</sub> , 1111<sub>(2)</sub> = F<sub>(16)</sub>
 
 ### MSB와 LSB
 - MSB (most significant bit) : 가장 왼쪽에 있는 비트
