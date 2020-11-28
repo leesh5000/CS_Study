@@ -42,7 +42,7 @@
     - DRAM (dynamic random access memory) : 저장된 데이터가 시간이 지나면 사라지는 메모리, 주기적 Refresh를 해주지 않으면 데이터가 사라진다. SRAM보다 속도도 느리지만 가격이 저렴하기 때문에 컴퓨터의 주 메모리로 사용한다.
     - SRAM (static random access memory) : Refresh를 하지 않아도 데이터가 사라지지 않는 메모리, 캐시 메모리로 사용한다.
 
-<br>[Contents](#Contents)<br>
+<br>[Contents](#Contents)<br><br>
 
 ## Number System
 2진수의 4비트는 16진수 1비트로 바꿀 수 있다. `0111<sub>2</sub> = 7<sub>16</sub> , 1111<sub>2</sub> = F<sub>16</sub>` 
