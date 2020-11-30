@@ -251,6 +251,8 @@ Exclusive-NOR의 줄임말로 두 수가 같을 때 출력이 1 또는 1의 개�
 
 -  Verilog Equation : X = ~ ( A ^ B )
 
+<br>[Contents](#Contents)<br><br>
+
 ## Reference
 - [KOCW 강의 - 디지털 논리 회로 익히기](http://www.kocw.net/home/search/kemView.do?kemId=1319470)
 - [Wikipedia - floating point arithmetic](https://en.wikipedia.org/wiki/Floating-point_arithmetic)
