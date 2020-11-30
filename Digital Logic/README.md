@@ -72,7 +72,7 @@ ex) 35<sub>(10)</sub> = (0011 0101)<sub>BCD</sub>, (0001 0111 0000)<sub>BCD</sub
 - MSB (most significant bit) : 가장 왼쪽에 있는 비트
 - LSB (least significant bit) : 가장 오른쪽에 있는 비트
 
-### 컴퓨터가 컴퓨터가 수를 표현하는 방법
+### 컴퓨터가 수를 표현하는 방법
 0과 1로 이루어진 이진수는 컴퓨터가 의미를 구분할 수 있는 전류가 흐르냐/흐르지 않냐와 대응되기 좋고, 디지털 시스템의 장점때문에 컴퓨터가 사용하기 좋은 수 체계이다. 십진수를 이진수로 변환하거나 이진수를 십진수로 변환하는 쉽고 검색해보면 많이 나오기 때문에 여기서는 다루지는 않겠다.
 
 #### 이진수의 음수 변환의 필요성
@@ -185,8 +185,8 @@ floating-point number는 실수를 컴퓨터상에서 근사값으로 표현할 
 ```
 
 각각의 값은 다음과 같이 표기된다. 부동소수점의 원리는 복잡하므로 여기서는 표기법만 알아본다.
-- Single Precision : F = (-1)<sup>S</sub> x 1.f x 2<sup>E-127</sup>
-- Double Precision : F = (-1)<sup>S</sub> x 1.f  x 2<sup>E-1203</sup>
+- Single Precision : F = (-1)<sup>S</sup> x 1.f x 2<sup>E-127</sup>
+- Double Precision : F = (-1)<sup>S</sup> x 1.f  x 2<sup>E-1203</sup>
 
 <br>[Contents](#Contents)<br><br>
 
