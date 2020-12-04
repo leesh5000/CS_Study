@@ -23,7 +23,7 @@
     - [부울대수의 규칙](#부울대수의-규칙)
     - [De Morgan's Theorem](#De-Morgan's-Theorem)
     - [NAND와 NOR의 만능 특성](#NAND와-NOR의-만능-특성)
-- Ch 5 : [SOP & POS](#SOP-&-POS)
+- Ch 5 : [SOP and POS](#SOP-and-POS)
     - [Sum of Product](#Sum-of-Product)
     - [Product of Sum](#Product-of-Sum)
     - [SOP와 POS의 상호변환](#SOP와-POS의-상호변환)
@@ -581,7 +581,7 @@ NAND 또는 NOR 는 특이하게도 자신만을 이용해서 다른 모든 논�
 
 <br>[Contents](#Contents)<br><br>
 
-## SOP & POS
+## SOP and POS
 
 #### Domain of a Boolean Expression
 Domain of a Boolean Expression(부울 식의 영역)은 수식에 사용된 변수들을 말한다.
