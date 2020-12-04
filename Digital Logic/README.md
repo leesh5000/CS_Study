@@ -205,12 +205,12 @@ IEEE 1364로 표준화 된 Verilog는 전자 시스템을 모델링하는 데 �
 
 [심볼, 부울대수 보기](https://en.wikipedia.org/wiki/Logic_gate)
 
-- Verilog Equation : Q = A
+- Verilog Equation : X = A
 
-Truth table
-| Input | Output |
-|:---:|:---:|
+#### Truth table
+A, X는 각각 입력고 출력
 | A | X | 
+|:---:|:---:|
 | 0 | 0 |
 | 1 | 1 |
 
@@ -219,12 +219,12 @@ Truth table
 
 [심볼, 부울대수 보기](https://en.wikipedia.org/wiki/Logic_gate)
 
-- Verilog Equation : Q = ~A
+- Verilog Equation : X = ~A
 
-Truth table
-| Input | Output |
-|:---:|:---:|
+#### Truth table
+A, X는 각각 입력고 출력
 | A | X | 
+|:---:|:---:|
 | 0 | 1 |
 | 1 | 0 |
 
@@ -235,8 +235,7 @@ Truth table
 
 - Verilog Equation : X = A & B
 
-Truth table
-| Input | Output |
+#### Truth table
 | A | B | Q |
 |:---:|:---:|:---:|
 | 0 | 0 | 0 |
