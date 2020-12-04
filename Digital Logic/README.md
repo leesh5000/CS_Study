@@ -2,15 +2,15 @@
 
 ## Contents
 
-- Ch1 : [Introduction](#Introduction)
+- Ch 1 : [Introduction](#Introduction)
     - [아날로그와 디지털](#아날로그와-디지털)
     - [아날로그 신호를 디지털 신호로 변환하는 방법](#아날로그-신호를-디지털-신호로-변환하는-방법)
     - [디지털시스템의 장점](#디지털시스템의-장점)
-- Ch2 : [Number System](#Number-System)
+- Ch 2 : [Number System](#Number-System)
     - [컴퓨터가 수를 표현하는 방법](#컴퓨터가-수를-표현하는-방법)
     - [이진수의 연산](#이진수의-연산)
     - [Floting-point number](#Floting-point-number)
-- Ch3 : [Logic Gate](#Logic-Gate)
+- Ch 3 : [Logic Gate](#Logic-Gate)
     - [Buffer](#Buffer)
     - [Inverter](#Inverter)
     - [AND](#AND)
@@ -19,6 +19,8 @@
     - [NOR](#NOR)
     - [XOR](#XOR)
     - [XNOR](#XNOR)
+- Ch 4 : [Boolean Algebra](#Boolean-Algebra)
+    - []
 
 ## Introduction
 
@@ -193,14 +195,26 @@ floating-point number는 실수를 컴퓨터상에서 근사값으로 표현할 
 ## Logic Gate
 Logic Gate(논리회로)는 Boolean Algebra를 물리적 장치에 구현한 것으로, 하나 이상의 논리적 입력값에 대해 논리 연산을 수행하여 하나의 논리적 출력값을 얻는 물리적 전자장치의 이상적인 모델을 말한다. Boolean Algebra란, 어떤 명제의 참과 거짓을 이진수 1과 0에 대응시켜서 명제와 명제간의 관계를 수학적으로 표현하는 것이다. 고전 명제 논리의 명제의 격자와 같은 성질을 갖는 격자이다. 즉 논리적 공리들을 만족시키는 논리합과 논리곱 및 부정의 연산이 정의된 대수 구조이다. 
 
-기본 논리게이트의 종류로는 Buffer, Inverter, AND, NAND, OR, NOR, XOR, XNOR 등이 있다. 
+기본 논리게이트의 종류로는 Buffer, Inverter, AND, NAND, OR, NOR, XOR, XNOR 등이 있다.
+
+#### Verilog
+IEEE 1364로 표준화 된 Verilog는 전자 시스템을 모델링하는 데 사용되는 하드웨어 설명 언어 (Hardware Description Language)입니다. 레지스터 전송 추상화 수준에서 디지털 회로의 설계 및 검증에 가장 일반적으로 사용됩니다. 여기서는 논리회로를 표현할 때 부울대수 표기법과 베릴로그 표기법 모두 사용할 것이다.
 
 ### Buffer
 버퍼는 입력과 출력이 같은 논리게이트이다.
 
-[심볼, 진리표, 부울대수 보러가기](https://en.wikipedia.org/wiki/Logic_gate)
+[심볼](https://en.wikipedia.org/wiki/Logic_gate)
 
+- Boolean Equation : X = A
 - Verilog Equation : X = A
+
+Truth table
+
+| Input | Output |
+|:---:|:---:|:---:|:---:|
+| A | X | 
+| 0 | 0 |
+| 1 | 1 |
 
 ### Inverter
 입력을 반전하여 출력하는 논리게이트이다. NOT이라고도 한다. 1의보수 발생기로 응용할 수 있다. 
@@ -252,6 +266,155 @@ Exclusive-NOR의 줄임말로 두 수가 같을 때 출력이 1 또는 1의 개�
 -  Verilog Equation : X = ~ ( A ^ B )
 
 <br>[Contents](#Contents)<br><br>
+
+## Boolean Algebra
+부울 대수(boolean algebra)는 어떤 명제의 참과 거짓을 이진수 1과 0에 대응시켜서 명제와 명제간의 관계를 수학적으로 표현하는 것이다. 논리적 공리들을 만족시키는 논리합과 논리곱 및 부정의 연산이 정의된 대수 구조이다. 부울 대수의 법칙들에는 교환법칙, 결합법칙, 배분법칙이 있다.
+
+#### 교환법칙 (Commutative Law)
+- 부울 합 (OR) : A+B = B+A
+| A | B | A+B | B+A |
+|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 1 |
+| 0 | 1 | 1 | 1 |
+| 1 | 1 | 1 | 1 |
+
+- 부울 곱 (AND) : A•B = B•A
+| A | B | A•B | B•A |
+|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 1 |
+| 0 | 1 | 1 | 1 |
+| 1 | 1 | 1 | 1 |
+
+#### 결합법칙 (Associative Law)
+- A+(B+C) = (A+B)+C
+- A•(B•C) = (A•B)•C
+
+#### 배분법칙 (Distributive Law)
+- A•(B+C) = (A•B)+(A•C)
+| Input | A•(B+C) | (A•B)+(A•C) |
+|:---:|:---:|:---:|:---:|
+| A | B | C | B+C | A•(B+C) | (A•B)+(A•C) 
+| 0 | 0 | 0 | 0 | 0 | 0 | 
+| 1 | 0 | 0 | 0 | 0 | 0 | 
+| 0 | 1 | 0 | 1 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 1 | 1 |
+| 1 | 0 | 1 | 1 | 1 | 1 |
+| 0 | 1 | 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 1 | 1 | 1 |
+
+- A+(B•C) = (A+B)•(A+C)
+| Input | A+(B•C) | (A+B)•(A+C) |
+|:---:|:---:|:---:|:---:|
+| A | B | C | B•C | A+(B•C) | (A+B)•(A+C) 
+| 0 | 0 | 0 | 0 | 0 | 0 | 
+| 1 | 0 | 0 | 0 | 1 | 1 | 
+| 0 | 1 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 | 0 | 0 |
+| 1 | 1 | 0 | 0 | 1 | 1 |
+| 1 | 0 | 1 | 0 | 1 | 1 |
+| 0 | 1 | 1 | 1 | 1 | 1 |
+| 1 | 1 | 1 | 1 | 1 | 1 |
+
+### 부울대수의 규칙
+1. A + 0 = A
+| Input | Output |
+|:---:|:---:|:---:|
+| A | 0 | A + 0 |
+| 0 | 0 | 0 |
+| 1 | 0 | 1 |
+
+2. A + 1 = 1
+| Input | Output |
+|:---:|:---:|:---:|
+| A | 1 | A + 1 |
+| 0 | 1 | 1 |
+| 1 | 1 | 1 |
+
+3. A + A = A
+| Input | Output |
+|:---:|:---:|:---:|
+| A | A | A + A |
+| 0 | 0 | 0 |
+| 1 | 1 | 1 |
+
+4. A + \bar{A} = 1
+| Input | Output |
+|:---:|:---:|:---:|
+| A | \bar{A} | A + \bar{A} |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+
+5. A \cdot 0 = 0
+| Input | Output |
+|:---:|:---:|:---:|
+| A | 0 | A \cdot A |
+| 0 | 0 | 0 |
+| 1 | 0 | 0 |
+
+6. A \cdot 1 = A
+| Input | Output |
+|:---:|:---:|:---:|
+| A | 1 | A \cdot 1 |
+| 0 | 1 | 0 |
+| 1 | 1 | 1 |
+
+7. A \cdot A = A
+| Input | Output |
+|:---:|:---:|:---:|
+| A | 1 | A \cdot A |
+| 0 | 0 | 0 |
+| 1 | 1 | 1 |
+
+8. A \cdot \bar{A} = 0
+| Input | Output |
+|:---:|:---:|:---:|
+| A | \bar{A} | A \cdot \bar{A} |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+
+9. \bar{\bar{A}} = A
+| Input | Output |
+|:---:|:---:|:---:|
+| A | \bar{A} | \bar{\bar{A}} |
+| 0 | 1 | 0 |
+| 1 | 0 | 1 |
+
+10. A+A\cdotB = A\cdot(A+B) = A
+A+A\cdotB = (A+A)\cdot(A+B) = A\cdot(A+B)
+
+(A\cdot1)+(A\cdotB) = A\cdot(1+B) = A\cdot1 = A
+
+### 드모르간의 정리 (De Morgan's Theorem)
+
+#### 제 1법칙 (1's Theorem)
+- \bar{AB} = \bar{A} + \bar{B}
+- 변수의 곱에 대한 보수는 각 변수들의 보수의 합과 같다. (드모르간의 제 1법칙)
+- NAND게이트 (\bar{AB}) = negative-OR게이트 (\bar{A}+\bar{B})
+| Input | Output | Output |
+|:---:|:---:|:---:|
+| A | B | \bar{AB} | \bar{A} | \bar{B} | \bar{A}+\bar{B} |
+| 0 | 0 | 1 | 1 | 1 | 1 |
+| 1 | 0 | 1 | 0 | 1 | 1 |
+| 0 | 1 | 1 | 1 | 0 | 1 |
+| 1 | 1 | 0 | 0 | 0 | 0 |
+
+#### 제 2법칙 (2's Theorem)
+- \bar{A+B} = \bar{A} \cdot \bar{B}
+- 변수의 합에 대한 보수는 각 변수들의 보수의 곱과 같다.
+- NOR 게이트 (\bar{A+B}) = negative-AND 게이트 (\bar{A}\bar{B})
+| Input | Output | Output |
+|:---:|:---:|:---:|
+| A | B | \bar{A+B} | \bar{A} | \bar{B} | \bar{A}\cdot\bar{B} |
+| 0 | 0 | 1 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 0 | 1 | 0 |
+| 0 | 1 | 0 | 1 | 0 | 0 |
+| 1 | 1 | 0 | 0 | 0 | 0 |
+
+### NAND와 NOR의 만능특성
+NAND 게이트만(\bar{AB})을 사용해서 각종 게이트들을 쉽게 만들 수 있다. 
 
 ## Reference
 - [KOCW 강의 - 디지털 논리 회로 익히기](http://www.kocw.net/home/search/kemView.do?kemId=1319470)
