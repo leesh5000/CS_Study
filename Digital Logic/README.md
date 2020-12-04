@@ -206,6 +206,7 @@ IEEE 1364로 표준화 된 Verilog는 전자 시스템을 모델링하는 데 �
 [심볼, 부울대수 보기](https://en.wikipedia.org/wiki/Logic_gate)
 
 - Verilog Equation : Q = A
+
 Truth table
 | Input | Output |
 |:---:|:---:|
@@ -236,7 +237,7 @@ Truth table
 
 Truth table
 | Input | Output |
-|:---:|:---:|
+|:---:|:---:|:---:|
 | A | B | Q | 
 | 0 | 0 | 0 |
 | 1 | 0 | 0 |
