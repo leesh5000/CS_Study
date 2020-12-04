@@ -198,14 +198,15 @@ Logic Gate(논리회로)는 Boolean Algebra를 물리적 장치에 구현한 것
 기본 논리게이트의 종류로는 Buffer, Inverter, AND, NAND, OR, NOR, XOR, XNOR 등이 있다. Buffer, Inverter는 입력값이 하나인 1-input Gate이다.
 
 #### Verilog
-IEEE 1364로 표준화 된 Verilog는 전자 시스템을 모델링하는 데 사용되는 하드웨어 설명 언어 (Hardware Description Language)입니다. 레지스터 전송 추상화 수준에서 디지털 회로의 설계 및 검증에 가장 일반적으로 사용됩니다. 여기서는 논리회로를 표현할 때 베릴로그 표기법 사용한다. 부울 표기법과 심볼들은 링크를 첨부해두었다.
+IEEE 1364로 표준화 된 Verilog는 전자 시스템을 모델링하는 데 사용되는 하드웨어 설명 언어 (Hardware Description Language)이다. 레지스터 전송 추상화 수준에서 디지털 회로의 설계 및 검증에 가장 일반적으로 사용된다. 
 
 ### Buffer
 버퍼는 입력과 출력이 같은 논리게이트이다.
 
-[심볼, 부울대수 보기](https://en.wikipedia.org/wiki/Logic_gate)
+[심볼 보기](https://en.wikipedia.org/wiki/Logic_gate)
 
-- Verilog Equation : X = A
+- Booliean Algebra : A
+- Verilog : A
 
 #### Truth table
 A, X는 각각 입력과 출력
@@ -217,9 +218,10 @@ A, X는 각각 입력과 출력
 ### Inverter
 입력을 반전하여 출력하는 논리게이트이다. NOT이라고도 한다. 1의보수 발생기로 응용할 수 있다. 
 
-[심볼, 부울대수 보기](https://en.wikipedia.org/wiki/Logic_gate)
+[심볼 보기](https://en.wikipedia.org/wiki/Logic_gate)
 
-- Verilog Equation : X = ~A
+- Booliean Algebra : ~A or A̅
+- Verilog : ~A
 
 #### Truth table
 A, X는 각각 입력과 출력
@@ -231,9 +233,13 @@ A, X는 각각 입력과 출력
 ### AND
 두 수의 입력이 모두 1일 경우에만 출력이 1인 논리게이트이다. AND 게이트는 0 • 0 = 0, 0 • 1 = 0, 1 • 0 = 0, 1 • 1 = 1이 되는 성질 때문에 `논리곱(Conjunction)`이라고 불린다. AND 게이트는 신호를 Masking하는데 사용된다.
 
-[심볼, 진리표, 부울대수 보러가기](https://en.wikipedia.org/wiki/Logic_gate)
+### Inverter
+입력을 반전하여 출력하는 논리게이트이다. NOT이라고도 한다. 1의보수 발생기로 응용할 수 있다. 
 
-- Verilog Equation : X = A & B
+[심볼 보기](https://en.wikipedia.org/wiki/Logic_gate)
+
+- Booliean Algebra : A•B
+- Verilog : A&B
 
 #### Truth table
 A, B는 입력, Q는 출력
@@ -247,9 +253,13 @@ A, B는 입력, Q는 출력
 ### OR
 두 수의 입력 중 하나라도 1인 경우에 출력이 1 또는 두 수의 입력이 모두 0일 경우에만 0인 논리게이트를 말한다. 0 + 0 = 0, 0 + 1 = 1, 1 + 0 = 1, 1 + 1 = 1이 되는 성질 때문에 `논리합(Disjunction)`이라고 불린다.
 
-[심볼, 진리표, 부울대수 보러가기](https://en.wikipedia.org/wiki/Logic_gate)
+### Inverter
+입력을 반전하여 출력하는 논리게이트이다. NOT이라고도 한다. 1의보수 발생기로 응용할 수 있다. 
 
--  Verilog Equation : X = A | B
+[심볼 보기](https://en.wikipedia.org/wiki/Logic_gate)
+
+- Booliean Algebra : A+B
+- Verilog : A|B
 
 #### Truth table
 A, B는 입력, Q는 출력
@@ -263,9 +273,10 @@ A, B는 입력, Q는 출력
 ### NAND
 두 수의 입력이 1일 경우에만 출력이 0인 논리게이트이다. AND의 출력을 NOT 시킨 것과 같다. NAND 게이트는 negative-OR 게이트와 등가이다.
 
-[심볼, 진리표, 부울대수 보러가기](https://en.wikipedia.org/wiki/Logic_gate)
+[심볼 보기](https://en.wikipedia.org/wiki/Logic_gate)
 
--  Verilog Equation : X = ~ ( A & B )
+- Booliean Algebra : ~(A•B)
+- Verilog : ~(A&B)
 
 #### Truth table
 A, B는 입력, Q는 출력
@@ -279,9 +290,10 @@ A, B는 입력, Q는 출력
 ### NOR
 두 수의 입력 중 하나라도 1인 경우에 출력이 0 또는 두 수의 입력이 모두 0일 경우에만 출력이 1인 논리게이트를 말한다. OR의 출력을 NOT 시킨 것과 같다. NOR 게이트는 negative-AND 게이트와 등가이다.
 
-[심볼, 진리표, 부울대수 보러가기](https://en.wikipedia.org/wiki/Logic_gate)
+[심볼 보기](https://en.wikipedia.org/wiki/Logic_gate)
 
--  Verilog Equation : X = ~ ( A | B )
+- Booliean Algebra : ~(A+B)
+- Verilog : ~(A|B)
 
 #### Truth table
 A, B는 입력, Q는 출력
@@ -295,9 +307,10 @@ A, B는 입력, Q는 출력
 ### XOR
 Exclusive-OR의 줄임말로 두 수가 다를 때 출력이 1 또는 1의 개수가 홀수일 때 출력이 1인 논리게이트를 말한다. 1의 개수가 홀수일 때 1을 출력하므로 홀수(Odd) 함수라고도 한다. 또한, 두 수가 다를 때 1을 출력하는 특징 때문에 인공위성이나 항공기 등과 같이 매우 중요한 회로에 쓰이는데, 입력에 똑같은 A회로 2개를 놓고 2개의 회로가 서로 다르게 들어오면 오류를 출력하도록 만들 수 있다.
 
-[심볼, 진리표, 부울대수 보러가기](https://en.wikipedia.org/wiki/Logic_gate)
+[심볼 보기](https://en.wikipedia.org/wiki/Logic_gate)
 
--  Verilog Equation : X = A ^ B
+- Booliean Algebra : A⊕B
+- Verilog : ~(A|B)
 
 #### Truth table
 A, B는 입력, Q는 출력
@@ -327,7 +340,7 @@ A, B는 입력, Q는 출력
 <br>[Contents](#Contents)<br><br>
 
 ## Boolean Algebra
-부울 대수(boolean algebra)는 어떤 명제의 참과 거짓을 이진수 1과 0에 대응시켜서 명제와 명제간의 관계를 수학적으로 표현하는 것이다. 논리적 공리들을 만족시키는 논리합과 논리곱 및 부정의 연산이 정의된 대수 구조이다. 부울 대수의 법칙들에는 교환법칙, 결합법칙, 배분법칙이 있다.
+부울 대수(boolean algebra)는 어떤 명제의 참과 거짓을 이진수 1과 0에 대응시켜서 명제와 명제간의 관계를 수학적으로 표현하는 것으로 논리적 공리들을 만족시키는 논리합과 논리곱 및 부정의 연산이 정의된 대수 구조이다. 논리회로에서 부울대수를 이용하면 복잡한 회로들도 쉽게 간략화 할 수 있다는 장점이 있다. 부울 대수의 법칙들에는 교환법칙, 결합법칙, 배분법칙이 있다.
 
 #### 교환법칙 (Commutative Law)
 - 부울 합 (OR) : A+B = B+A
@@ -366,7 +379,7 @@ A, B는 입력, Q는 출력
 | 0 | 1 | 1 | 1 | 0 | 0 |
 | 1 | 1 | 1 | 1 | 1 | 1 |
 
-- A+(B•C) = (A+B)•(A+C)
+- A+(B•C) = (A+B)•(A+C) [수학이랑 다르니까 주의하기]
 
 | A | B | C | B•C | A+(B•C) | (A+B)•(A+C)
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -449,10 +462,10 @@ A, B는 입력, Q는 출력
 
 ### 드모르간의 정리 (De Morgan's Theorem)
 
-#### 제 1법칙 (1's Theorem)
-- ~(A•B) = ~A+~B
-- 변수의 곱에 대한 보수는 각 변수들의 보수의 합과 같다. (드모르간의 제 1법칙)
-- NAND게이트 [ ~(A•B) ] = negative-OR게이트 [ ~A+~B ]
+1. 제 1법칙 (1's Theorem)
+    - ~(A•B) = ~A+~B
+    - 변수의 곱에 대한 보수는 각 변수들의 보수의 합과 같다. (드모르간의 제 1법칙)
+    - NAND게이트 [ ~(A•B) ] = negative-OR게이트 [ ~A+~B ]
 
 | A | B | ~(A•B) | ~A | ~B | ~A+~B |
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -461,10 +474,10 @@ A, B는 입력, Q는 출력
 | 0 | 1 | 1 | 1 | 0 | 1 |
 | 1 | 1 | 0 | 0 | 0 | 0 |
 
-#### 제 2법칙 (2's Theorem)
-- ~(A+B) = ~A•~B
-- 변수의 합에 대한 보수는 각 변수들의 보수의 곱과 같다.
-- NOR 게이트 [ ~(A+B) ] = negative-AND 게이트 [ ~A•~B ]
+2. 제 2법칙 (2's Theorem)
+    - ~(A+B) = ~A•~B
+    - 변수의 합에 대한 보수는 각 변수들의 보수의 곱과 같다.
+    - NOR 게이트 [ ~(A+B) ] = negative-AND 게이트 [ ~A•~B ]
 
 | A | B | ~(A+B) | ~A | ~B | ~A•~B |
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -474,14 +487,58 @@ A, B는 입력, Q는 출력
 | 1 | 1 | 0 | 0 | 0 | 0 |
 
 ### NAND와 NOR의 만능 특성
-NAND 게이트만[ ~(A•B) ]을 사용해서 각종 게이트들을 쉽게 만들 수 있다.
+NAND 또는 NOR 는 특이하게도 자신만을 이용해서 다른 모든 논리 게이트를 만들 수 있는 특성이 있다. NAND로만 모든 회로를 만들 수 있고, NAND 회로가 AND 회로보다 크기가 더 작기 때문에 옛날에는 NAND로 모든 회로를 구성했다. NOR 게이트만 사용해도 모든 논리회로를 구성할 수 있다. 하지만, NOR 게이트는 NAND 게이트보다 조금 더 크기 때문에 대부분 NAND를 가장 많이 사용한다. 여기서는 NAND 게이트만 사용하여 다른 논리회로를 만드는 법을 알아본다. NOR 게이트는 NAND를 알면 똑같은 방법을 사용하면 되므로 생략한다.
 
-- Inverter : 같은 입력값을 NAND게이트에 통과시키면 인버터가 된다. 예를들어, 다음 표와 같이 똑같은 입력 A 2개를 NAND게이트에 넣은 값은 A를 인버터에 통과시킨 것과 같은 결과를 갖는다. ~(A•B)는 NAND게이트의 베릴로그 표기이고, ~A는 인버터의 베릴로그 표기이다.
+#### NAND만 사용
+- Inverter : 같은 입력 값 2개를 NAND게이트에 통과시키면 인버터가 된다. 예를들어, 다음 표와 같이 똑같은 입력 A 2개를 NAND게이트에 넣은 값은 A를 인버터에 통과시킨 것과 같은 결과를 갖는다. ~(A•B), ~(A+B), ~A는 각각 NAND, NOR, 인버터의 베릴로그 표기이다.
 
-| A | A | ~(A•B) | ~A |
+| A | A | ~(A•A) | ~A |
 |:---:|:---:|:---:|:---:|
 | 0 | 0 | 1 | 1 |
 | 1 | 1 | 0 | 0 |
+
+이것을 식으로 증명하면, 다음과 같이 나타낼 수 있다.
+```
+    입력 A가 NAND연산만으로 ~A가 나와야 NAND게이트만으로 인버터를 만들었다고 할 수 있다.
+
+        ~(A•A)
+    =   ~A + ~A     [드모르간 제 1법칙]
+    =   ~A          [부울대수 3규칙]
+
+    따라서, NAND연산만을 이용해서 A의 인버터 연산을 만들었다.
+```
+
+- AND : 두 입력값 A,B에 대해서 NAND 게이트를 한 번 통과시킨 후, 그 결과를 2개의 입력으로 하여 다시 NAND게이트에 통과시킨다. 여기서는 진리표는 생략하고 식으로만 증명한다.
+```
+    입력 A와 B가 NAND연산만으로 A•B가 나와야 NAND게이트만으로 AND게이트를 만들었다고 할 수 있다.
+    NAND로 AND를 만드는 방법은 두 입력값 A,B에 대해서 NAND 게이트를 한 번 통과시킨 후, 그 결과를 2개의 입력으로 하여 다시 NAND게이트에 통과시키는 것이다.
+
+        ~(~(A•B)•~(A•B))
+    =   ~(~(A•B)) + ~(~(A•B))   [드모르간 2법칙]
+    =   (A•B) + (A•B)           [부울대수 9규칙]
+    =   A•B                     [부울대수 3규칙]
+    
+    따라서, NAND연산만을 이용해서 AND연산을 만들었다.
+```
+
+- OR : 두 입력값 A,B에 대해서 A와 B를 각각 NAND를 이용해서 ~A, ~B로 만들고 이 값을 다시 NAND 게이트로 통과시키면 된다.
+```
+    A,B를 NAND를 이용하여 ~A를 만드는 것은 1번 Inverter를 이용하면 되고, 이 값을 다시 NAND연산하면 된다.
+    
+        ~(~A•~B)
+    =   ~(~A) + ~(~B)   [드모르간 2법칙]
+    =   A+B             [부울대수 9규칙]
+```
+
+- NOR : 위의 OR게이트의 결과를 NAND 게이트에 통과시키면 된다.
+```
+    NAND로 NOR을 만들기는 3번의 NAND 연산만을 이용하여 OR연산 만든것의 결과를 다시 NAND연산을 하면 된다. 즉, 3번의 결과인 A+B를 두 개의 입력값으로 하여 NAND연산하면 된다.
+    
+        ~((A+B)•(A+B))
+    =   ~(A+B) + ~(A+B)
+    =   ~(A+B)
+```
+
 
 ## Reference
 - [KOCW 강의 - 디지털 논리 회로 익히기](http://www.kocw.net/home/search/kemView.do?kemId=1319470)
