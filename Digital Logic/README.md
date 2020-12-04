@@ -24,7 +24,11 @@
     - [De Morgan's Theorem](#De-Morgan's-Theorem)
     - [NAND와 NOR의 만능 특성](#NAND와-NOR의-만능-특성)
 - Ch 5 : [SOP & POS](#SOP-&-POS)
-    -[]
+    -[Sum of Product](#Sum-of-Product)
+    -[Product of Sum](#Product-of-Sum)
+    -[SOP와 POS의 상호변환](#SOP와-POS의-상호변환)
+- [Reference](#Reference)
+    
 ## Introduction
 
 ### 아날로그와 디지털 ###
@@ -771,5 +775,7 @@ SOP와 POS는 진리표를 이용해서 서로 쉽게 변환될 수 있다. 예�
 - [KOCW 강의 - 디지털 논리 회로 익히기](http://www.kocw.net/home/search/kemView.do?kemId=1319470)
 - [Wikipedia - floating point arithmetic](https://en.wikipedia.org/wiki/Floating-point_arithmetic)
 - [Wikipedia - Logic Gate](https://en.wikipedia.org/wiki/Logic_gate)
+- [Wikipedia - Verilog](https://en.wikipedia.org/wiki/Verilog)
+- [Wikipedia - Bool Algebra](https://en.wikipedia.org/wiki/Bol_loop)
 
 
