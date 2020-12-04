@@ -395,6 +395,8 @@ A, B는 입력, Q는 출력
 | 0 | 1 | 1 | 1 | 1 | 1 |
 | 1 | 1 | 1 | 1 | 1 | 1 |
 
+<br>[Contents](#Contents)<br><br>
+
 ### 부울대수의 규칙
 1. A + 0 = A
 
@@ -463,6 +465,8 @@ A, B는 입력, Q는 출력
 - A+A•B = A•(A+B) 증명 : A+A•B = (A+A)•(A+B) = A•(A+B)
 - A+A•B = A 증명 : A+A•B = A•1+A•B = A•(1+B) =A•1 = A 
 
+<br>[Contents](#Contents)<br><br>
+
 ### 드모르간의 정리 (De Morgan's Theorem)
 
 1. 제 1법칙 (1's Theorem)
@@ -488,6 +492,8 @@ A, B는 입력, Q는 출력
 | 1 | 0 | 0 | 0 | 1 | 0 |
 | 0 | 1 | 0 | 1 | 0 | 0 |
 | 1 | 1 | 0 | 0 | 0 | 0 |
+
+<br>[Contents](#Contents)<br><br>
 
 ### NAND와 NOR의 만능 특성
 NAND 또는 NOR 는 특이하게도 자신만을 이용해서 다른 모든 논리 게이트를 만들 수 있는 특성이 있다. NAND로만 모든 회로를 만들 수 있고, NAND 회로가 AND 회로보다 크기가 더 작기 때문에 옛날에는 NAND로 모든 회로를 구성했다. NOR 게이트만 사용해도 모든 논리회로를 구성할 수 있다. 하지만, NOR 게이트는 NAND 게이트보다 조금 더 크기 때문에 대부분 NAND를 가장 많이 사용한다. 여기서는 NAND 게이트만 사용하여 다른 논리회로를 만드는 법을 알아본다. NOR 게이트는 NAND를 알면 똑같은 방법을 사용하면 되므로 생략한다.
@@ -545,6 +551,8 @@ NAND 또는 NOR 는 특이하게도 자신만을 이용해서 다른 모든 논�
 - XOR : 4개의 NAND 게이트를 이용하면 XOR을 만들 수 있다.
 
 - XNOR : XOR의 결과를 NAND로 만든 인버터에 입력하면 된다.
+
+<br>[Contents](#Contents)<br><br>
 
 ## Reference
 - [KOCW 강의 - 디지털 논리 회로 익히기](http://www.kocw.net/home/search/kemView.do?kemId=1319470)
