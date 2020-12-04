@@ -468,8 +468,24 @@ A, B는 입력, Q는 출력
 | 1 | 0 | 1 |
 
 10. A+A•B = A•(A+B) = A
-- A+A•B = A•(A+B) 증명 : A+A•B = (A+A)•(A+B) = A•(A+B)
-- A+A•B = A 증명 : A+A•B = A•1+A•B = A•(1+B) =A•1 = A 
+- A+A•B = A•(A+B)
+```
+    Prove that,
+    
+    A+A•B 
+    = (A+A)•(A+B)   [배분법칙 2번]
+    = A•(A+B)       [부울규칙 3번]
+```
+- A+A•B = A
+```
+    Prove that,
+    
+    A+A•B 
+    = A•1+A•B   [부울규칙 6번]
+    = A•(1+B)   [배분법칙 1번]
+    = A•1       [부울규칙 2번]
+    = A         [부울규칙 6번]
+```
 
 <br>[Contents](#Contents)<br><br>
 
