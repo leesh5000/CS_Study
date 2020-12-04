@@ -237,8 +237,8 @@ Truth table
 
 Truth table
 | Input | Output |
+| A | B | Q |
 |:---:|:---:|:---:|
-| A | B | Q | 
 | 0 | 0 | 0 |
 | 1 | 0 | 0 |
 | 0 | 1 | 0 |
