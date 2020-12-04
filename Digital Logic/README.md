@@ -205,7 +205,7 @@ IEEE 1364로 표준화 된 Verilog는 전자 시스템을 모델링하는 데 �
 
 [심볼 보기](https://en.wikipedia.org/wiki/Logic_gate)
 
-- Booliean Algebra : A
+- Boolean Algebra : A
 - Verilog : A
 
 #### Truth table
@@ -220,7 +220,7 @@ A, X는 각각 입력과 출력
 
 [심볼 보기](https://en.wikipedia.org/wiki/Logic_gate)
 
-- Booliean Algebra : ~A or A̅
+- Boolean Algebra : ~A or A̅
 - Verilog : ~A
 
 #### Truth table
@@ -238,7 +238,7 @@ A, X는 각각 입력과 출력
 
 [심볼 보기](https://en.wikipedia.org/wiki/Logic_gate)
 
-- Booliean Algebra : A•B
+- Boolean Algebra : A•B
 - Verilog : A&B
 
 #### Truth table
@@ -258,7 +258,7 @@ A, B는 입력, Q는 출력
 
 [심볼 보기](https://en.wikipedia.org/wiki/Logic_gate)
 
-- Booliean Algebra : A+B
+- Boolean Algebra : A+B
 - Verilog : A|B
 
 #### Truth table
@@ -275,7 +275,7 @@ A, B는 입력, Q는 출력
 
 [심볼 보기](https://en.wikipedia.org/wiki/Logic_gate)
 
-- Booliean Algebra : ~(A•B)
+- Boolean Algebra : ~(A•B)
 - Verilog : ~(A&B)
 
 #### Truth table
@@ -292,7 +292,7 @@ A, B는 입력, Q는 출력
 
 [심볼 보기](https://en.wikipedia.org/wiki/Logic_gate)
 
-- Booliean Algebra : ~(A+B)
+- Boolean Algebra : ~(A+B)
 - Verilog : ~(A|B)
 
 #### Truth table
@@ -309,7 +309,7 @@ Exclusive-OR의 줄임말로 두 수가 다를 때 출력이 1 또는 1의 개�
 
 [심볼 보기](https://en.wikipedia.org/wiki/Logic_gate)
 
-- Booliean Algebra : A⊕B
+- Boolean Algebra : A⊕B (= A̅B+AB̅ )
 - Verilog : ~(A|B)
 
 #### Truth table
@@ -326,7 +326,8 @@ Exclusive-NOR의 줄임말로 두 수가 같을 때 출력이 1 또는 1의 개�
 
 [심볼, 진리표, 부울대수 보러가기](https://en.wikipedia.org/wiki/Logic_gate)
 
--  Verilog Equation : X = ~ ( A ^ B )
+- Boolean Algebra : ~(A⊕B)
+-  Verilog Equation : ~(A^B)
 
 #### Truth table
 A, B는 입력, Q는 출력
@@ -539,7 +540,9 @@ NAND 또는 NOR 는 특이하게도 자신만을 이용해서 다른 모든 논�
     =   ~(A+B)
 ```
 
-\overline{A \cdot B}
+- XOR : 4개의 NAND 게이트를 이용하면 XOR을 만들 수 있다.
+
+- XNOR : XOR의 결과를 NAND로 만든 인버터에 입력하면 된다.
 
 ## Reference
 - [KOCW 강의 - 디지털 논리 회로 익히기](http://www.kocw.net/home/search/kemView.do?kemId=1319470)
