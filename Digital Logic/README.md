@@ -24,9 +24,9 @@
     - [De Morgan's Theorem](#De-Morgan's-Theorem)
     - [NAND와 NOR의 만능 특성](#NAND와-NOR의-만능-특성)
 - Ch 5 : [SOP & POS](#SOP-&-POS)
-    -[Sum of Product](#Sum-of-Product)
-    -[Product of Sum](#Product-of-Sum)
-    -[SOP와 POS의 상호변환](#SOP와-POS의-상호변환)
+    - [Sum of Product](#Sum-of-Product)
+    - [Product of Sum](#Product-of-Sum)
+    - [SOP와 POS의 상호변환](#SOP와-POS의-상호변환)
 - [Reference](#Reference)
     
 ## Introduction
