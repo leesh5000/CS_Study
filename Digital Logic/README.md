@@ -539,6 +539,7 @@ NAND 또는 NOR 는 특이하게도 자신만을 이용해서 다른 모든 논�
     =   ~(A+B)
 ```
 
+\overline{A \cdot B}
 
 ## Reference
 - [KOCW 강의 - 디지털 논리 회로 익히기](http://www.kocw.net/home/search/kemView.do?kemId=1319470)
