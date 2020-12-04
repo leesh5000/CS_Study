@@ -21,7 +21,7 @@
     - [XNOR](#XNOR)
 - Ch 4 : [Boolean Algebra](#Boolean-Algebra)
     - [부울대수의 규칙](#부울대수의-규칙)
-    - [드모르간의 정리](#드모르간의-정리-(De-Morgan's-Theorem))
+    - [De Morgan's Theorem](#De-Morgan's-Theorem)
     - [NAND와 NOR의 만능 특성](#NAND와-NOR의-만능-특성)
 
 ## Introduction
@@ -473,7 +473,7 @@ A, B는 입력, Q는 출력
 
 <br>[Contents](#Contents)<br><br>
 
-### 드모르간의 정리 (De Morgan's Theorem)
+### De Morgan's Theorem
 
 1. 제 1법칙 (1's Theorem)
     - ~(A•B) = ~A+~B
