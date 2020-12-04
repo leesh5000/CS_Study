@@ -195,23 +195,20 @@ floating-point number는 실수를 컴퓨터상에서 근사값으로 표현할 
 ## Logic Gate
 Logic Gate(논리회로)는 Boolean Algebra를 물리적 장치에 구현한 것으로, 하나 이상의 논리적 입력값에 대해 논리 연산을 수행하여 하나의 논리적 출력값을 얻는 물리적 전자장치의 이상적인 모델을 말한다. Boolean Algebra란, 어떤 명제의 참과 거짓을 이진수 1과 0에 대응시켜서 명제와 명제간의 관계를 수학적으로 표현하는 것이다. 고전 명제 논리의 명제의 격자와 같은 성질을 갖는 격자이다. 즉 논리적 공리들을 만족시키는 논리합과 논리곱 및 부정의 연산이 정의된 대수 구조이다. 
 
-기본 논리게이트의 종류로는 Buffer, Inverter, AND, NAND, OR, NOR, XOR, XNOR 등이 있다.
+기본 논리게이트의 종류로는 Buffer, Inverter, AND, NAND, OR, NOR, XOR, XNOR 등이 있다. Buffer, Inverter는 입력값이 하나인 1-input Gate이다.
 
 #### Verilog
-IEEE 1364로 표준화 된 Verilog는 전자 시스템을 모델링하는 데 사용되는 하드웨어 설명 언어 (Hardware Description Language)입니다. 레지스터 전송 추상화 수준에서 디지털 회로의 설계 및 검증에 가장 일반적으로 사용됩니다. 여기서는 논리회로를 표현할 때 부울대수 표기법과 베릴로그 표기법 모두 사용할 것이다.
+IEEE 1364로 표준화 된 Verilog는 전자 시스템을 모델링하는 데 사용되는 하드웨어 설명 언어 (Hardware Description Language)입니다. 레지스터 전송 추상화 수준에서 디지털 회로의 설계 및 검증에 가장 일반적으로 사용됩니다. 여기서는 논리회로를 표현할 때 베릴로그 표기법 사용한다. 부울 표기법과 심볼들은 링크를 첨부해두었다.
 
 ### Buffer
 버퍼는 입력과 출력이 같은 논리게이트이다.
 
-[심볼](https://en.wikipedia.org/wiki/Logic_gate)
+[심볼, 부울대수 보기](https://en.wikipedia.org/wiki/Logic_gate)
 
-- Boolean Equation : X = A
-- Verilog Equation : X = A
-
+- Verilog Equation : Q = A
 Truth table
-
 | Input | Output |
-|:---:|:---:|:---:|:---:|
+|:---:|:---:|
 | A | X | 
 | 0 | 0 |
 | 1 | 1 |
@@ -219,9 +216,16 @@ Truth table
 ### Inverter
 입력을 반전하여 출력하는 논리게이트이다. NOT이라고도 한다. 1의보수 발생기로 응용할 수 있다. 
 
-[심볼, 진리표, 부울대수 보러가기](https://en.wikipedia.org/wiki/Logic_gate)
+[심볼, 부울대수 보기](https://en.wikipedia.org/wiki/Logic_gate)
 
-- Verilog Equation : X = ~A
+- Verilog Equation : Q = ~A
+
+Truth table
+| Input | Output |
+|:---:|:---:|
+| A | X | 
+| 0 | 1 |
+| 1 | 0 |
 
 ### AND
 두 수의 입력이 모두 1일 경우에만 출력이 1인 논리게이트이다. AND 게이트는 0 • 0 = 0, 0 • 1 = 0, 1 • 0 = 0, 1 • 1 = 1이 되는 성질 때문에 `논리곱(Conjunction)`이라고 불린다. AND 게이트는 신호를 Masking하는데 사용된다.
@@ -229,6 +233,15 @@ Truth table
 [심볼, 진리표, 부울대수 보러가기](https://en.wikipedia.org/wiki/Logic_gate)
 
 - Verilog Equation : X = A & B
+
+Truth table
+| Input | Output |
+|:---:|:---:|
+| A | B | Q | 
+| 0 | 0 | 0 |
+| 1 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 1 | 1 |
 
 ### OR
 두 수의 입력 중 하나라도 1인 경우에 출력이 1 또는 두 수의 입력이 모두 0일 경우에만 0인 논리게이트를 말한다. 0 + 0 = 0, 0 + 1 = 1, 1 + 0 = 1, 1 + 1 = 1이 되는 성질 때문에 `논리합(Disjunction)`이라고 불린다.
