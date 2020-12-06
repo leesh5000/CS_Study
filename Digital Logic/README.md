@@ -9,7 +9,6 @@
 - Ch 5 : [SOP and POS](#sop-and-pos)
 - Ch 6 : [Karnaugh Map](#karnaugh-map)
 - Ch 7 : [Logic Circuit](#Logic-Circuit)
-    
 - [Reference](#reference)
 
 ## Introduction
