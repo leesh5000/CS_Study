@@ -3,36 +3,12 @@
 ## Contents
 
 - Ch 1 : [Introduction](#introduction)
-    - [아날로그와 디지털](#아날로그와-디지털)
-    - [아날로그 신호를 디지털 신호로 변환하는 방법](#아날로그-신호를-디지털-신호로-변환하는-방법)
-    - [디지털시스템의 장점](#디지털시스템의-장점)
 - Ch 2 : [Number System](#number-system)
-    - [컴퓨터가 수를 표현하는 방법](#컴퓨터가-수를-표현하는-방법)
-    - [이진수의 연산](#이진수의-연산)
-    - [Floting-point number](#floting-point-number)
 - Ch 3 : [Logic Gate](#logic-gate)
-    - [Buffer](#buffer)
-    - [Inverter](#inverter)
-    - [AND](#and)
-    - [OR](#or)
-    - [NAND](#nand)
-    - [NOR](#nor)
-    - [XOR](#xor)
-    - [XNOR](#xnor)
 - Ch 4 : [Boolean Algebra](#boolean-algebra)
-    - [부울대수의 법칙과 규칙](#부울대수의-법칙과-규칙)
-    - [De Morgan's Theorem](#de-morgans-theorem)
-    - [NAND와 NOR의 만능 특성](#nand와-nor의-만능-특성)
 - Ch 5 : [SOP and POS](#sop-and-pos)
-    - [Sum of Product](#sum-of-product)
-    - [Product of Sum](#[product-of-sum)
-    - [SOP와 POS의 상호변환](#sop와-pos의-상호변환)
 - Ch 6 : [Karnaugh Map](#karnaugh-map)
-    - [Gray Code](#gray-code)
-    - [카르노 맵](#카르노-맵)
-    - [SOP와 POS의 변환](#sop와-pos의-변환)
-    - [XOR function](#xor-function)
-- Ch 7 : [Combinational Logic Circuit](#Combinational-Logic-Circuit)
+- Ch 7 : [Logic Circuit](#Logic-Circuit)
     
 - [Reference](#reference)
 
@@ -178,7 +154,7 @@ singed 이진수의 덧셈에서 수의 표현범위를 벗어나는 오버플�
       + 00000001     (1)                         + 11111111     (-1)
       ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ                      --------------------
         10000000  (-128)                           01111111    (127)    [101111111 이지만, unsigned 이진수 덧셈이므로 마지막 캐리는 버려야한다.]
-``` 
+```
 
 #### unsigned 이진수의 오버플로우
 unsigned 이진수의 경우에는 유효범위를 넘어가면 오버플로우가 발생한다. 예를들어 8비트의 이진수를 생각해보자. 8비트 unsigned 이진수의 경우 유효범위는 0~255이다.
@@ -219,6 +195,7 @@ floating-point number는 실수를 컴퓨터상에서 근사값으로 표현할 
 회로소자(Circuit Element란, 신호처리(증폭, 필터링, 변조)를 위한 가장 기본적인 회로구성요소를 말한다. 예를들어, 수동소자인 `Registor, Inductor, Capacitor`와 능동소자인 `transistor, diode` 등이 있다. 수동소자는 에너지 소비가 가능한 소자이며 전압과 전류의 관계가 선형적인 특징을 갖는다. 능동소자는 에너지 공급이 가능한 소자이며, 전류를 제어`diode`하거나 증폭`transistor`하는 역할을 한다. 이러한 기본 회로소자를 조합해서 AND,NOT,OR 등의 논리소자를 만드는 것이다. 
 
 [AND,OR,NOT게이트의 원리](https://blog.naver.com/PostView.nhn?blogId=bitnang&logNo=70172717438&parentCategoryNo=&categoryNo=49&viewDate=&isShowPopularPosts=true&from=search)
+[CMOS Inverter, NAND, NOR 원리 (9강 19분)](http://www.kocw.net/home/search/kemView.do?kemId=1319470)
 
 #### 논리소자의 특징
 1. 입력신호들에 취해지는 논리 조합에 따라 출력이 결정된다.
@@ -244,7 +221,7 @@ floating-point number는 실수를 컴퓨터상에서 근사값으로 표현할 
 
 #### Truth table
 A, X는 각각 입력과 출력
-| A | X | 
+| A | X |
 |:---:|:---:|
 | 0 | 0 |
 | 1 | 1 |
@@ -261,7 +238,7 @@ A, X는 각각 입력과 출력
 
 #### Truth table
 A, X는 각각 입력과 출력
-| A | X | 
+| A | X |
 |:---:|:---:|
 | 0 | 1 |
 | 1 | 0 |
@@ -1005,26 +982,113 @@ POS `X=(A+B+C)(A+B+C')(A+B'+C)(A+B'+C')(A'+B'+C)`를 SOP로 변환하기
 변수가 5개인 논리식에 대해서도 카르노맵을 만들 수 있다. 이 경우에는 A=0, A=1 일때 B,C,D,E를 갖는 4-변수 카르노맵 2개를 만들어서 사용한다. 자세한 방법은 링크에 있는 [KOCW강의](http://www.kocw.net/home/search/kemView.do?kemId=1319470) 7강 48분을 참고하자.
 
 <br>[Contents](#Contents)<br><br>
- 
- ## Combinational Logic Circuit
- 
- ### Logic Circuit
+
+ ## Logic Circuit
  논리회로란, 논리 값을 결정짓는 연산회로를 말한다. 논리회로는 논리게이트 및 플립플롭으로 구성되며, 논리회로의 신호는 [부울대수](#Boolean-Algebra)에 의존한다.
- 
- #### 논리연산, 논리소자, 논리회로 
+
+ #### 논리연산, 논리소자, 논리회로
  - 논리연산 (logic operation) : 하나 이상의 논리값으로 부터 새로운 논리값을 얻는 연산
  - 논리소자 (logic gate, logic element) : 기본 [회로소자](#Circuit-Element)들을 조합하여 논리연산을 물리적으로 구현한 것
  - 논리회로 (logic circuit) : 논리값을 결정하는 연산회로, 논리소자 및 플립플롭으로 구성
- 
+
  #### 논리회로의 종류
- - 조합논리회로 (Combinational Logic Circuit) : 오직 현재의 입력 상태에 의해서만 출력논리가 결정되는 회로
+ - 조합논리회로 (Combinational Logic Circuit) : 오직 현재의 입력 상태에 의해서만 출력논리가 결정되는 회로, 기억소자가 없고 [논리게이트](#Logic-Gate)만으로 구성된다.
  - 순차논리회로 (Sequential Logic Circuit) : 현재의 입력 및 과거의 입력/출력 신호 등 모두에 의해서 출력논리가 결정되는 회로, 즉, 메모리 요소(상태저장)을 가지고 있다.
- 
+
  #### 논리회로의 설계 과정
  - 요구사항 -> 진리표 -> 논리식 -> 논리식 단순화 -> 논리회로 설계
+
+ <br>[Contents](#Contents)<br><br>
+
+ ## Combinational Logic Circuit
+ 오직 현재의 입력 상태에 의해서만 출력논리가 결정되는 회로, 기억소자가 없고 여러 개의 [논리게이트](#Logic-Gate)만으로 구성된다. 조합논리회로에는 반가산기, 전가산기, 
+
+ ### Adder
+가산기는 두 오퍼랜드를 더하는 조합논리회로를 말한다. 가산기 중에는 반가산기와 전가산기가 있다. 컴퓨터에서는 감산기는 없으므로 보수를 취해서 더하는 방식으로 뺄셈을 구현한다.
  
- 
- 
+ #### Half Adder
+ Half Adder(반가산기)는 2개의 1비트를 더하여 sum과 carry를 발생시키는 가산기
+
+`1. 반가산기 진리표`
+
+| A | B | sum | carry |
+|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 0 |
+| 1 | 0 | 1 | 0 |
+| 1 | 1 | 0 | 1 |
+
+`2. 반가산기 진리표를 보고 논리식 만들기(카르노맵)`
+
+[sum]
+|A\B| 0 | 1 |
+|:---:|:---:|:---:|
+| 0 |   | 1 |
+| 1 | 1 |   |
+
+-> sum = AA'+A'B = A⊕B
+
+[carry]
+|A\B| 0 | 1 |
+|:---:|:---:|:---:|
+| 0 |   |   |
+| 1 |   | 1 |
+
+-> carry = AB
+
+`3. 회로로 만들기`
+
+sum은 XOR게이트, carry는 AND게이트 사용하여 연결
+
+#### Full Adder
+전가산기는 3개의 비트(A,B,C<sub>in</sub>)를 더하여 sum과 carry를 발생시킨다. C<sub>in</sub>은 전 단에서 올라온 carry를 말한다.
+
+#### 전가산기의 논리식
+- sum = A⊕B⊕C<sub>in</sub>
+- carryt out = AB+(A⊕B)C<sub>in</sub> = AB+AC<sub>in</sub>+BC<sub>in</sub>
+
+#### 전가산기의 논리회로
+전가산기는 2개의 반가산기와 OR게이트 하나로 만들 수 있다.
+
+#### 4비트 가산기
+- 4비트 가산기는 가산기 중 사용하는 게이트 수가 가장 적은 간단한 구조이지만, 캐리의 전파시간 때문에 가장 느리다.
+- 지연시간은 n비트 가산기인 경우, 2n 또는 2n+2이다. `32비트 가산기의 지연시간 = 64 또는 66`  
+- RCA(ripple carry adder)라고도 한다.
+
+<br>[Contents](#Contents)<br><br>
+
+### Comparator
+비교기(Comparator)는 두 수의 크기에 따라 같다,크다,작다의 3가지 상태를 출력하는 조합논리회로이다.
+
+#### 비교기의 논리식
+- equal = (A⊕B)' (XNOR게이트)
+- greater = AB'
+- less = A'B
+
+#### 2-bit 비교기
+A = A<sub>1</sub>A<sub>0</sub>, B = B<sub>1</sub> 인 두 2비트 이진수 A,B를 비교하는 2-bit 비교기를 만들어보자.
+
+- `equal = (A<sub>1</sub>⊕B<sub>1</sub>)'(A<sub>0</sub>⊕B<sub>0</sub>)'` : A,B 각 비트가 같다.
+- `greater = A<sub>1</sub>B<sub>1</sub>' + (A<sub>0</sub>⊕B<sub>0</sub>)'A<sub>0</sub>B<sub>0</sub>'` : A가 B보다 첫번째 비트가 더 크거나, 첫번째 비트는 같은데 두번째 비트가 더 큰 경우 
+- `less = A<sub>1</sub>'B<sub>1</sub> + (A<sub>0</sub>⊕B<sub>0</sub>)'A<sub>0</sub>'B<sub>0</sub>` : A가 B보다 첫번째 비트가 더 작거나, 첫번째 비트는 같은데 두번째 비트가 더 작은 경우 
+
+비교기는 가산기를 이용하여 뺄셈의 결과를 가지고 대소 관계를 판단할 수도 있지만 비교기가 가산기보다 회로가 더 간단하다.
+
+### Decoder & Encoder
+디코더는 n비트 이진코드를 2<sup>n</sup>개의 서로다른 출력으로 만들어주는 논리회로를 말한다. 인코더는 디코더의 반대로, 개별적인 입력을 코드화해서 이진코드로 만들어주는 논리회로이다. 
+
+예를들어, CPU와 키보드, 모니터, 마우스, 모뎀, ... 등 8개의 주변장치를 연결한다고 생각해보자. 디코더가 없으면 CPU에 8개의 주변장치를 하나씩 연결하는 신호선을 만들어야한다. 하지만 CPU와 8개의 주변장치 중간에 디코더를 하나 두고 이 디코더와 다른 주변장치를 연결한다고 생각해보자. 그렇다면 CPU는 총 3개의 이진코드 신호선만 연결하면 된다. CPU가 3개의 신호선으로 디코더에게 이진코드를 건네주면 디코더는 이 코드를 해석하여 알맞은 주변장치를 연결해주면 된다. 
+
+`000->디코더->키보드(0번), 010->디코더->마우스(2번), 111->디코더->모뎀(7번)`
+
+### Multiplexer
+여러 개의 입력 중 하나를 선택하여 출력으로 내보내는 조합논리회로로 일종의 데이터 선택기이다. 입력의 개수에 따라 2-to-1, 4-to-1, .. 등이 있다. Mux라고도 한다.
+
+### Demultiplexer
+1개의 입력을 2<sup>n</sup>개의 출력선 중 하나로 내보내는 조합논리회로로 일종의 데이터 분배기이다. 출력선의 개수에 따라 1-to-2, 1-to-4, ..등이 있다. DeMux라고도 한다.
+
+
+
 ## Reference
 - [KOCW 강의 - 디지털 논리 회로 익히기](http://www.kocw.net/home/search/kemView.do?kemId=1319470)
 - [정보통신기술용어해설](http://www.ktword.co.kr/abbr_view.php?nav=2&id=124&m_temp1=4893)
