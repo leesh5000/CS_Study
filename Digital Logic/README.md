@@ -213,10 +213,10 @@ floating-point number는 실수를 컴퓨터상에서 근사값으로 표현할 
 <br>[Contents](#Contents)<br><br>
 
 ## Logic Gate
-Logic Gate(= Logic Element, 논리게이트 또는 논리소자)는 논리 연산에 기본이 되는 논리 소자를 말한다. 여기서 "Gate"라는 말은 정보흐름의 허용 및 저지를 결정하는 단자 또는 소자를 말한다. 
+논리소자(Logic gate, Logic element)는 논리 연산에 기본이 되는 논리소자를 말한다. 여기서 "Gate"라는 말은 정보흐름의 허용 및 저지를 결정하는 단자 또는 소자를 말한다. 논리소자는 여러 개의 회로소자들로 구성된다. 
 
-#### Circuit Element
-Circuit Element(회로소자)란, 신호처리(증폭, 필터링, 변조)를 위한 가장 기본적인 회로구성요소를 말한다. 예를들어, 수동소자인 Registor, Inductor, Capacitor와 능동소자인 transistor, diode 등이 있다. 수동소자는 에너지 소비가 가능한 소자이며 전압과 전류의 관계가 선형적인 특징을 갖는다. 능동소자는 에너지 공급이 가능한 소자이며, 전류를 제어(diode)하거나 증폭(transistor)하는 역할을 한다. 이러한 기본 회로소자를 조합해서 AND,NOT,OR 등의 논리소자를 만드는 것이다. 
+#### 회로소자
+회로소자(Circuit Element란, 신호처리(증폭, 필터링, 변조)를 위한 가장 기본적인 회로구성요소를 말한다. 예를들어, 수동소자인 `Registor, Inductor, Capacitor`와 능동소자인 `transistor, diode` 등이 있다. 수동소자는 에너지 소비가 가능한 소자이며 전압과 전류의 관계가 선형적인 특징을 갖는다. 능동소자는 에너지 공급이 가능한 소자이며, 전류를 제어`diode`하거나 증폭`transistor`하는 역할을 한다. 이러한 기본 회로소자를 조합해서 AND,NOT,OR 등의 논리소자를 만드는 것이다. 
 
 [AND,OR,NOT게이트의 원리](https://blog.naver.com/PostView.nhn?blogId=bitnang&logNo=70172717438&parentCategoryNo=&categoryNo=49&viewDate=&isShowPopularPosts=true&from=search)
 
@@ -1013,7 +1013,7 @@ POS `X=(A+B+C)(A+B+C')(A+B'+C)(A+B'+C')(A'+B'+C)`를 SOP로 변환하기
  
  #### 논리연산, 논리소자, 논리회로 
  - 논리연산 (logic operation) : 하나 이상의 논리값으로 부터 새로운 논리값을 얻는 연산
- - 논리소자 (logic gate, logic element) : [기본소자](#Circuit-Element)들을 조합하여 논리연산을 물리적으로 구현한 것
+ - 논리소자 (logic gate, logic element) : 기본 [회로소자](#Circuit-Element)들을 조합하여 논리연산을 물리적으로 구현한 것
  - 논리회로 (logic circuit) : 논리값을 결정하는 연산회로, 논리소자 및 플립플롭으로 구성
  
  #### 논리회로의 종류
