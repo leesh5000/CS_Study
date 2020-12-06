@@ -181,6 +181,8 @@ floating-point number는 실수를 컴퓨터상에서 근사값으로 표현할 
 - Single Precision : F = (-1)<sup>S</sup> x 1.f x 2<sup>E-127</sup>
 - Double Precision : F = (-1)<sup>S</sup> x 1.f  x 2<sup>E-1203</sup>
 
+<br>[Contents](#Contents)<br><br>
+
 ## Logic Gate
 논리소자(Logic gate, Logic element)는 논리 연산에 기본이 되는 논리소자를 말한다. 여기서 "Gate"라는 말은 정보흐름의 허용 및 저지를 결정하는 단자 또는 소자를 말한다. 논리소자는 여러 개의 회로소자들로 구성된다. 
 
@@ -333,6 +335,8 @@ A, B는 입력, Q는 출력
 | 1 | 0 | 0 |
 | 0 | 1 | 0 |
 | 1 | 1 | 1 |
+
+<br>[Contents](#Contents)<br><br>
 
 ## Boolean Algebra
 부울 대수(boolean algebra)는 어떤 명제를 참과 거짓을 뜻하는 0,1과 논리곱, 논리합, 부정의 개념을 이용하여 기호화 한 것이다. 컴퓨터공학에서 부울대수를 이용하면 논리회로의 논리관계를 대수적으로 표현하기에 매우 유용하다. 
