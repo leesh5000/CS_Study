@@ -11,6 +11,8 @@
 - Ch 7 : [Logic Circuit](#Logic-Circuit)
 - [Reference](#reference)
 
+<br>[Home](https://github.com/leesh5000/ComputerScience_Study)</br></br>
+
 ## Introduction
 
 ### 아날로그와 디지털 ###
