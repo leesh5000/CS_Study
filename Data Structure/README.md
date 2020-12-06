@@ -2,19 +2,16 @@
 
 ## Contents
 
-- Set 1 : Introduction
-    - [Data Types](#Data-Types)
-    - [Data Structures](#Data-Structures)
-    - [Abstract Data Type](#Abstract-Data-Type)
-- Set 2 : Linear Structures
-  - [Array](#Array)
-  - [LinkedList](#LinkedList)
-  - [Stack](#Stack)
-  - [Queue](#Queue)
-- Set 3 : Non-Linear Structures
-    - [Tree](#Tree)
-        - [Heap](#Heap)
-        - [Priority Queue](#Priority-Queue)
+- Ch 1 : [Data Types](#Data-Types) 
+- Ch 2 : [Data Structures](#Data-Structures)
+- Ch 3 : [Abstract Data Type](#Abstract-Data-Type)
+- Ch 4 : [Array](#Array)
+- Ch 5 : [LinkedList](#LinkedList)
+- Ch 6 : [Stack](#Stack)
+- Ch 7 : [Queue](#Queue)
+- Ch 8 : [Tree](#Tree)
+- Ch 9 : [Heap](#Heap)
+- Ch 10 : [Priority Queue](#Priority-Queue)
 - [Reference](#Reference)
 
 <br>[Home](https://github.com/leesh5000/ComputerScience_Study)</br></br>
