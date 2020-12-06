@@ -1037,7 +1037,10 @@ sum은 XOR게이트, carry는 AND게이트 사용하여 연결
 ### Demultiplexer
 1개의 입력을 2<sup>n</sup>개의 출력선 중 하나로 내보내는 조합논리회로로 일종의 데이터 분배기이다. 출력선의 개수에 따라 1-to-2, 1-to-4, ..등이 있다. DeMux라고도 한다.
 
+### Parity
+패리티는 디지털 신호 전송 시 전송 데이터에 1비트를 추가로 더 보내어 수신측에서 오류를 체크할 수 있게 해주는 조합논리회로이다.
 
+<br>[Contents](#Contents)<br><br>
 
 ## Reference
 - [KOCW 강의 - 디지털 논리 회로 익히기](http://www.kocw.net/home/search/kemView.do?kemId=1319470)
