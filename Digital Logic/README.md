@@ -2,13 +2,13 @@
 
 ## Contents
 
-- Ch1 : [Introduction](#introduction)
-- Ch2 : [Number System](#number-system)
-- Ch3 : [Logic Gate](#logic-gate)
-- Ch4 : [Boolean Algebra](#boolean-algebra)
-- Ch5 : [SOP and POS](#sop-and-pos)
-- Ch6 : [Karnaugh Map](#karnaugh-map)
-- Ch7 : [Logic Circuit](#Logic-Circuit)
+- Ch 1 : [Introduction](#introduction)
+- Ch 2 : [Number System](#number-system)
+- Ch 3 : [Logic Gate](#logic-gate)
+- Ch 4 : [Boolean Algebra](#boolean-algebra)
+- Ch 5 : [SOP and POS](#sop-and-pos)
+- Ch 6 : [Karnaugh Map](#karnaugh-map)
+- Ch 7 : [Logic Circuit](#Logic-Circuit)
 - [Reference](#reference)
 
 <br>[Home](https://github.com/leesh5000/ComputerScience_Study)</br></br>
