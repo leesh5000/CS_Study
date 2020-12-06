@@ -20,7 +20,7 @@
     - [XOR](#xor)
     - [XNOR](#xnor)
 - Ch 4 : [Boolean Algebra](#boolean-algebra)
-    - [부울대수의 규칙](#부울대수의-규칙)
+    - [부울대수의 법칙과 규칙](#부울대수의-법칙과-규칙)
     - [De Morgan's Theorem](#de-morgans-theorem)
     - [NAND와 NOR의 만능 특성](#nand와-nor의-만능-특성)
 - Ch 5 : [SOP and POS](#sop-and-pos)
@@ -32,8 +32,10 @@
     - [카르노 맵](#카르노-맵)
     - [SOP와 POS의 변환](#sop와-pos의-변환)
     - [XOR function](#xor-function)
-- [Reference](#reference)
+- Ch 7 : [Combinational Logic Circuit](#Combinational-Logic-Circuit)
     
+- [Reference](#reference)
+
 ## Introduction
 
 ### 아날로그와 디지털 ###
@@ -211,12 +213,26 @@ floating-point number는 실수를 컴퓨터상에서 근사값으로 표현할 
 <br>[Contents](#Contents)<br><br>
 
 ## Logic Gate
-Logic Gate(논리회로)는 Boolean Algebra를 물리적 장치에 구현한 것으로, 하나 이상의 논리적 입력값에 대해 논리 연산을 수행하여 하나의 논리적 출력값을 얻는 물리적 전자장치의 이상적인 모델을 말한다. Boolean Algebra란, 어떤 명제의 참과 거짓을 이진수 1과 0에 대응시켜서 명제와 명제간의 관계를 수학적으로 표현하는 것이다. 고전 명제 논리의 명제의 격자와 같은 성질을 갖는 격자이다. 즉 논리적 공리들을 만족시키는 논리합과 논리곱 및 부정의 연산이 정의된 대수 구조이다. 
+Logic Gate(= Logic Element, 논리게이트 또는 논리소자)는 논리 연산에 기본이 되는 논리 소자를 말한다. 여기서 "Gate"라는 말은 정보흐름의 허용 및 저지를 결정하는 단자 또는 소자를 말한다. 
+
+#### Circuit Element
+Circuit Element(회로소자)란, 신호처리(증폭, 필터링, 변조)를 위한 가장 기본적인 회로구성요소를 말한다. 예를들어, 수동소자인 Registor, Inductor, Capacitor와 능동소자인 transistor, diode 등이 있다. 수동소자는 에너지 소비가 가능한 소자이며 전압과 전류의 관계가 선형적인 특징을 갖는다. 능동소자는 에너지 공급이 가능한 소자이며, 전류를 제어(diode)하거나 증폭(transistor)하는 역할을 한다. 이러한 기본 회로소자를 조합해서 AND,NOT,OR 등의 논리소자를 만드는 것이다. 
+
+[AND,OR,NOT게이트의 원리](https://blog.naver.com/PostView.nhn?blogId=bitnang&logNo=70172717438&parentCategoryNo=&categoryNo=49&viewDate=&isShowPopularPosts=true&from=search)
+
+#### 논리소자의 특징
+1. 입력신호들에 취해지는 논리 조합에 따라 출력이 결정된다.
+2. 1 이상의 논리값으로 부터 새로운 논리값을 만든다.
+
+#### 논리소자의 구분
+1. 기본게이트 : NOT, AND, OR
+2. 범용게이트 : NAND, NOR (모든 다른 게이트들은 이 2개의 범용게이트들을 대체하여 표현 가능하다.)
+3. 기타게이트 : XOR, XNOR
 
 기본 논리게이트의 종류로는 Buffer, Inverter, AND, NAND, OR, NOR, XOR, XNOR 등이 있다. Buffer, Inverter는 입력값이 하나인 1-input Gate이다.
 
 #### Verilog
-IEEE 1364로 표준화 된 Verilog는 전자 시스템을 모델링하는 데 사용되는 하드웨어 설명 언어 (Hardware Description Language)이다. 레지스터 전송 추상화 수준에서 디지털 회로의 설계 및 검증에 가장 일반적으로 사용된다. 
+전자시스템을 설명하는 하드웨어 기술 언어이다. (HDL, Hardware Description Language) 
 
 ### Buffer
 버퍼는 입력과 출력이 같은 논리게이트이다.
@@ -365,7 +381,19 @@ A, B는 입력, Q는 출력
 <br>[Contents](#Contents)<br><br>
 
 ## Boolean Algebra
-부울 대수(boolean algebra)는 어떤 명제의 참과 거짓을 이진수 1과 0에 대응시켜서 명제와 명제간의 관계를 수학적으로 표현하는 것으로 논리적 공리들을 만족시키는 논리합과 논리곱 및 부정의 연산이 정의된 대수 구조이다. 논리회로에서 부울대수를 이용하면 복잡한 회로들도 쉽게 간략화 할 수 있다는 장점이 있다. 부울 대수의 법칙들에는 교환법칙, 결합법칙, 배분법칙이 있다.
+부울 대수(boolean algebra)는 어떤 명제를 참과 거짓을 뜻하는 0,1과 논리곱, 논리합, 부정의 개념을 이용하여 기호화 한 것이다. 컴퓨터공학에서 부울대수를 이용하면 논리회로의 논리관계를 대수적으로 표현하기에 매우 유용하다. 
+
+#### Algebra 
+Algebra란, 수 들사이에 연산 및 그 관계를 말한다.
+
+#### 부울 대수를 단순화해야하는 이유
+앞으로 여러 챕터에 걸쳐서 부울 대수를 단순화하는 방법에 대해서 배운다. 왜 부울대수를 단순화해야 할까?
+
+부울대수는 같은 결과를 나타내는 식이라도 정리가 되지 않으면 굉장히 복잡한 식이 될 수도 있고, 단순한 식이 될 수도 있다. 부울대수는 모든 컴퓨터 논리소자를 표현하는 식이므로 부울대수를 단순화한다는 것은 곧 물리적인 컴퓨터 내부의 물리적인 논리회로들을 단순화 할 수 있다는 것을 말한다. 컴퓨터 내부 회로를 단순화하면 컴퓨터의 빠른속도, 작은크기, 낮은 전력소모 등을 가져올 수 있다.   
+
+<br>[Contents](#Contents)<br><br>
+
+### 부울대수의 법칙과 규칙
 
 #### 교환법칙 (Commutative Law)
 - 부울 합 (OR) : A+B = B+A
@@ -404,7 +432,7 @@ A, B는 입력, Q는 출력
 | 0 | 1 | 1 | 1 | 0 | 0 |
 | 1 | 1 | 1 | 1 | 1 | 1 |
 
-- A+(B•C) = (A+B)•(A+C) [수학이랑 다르니까 주의하기]
+- A+(B•C) = (A+B)•(A+C) [일반적인 대수관계와 다르니까 주의]
 
 | A | B | C | B•C | A+(B•C) | (A+B)•(A+C)
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -417,9 +445,7 @@ A, B는 입력, Q는 출력
 | 0 | 1 | 1 | 1 | 1 | 1 |
 | 1 | 1 | 1 | 1 | 1 | 1 |
 
-<br>[Contents](#Contents)<br><br>
-
-### 부울대수의 규칙
+#### 부울대수의 규칙
 1. A + 0 = A
 
 | A | 0 | A + 0 |
@@ -837,7 +863,6 @@ SOP와 POS는 진리표를 이용해서 서로 쉽게 변환될 수 있다. 예�
 | 11 |   |   |
 | 10 |   |   |
 
-
 #### 카르노맵을 이용하여 부울식을 단순화하는 방법
 ```
 1. 변수의 개수에 따라 2^n 칸을 갖는 테이블을 만든다.
@@ -981,8 +1006,28 @@ POS `X=(A+B+C)(A+B+C')(A+B'+C)(A+B'+C')(A'+B'+C)`를 SOP로 변환하기
 
 <br>[Contents](#Contents)<br><br>
  
+ ## Combinational Logic Circuit
+ 
+ ### Logic Circuit
+ 논리회로란, 논리 값을 결정짓는 연산회로를 말한다. 논리회로는 논리게이트 및 플립플롭으로 구성되며, 논리회로의 신호는 [부울대수](#Boolean-Algebra)에 의존한다.
+ 
+ #### 논리연산, 논리소자, 논리회로 
+ - 논리연산 (logic operation) : 하나 이상의 논리값으로 부터 새로운 논리값을 얻는 연산
+ - 논리소자 (logic gate, logic element) : [기본소자](#Circuit-Element)들을 조합하여 논리연산을 물리적으로 구현한 것
+ - 논리회로 (logic circuit) : 논리값을 결정하는 연산회로, 논리소자 및 플립플롭으로 구성
+ 
+ #### 논리회로의 종류
+ - 조합논리회로 (Combinational Logic Circuit) : 오직 현재의 입력 상태에 의해서만 출력논리가 결정되는 회로
+ - 순차논리회로 (Sequential Logic Circuit) : 현재의 입력 및 과거의 입력/출력 신호 등 모두에 의해서 출력논리가 결정되는 회로, 즉, 메모리 요소(상태저장)을 가지고 있다.
+ 
+ #### 논리회로의 설계 과정
+ - 요구사항 -> 진리표 -> 논리식 -> 논리식 단순화 -> 논리회로 설계
+ 
+ 
+ 
 ## Reference
 - [KOCW 강의 - 디지털 논리 회로 익히기](http://www.kocw.net/home/search/kemView.do?kemId=1319470)
+- [정보통신기술용어해설](http://www.ktword.co.kr/abbr_view.php?nav=2&id=124&m_temp1=4893)
 - [Wikipedia - floating point arithmetic](https://en.wikipedia.org/wiki/Floating-point_arithmetic)
 - [Wikipedia - Logic Gate](https://en.wikipedia.org/wiki/Logic_gate)
 - [Wikipedia - Verilog](https://en.wikipedia.org/wiki/Verilog)
