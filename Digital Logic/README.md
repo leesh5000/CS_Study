@@ -23,8 +23,6 @@
 
 [A/D Converter의 작동원리](https://www.rohm.co.kr/electronics-basics/ad-converters/ad_what2)
 
-<br>[Contents](#Contents)<br><br>
-
 ### 디지털시스템의 장점 ###
 그렇다면 아날로그보다 정확도가 떨어지는 디지털 시스템을 왜 사용할까? 디지털 시스템을 사용하는 이유에는 다음 몇 가지가 있다.  
 1. 0과 1만 디지털 신호로 사용하기 때문에 외부 환경(열이나 잡음)에 강하다.
@@ -40,8 +38,6 @@
 - Frequency (f) : Hertz (cycles per second)
 - T = 1 / f 
 
-<br>[Contents](#Contents)<br><br>
-
 ### 논리회로의 종류 ###
 1. 조합논리회로 (combinational logic circuit) : 기본 게이트의 조합으로 구성되는 회로 `ex) 리모컨의 숫자 버튼`
 2. 순차논리회로 (sequential logic circuit) : 플립플롭(flip-flop) 등 현재 상태를 저장하는 저장소자가 포함된 논리회로 `ex) 리모컨의 채널 +/- 버튼`
@@ -52,8 +48,6 @@
 - 메모리 : (공통점)전원을 끄면 저장되어 있던게 사라지는 휘발성 메모리
     - DRAM (dynamic random access memory) : 저장된 데이터가 시간이 지나면 사라지는 메모리, 주기적 Refresh를 해주지 않으면 데이터가 사라진다. SRAM보다 속도도 느리지만 가격이 저렴하기 때문에 컴퓨터의 주 메모리로 사용한다.
     - SRAM (static random access memory) : Refresh를 하지 않아도 데이터가 사라지지 않는 메모리, 캐시 메모리로 사용한다.
-
-<br>[Contents](#Contents)<br><br>
 
 ## Number System
 컴퓨터공학에서 중요하게 알아야 할 2진수와 16진수가 있다. 2진수의 digit은 0과1, 16진수의 digit은 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F이다. 2진수와 16진수는 4비트 단위로 변환될 수 있다. 
