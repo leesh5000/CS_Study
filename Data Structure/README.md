@@ -74,7 +74,7 @@ Deletion : O(n) [배열의 첫 번째 요소를 삭제하고 빈 공간을 없�
 ### Implementation ###
 - 배열 구현 [C](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C/ArrayList/ArrayList.c)
 
-### Applications of Array ###
+### Applications ###
 배열의 단점은 사이즈가 고정되어있다는 점이다. 하지만, 배열을 응용하여 동적배열을 만들면 이를 해결할 수 있다. 동적배열은 배열의 사이즈가 동적으로 늘어나고 줄어들 수 있는 배열을 말하며 프로그래밍 언어마다 vector(C++), list(C#), ArrayList(java), list(python)로 제공된다.
 1. 동적배열
 2. 이진탐색(Binary Search) : 이진탐색이란, 정렬된 배열내에서 특정 값을 찾는 탐색 알고리즘을 말한다. [C](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C/ArrayList/BinarySearch.c)
@@ -95,7 +95,7 @@ Deletion : O(1)
 ### Implementation ###
 - 연결리스트 구현 [C](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C/LinkedList/SinglyLinkedList.c)
 
-### Applications of Linked List ###
+### Applications ###
 일반적으로 연결리스트라고 하면 단방향으로 연결된 연결리스트를 말한다. 연결리스트를 응용해서 양방향으로 연결하면 양방향 연결리스트라 하고, 연결리스트의 마지막 노드가 첫 노드를 가리키게 만든 것을 원형 연결리스트라고 한다.
 1. 양방향 연결리스트
 2. 원형 연결리스트
@@ -119,7 +119,7 @@ Deletion : O(1) [Top에서 삭제가 이루어지므로]
 - 배열을 이용하여 스택 구현 [C](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C/Stack/StackUsingArray.c)
 - 연결리스트를 이용하여 스택 구현
 
-### Applications of Stack ###
+### Applications ###
 스택은 LIFO 순서 따르는 특징때문에 메모리의 스택영역, CPU 인터럽트 사이클, Redo/Undo, String Reversal, 계산기 구현 등에 응용된다.
 1. 연산순서를 따르는 계산기
 2. 스택을 이용한 트리 순회
@@ -147,8 +147,8 @@ Deletion : O(1) [Rear에서 가 이루어지므로]
 
 ### Applications ###
 큐는 선형 자료구조로 데이터가 즉시 처리될 필요는 없지만, LIFO 순서로 처리되야 할 때 사용된다. 예를들어, 여러 소비자가 자원을 공유하는 경우와 두 프로세스 간에 데이터가 비동기적으로 전송되는 경우(데이터가 반드시 동시에 처리될 필요가 없을때)가 있다. 첫번째 경우는  `CPU 스케줄링` 이나 `디스크 스케줄링` 등이 있고, 두번째 경우는 `IO버퍼`, `파이프`, `서버` 등이 있다. 이와 같이 큐는 운영체제와 네트워크와 관련된 소프트웨어 구현에 있어서 중요한 역할을 하는 자료구조이다.
-1. LRU 캐시 구현
-2. 데크 구현
+1. LRU 캐시
+2. 데크
 3. Queuing Theory Simulation
 
 </br>[Contents](#Contents)</br></br>
@@ -235,10 +235,10 @@ Deletion : O(n) [특정 노드에 자식노드를 삭제하려한다면, 먼저 
 - 배열을 이용한 이진트리 구현 (연결리스트를 이용한 이진트리와 시간복잡도 비교해보기) [Java](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/Java/src/Tree/TreeUsingArray.java)
 - 연결리스트를 이용하여 이진트리 구현
 
-### Applications of Tree ###
+### Applications ###
 트리는 주로 계층적 데이터를 조작/관리하는데 많이 응용되는데 예를들면, 컴퓨터 시스템에서 파일 디렉터리 구조 등이 있다. 또한, 트리는 구현 방법에 따라 BST(Binary Search Tree), Heap, AVL/Red-Black Tree 등 여러 가지 다양한 트리로 응용될 수 있다.  
-1. 수식트리의 구현
-2. 이진트리의 BFS(Level Order Traversal)와 DFS(Pre/In/Postorder Traversal) 구현
+1. 수식트리
+2. 이진트리의 BFS(Level Order Traversal)와 DFS(Pre/In/Postorder Traversal)
 
 </br>[Contents](#Contents)</br></br>
 
@@ -292,10 +292,10 @@ Deletion : O(log(n)) [이진힙의 데이터 삭제과정]
 - Binomial Heap 구현
 - Pibonacci Heap 구현
 
-### Applications of Heap ###
+### Applications ###
 힙은 특별한 힙 속성으로 인해 최대/최소값을 구하고자 할 때 많이 사용된다. 이를 응용하면 우선순위 큐를 쉽게 구현할 수 있으며, Prim Algorithm 이나 Dijkstra's algorithm에 사용될 수 있다. 
-1. 힙 정렬(Heap Sort) 구현
-2. Heapify 구현
+1. 힙 정렬(Heap Sort)
+2. Heapify
 
 </br>[Contents](#Contents)</br></br>
 
@@ -334,7 +334,7 @@ Deletion : O(log(n) [데이터 삭제도 추가와 마찬가지이다.)
 - 연결리스트를 이용하여 우선순위 큐 구현
 - 힙을 이용하여 우선순위 큐 구현
 
-### Applications of Priority Queue ###
+### Applications ###
 우선순위 큐는 운영체제, 여러 알고리즘에 많이 응용된다. 운영체제에서 ISR(인터럽트 서비스 루틴), A* 길찾기 알고리즘, 다익스트라 최단경로, Prim's algorithm 등에 많이 응용된다.
 1. A* 길찾기 알고리즘
 2. 다익스트라 최단 경로
