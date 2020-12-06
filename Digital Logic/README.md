@@ -1012,8 +1012,6 @@ sum은 XOR게이트, carry는 AND게이트 사용하여 연결
 - 지연시간은 n비트 가산기인 경우, 2n 또는 2n+2이다. `32비트 가산기의 지연시간 = 64 또는 66`  
 - RCA(ripple carry adder)라고도 한다.
 
-<br>[Contents](#Contents)<br><br>
-
 ### Comparator
 비교기(Comparator)는 두 수의 크기에 따라 같다,크다,작다의 3가지 상태를 출력하는 조합논리회로이다.
 
