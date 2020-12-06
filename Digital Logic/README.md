@@ -21,7 +21,7 @@
     - [XNOR](#XNOR)
 - Ch 4 : [Boolean Algebra](#Boolean-Algebra)
     - [부울대수의 규칙](#부울대수의-규칙)
-    - [De Morgan's Theorem](#De-Morgan's-Theorem)
+    - [De Morgan's Theorem](#de-morgan's-theorem)
     - [NAND와 NOR의 만능 특성](#NAND와-NOR의-만능-특성)
 - Ch 5 : [SOP and POS](#SOP-and-POS)
     - [Sum of Product](#Sum-of-Product)
