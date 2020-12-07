@@ -1042,6 +1042,44 @@ sum은 XOR게이트, carry는 AND게이트 사용하여 연결
 
 <br>[Contents](#Contents)<br><br>
 
+## Sequential Logic Circuit
+현재의 입력 및 과거의 입력/출력 신호 등 모두에 의해서 출력논리가 결정되는 회로, 값을 저장하기 위한 래치, 플립플롭, 레지스터, 메모리 등의 소자로 현재 상태를 저장한다.
+
+### SR Latch
+- S(set)가 0일 때 1을 출력, R(reset)이 0일 때 0을 출력, 둘다 1일때는 기존값 유지하는 순차회로이다.
+- S,R을 둘 다 0으로 설정하는 경우에는 출력값을 예측할 수 없으므로 허용되지 않는다.
+- 기계적인 진동에 의한 contact bounce 오류를 제거하기 위해 사용된다.
+
+### Gated SR Latch
+- EN(enable)신호가 있는 SR 래치
+- EN=0이면 SR래치의 입력값이 1,1 이므로 기존값 유지, EN=1이면 입력이 not되어 출력값이 변할 수 있다.
+- S,R이 1일 때 활성화되므로 `active-high` 신호이다.
+- EN=1이고, S,R이 각각 1이면 다음 SR 래치에서 S,R이 각각 0,0이 되므로 허용될 수 없는 값이 나온다.
+
+### D Latch
+- Gated SR Latch의 입력 하나를 인버터로 묶어서 허용되지 않는 값 입력으로 들어갈 수 없도록 만든 래치
+- 일반적으로 가장 많이 사용되는 래치이다. (보통 래치라고 하면 이 D래치를 말한다.)
+- EN=1이면, 출력 Q는 입력 D값을 그대로 출력하므로 `trasparent latch` 라고도 한다. 
+
+#### Clock 신호
+- clock 신호는 주기적인 square wave이다.
+- 의미있는 정보를 보내는 것이 아니고 타이밍을 맞추기 위해 사용한다. 
+- Clock 신호에 맞추어 래치나 플립플롭들이 동시에 정보를 저장한다.
+
+### Flip-Flops
+- clock 신호가 변화하는 시점(edge)에 맞추어 동작 `(edge-sensitive)`
+- 반면에, latch는 clock 신호 값에 맞추어 동작 `(level-sensitive)
+- 상승/하강 edge 중 동작하는 edge에 따라 rising edge triggered F/F, falling edge triggered F/F가 있다.
+
+### D F/F
+- 전통적인 D rising edge triggered F/F이다.
+- C(clock)=0이면, S,R=1이 되므로 기존값 유지
+- C=0->1로 바뀌는 순간에 D=0의 입력값을 주면 SR래치에 S=1,R=0이므로 Q=0(비활성화)된다.
+- C=0->1로 바뀌는 순간에 D=1의 입력값을 주면 SR래치에 S=0,R=1이므로 Q=1(활성화)된다.
+- 따라서, C=0,C=1 일 때는 작동하지 않고(기존값을 유지), C=0->1로 바뀌는 순간에 D값에 따라 Q 값을 출력한다.
+
+### Pulse
+
 ## Reference
 - [KOCW 강의 - 디지털 논리 회로 익히기](http://www.kocw.net/home/search/kemView.do?kemId=1319470)
 - [정보통신기술용어해설](http://www.ktword.co.kr/abbr_view.php?nav=2&id=124&m_temp1=4893)
