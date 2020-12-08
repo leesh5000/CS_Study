@@ -111,6 +111,7 @@ print(int('3'))
 ```
 
 ### 연산
+```
 i1 = 39
 i2 = 939
 big_int1 = 9999999999999999999991293810
@@ -120,13 +121,13 @@ f2 = 3.784
 f3 = .5
 f4 = 10.
 
-## 연산
 print(i1*i2)
 print(big_int1 * big_int2)
 print(f1 ** f2)
 
 result = f3 + i2
 print(result, type(result))
+
 
 ## 형 변환
 ```
