@@ -23,12 +23,16 @@
 기본출력
 ```
 print('Hello Python!')
+## Hello Python!
 
 print("Hello Python!")
+## Hello Python!
 
 print("""Hello Python!""")
+## Hello Python!
 
 print('''Hello Python!''')
+## Hello Python!
 ```
 
 줄바꿈
@@ -40,56 +44,67 @@ print()
 Seperate 옵션 사용
 ```
 print('T', 'E', 'S', 'T', sep='')
+# TEST
 
 print('2020','09','07', sep='-')
+# 2020-09-07
 
-print('leesh5000','google.com', sep='@')
+print('lsh','google.com', sep='@')
+# lsh@google.com
 ```
 
 End 옵션 사용
 ```
 print('Hi', end=' Python')
+# Hi Python
 
 print('\nPython is ', end='Good\n')
-
+# Python is Good
 ```
 
 format 옵션 사용
 ```
-print("\n[format 옵션 사용]")
-
 print('{} and {}'.format(1,2))
+# 1 and 2
 
 print("{0} and {1} and {0}".format('zero','one'))
+# zero and one and zero
 
 print("{a} are {b}".format(a='You', b='Me'))
+# You are Me
 
 print("%s's favorite number is %d" % ('SH', 7))
+# SH's favorite number is 7
 
 print("Test1 : %5d, Price : %4.2f" % (101, 1234.56789))
+# Test1 :   101, Price : 1234.57
 
 print("Test2 : {0: 5d}, Price : {1: 4.2f}".format(101,1234.567))
+# Test2 :   101, Price :  1234.57
 
 print("Test3 : {a: 5d}, Price : {b: 4.2f}".format(a=101,b=1234.567))
-
+# Test3 :   101, Price :  1234.57
 ```
 
 Escape 코드
 ```
-print("\n[Escape 코드 사용]")
-
 print("'you'")
+# 'you'
 
 print('"Hi"')
+# "Hi"
 
 print('\'Hello\'')
+# 'Hello'
 
 print('\\Python\\')
+# \pytonh\
 
 print('\\n\n')
+# \n
 
 print('\ttap')
-
+#    tap
 ```
 
 <br>[Contents](#Contents)<br><br>
@@ -106,31 +121,26 @@ print('\ttap')
 
 ```
 v_str1 = "Niceman"
-
 v_bool = True
-
 v_str2 = "Goodboy"
-
 v_float = 10.3
-
 v_int = 7
-
 v_dict = {
     "name" : "Kim",
     "age" : 25
 }
-
 v_tuple = 3, 5, 7
-
 v_set = {7, 8, 9}
-
 v_list = [3, 5, 7]
 
 print(type(v_tuple))
+# <class 'tuple'>
 
 print(type(v_set))
+# <class 'set'>
 
 print(type(v_float))
+# <class 'float'>
 ```
 
 #### 형 변환
@@ -270,7 +280,8 @@ print('z' not in str_o4)
 
 #### 문자열 형변환
 ```
-print(str(77) + 'a') # 77a
+print(str(77) + 'a') 
+# 77a
 ```
 
 #### 문자열 관련 함수
