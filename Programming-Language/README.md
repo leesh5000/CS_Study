@@ -17,6 +17,8 @@
 - 파이썬 인터프리터만 있으면 어느 운영체제든지 실행가능하다.
 - 과학, 머신러닝, 웹 등 범용적으로 사용된다.
 
+<br>[Contents](#Contents)<br><br>
+
 ### 기본출력
 기본출력
 ```
@@ -67,6 +69,8 @@ print('\\n\n')
 print('\ttap')
 ```
 
+<br>[Contents](#Contents)<br><br>
+
 ### 파이썬의 데이터타입
 - Boolean
 - Numbers
@@ -110,7 +114,7 @@ print(int(result2))
 print(int('3'))
 ```
 
-### 연산
+#### 연산
 ```
 i1 = 39
 i2 = 939
@@ -127,9 +131,9 @@ print(f1 ** f2)
 
 result = f3 + i2
 print(result, type(result))
+```
 
-
-## 형 변환
+#### 형 변환
 ```
 a = 5.
 b = 10
@@ -142,7 +146,7 @@ print(int(result2))
 print(int('3'))
 ```
 
-## 수치 연산 관련 함수
+#### 수치 연산 관련 함수
 ```
 print(abs(-7))
 n, m = divmod(100, 8) ## n = quotient , m = remainder
@@ -151,6 +155,8 @@ import math ## 수학관련 모듈
 print(math.ceil(5.1)) ## 5.1보다 크면서 가장 작은 정수 = 6
 print(math.floor(3.874)) ## 3.874보다 작으면서 가장 큰 정수 = 3
 ```
+
+<br>[Contents](#Contents)<br><br>
 
 ### 문자열
 ```
