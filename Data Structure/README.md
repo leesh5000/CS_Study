@@ -41,11 +41,14 @@
 
 </br>[Contents](#Contents)</br></br>
 
+
 ## Array
 - 같은 자료형들을 연속적인 위치에 나란히 저장하는 자료구조
 - 인덱스를 통해 데이터에 접근가능 `Radom Access(임의접근)`
 - 배열의 크기는 변경 불가
 - 데이터의 추가/삭제에 이사비용이 발생
+
+</br>
 
 ### 배열의 시간복잡도
 ```
@@ -54,14 +57,6 @@ Search : O(n) [배열이 모두 정렬되어있는 경우, 이진탐색을 이�
 Insertion : O(n) [배열의 첫 번째 공간에 데이터를 삽입하여 이사비용이 발생할 때]
 Deletion : O(n) [배열의 첫 번째 요소를 삭제하고 빈 공간을 없애기 위해 이사비용이 발생할 때]
 ```
-
-### Implementation ###
-- 배열 구현 [C](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C/ArrayList/ArrayList.c)
-
-### Applications ###
-배열의 단점은 사이즈가 고정되어있다는 점이다. 하지만, 배열을 응용하여 동적배열을 만들면 이를 해결할 수 있다. 동적배열은 배열의 사이즈가 동적으로 늘어나고 줄어들 수 있는 배열을 말하며 프로그래밍 언어마다 vector(C++), list(C#), ArrayList(java), list(python)로 제공된다.
-1. 동적배열
-2. 이진탐색(Binary Search) : 이진탐색이란, 정렬된 배열내에서 특정 값을 찾는 탐색 알고리즘을 말한다. [C](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C/ArrayList/BinarySearch.c)
 
 </br>[Contents](#Contents)</br></br>
 

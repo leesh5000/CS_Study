@@ -10,6 +10,7 @@
     - [문자열](#문자열)
     - [리스트와 튜플](#리스트와-튜플)
     - [딕셔너리](#딕셔너리)
+    - [집합](#집합)
 
 <br>[Home](https://github.com/leesh5000/ComputerScience_Study)</br></br>
 
@@ -39,11 +40,15 @@ print('''Hello Python!''')
 -> Hello Python!
 ```
 
+<br>
+
 #### 줄바꿈
 ```
 print()
 -> 
 ```
+
+<br>
 
 #### Seperate 옵션 사용
 ```
@@ -57,6 +62,9 @@ print('lsh','google.com', sep='@')
 -> lsh@google.com
 ```
 
+<br>
+
+
 #### End 옵션 사용
 ```
 print('Hi', end=' Python')
@@ -65,6 +73,9 @@ print('Hi', end=' Python')
 print('\nPython is ', end='Good\n')
 -> Python is Good
 ```
+
+<br>
+
 
 #### format 옵션 사용
 ```
@@ -89,6 +100,9 @@ print("Test2 : {0: 5d}, Price : {1: 4.2f}".format(101,1234.567))
 print("Test3 : {a: 5d}, Price : {b: 4.2f}".format(a=101,b=1234.567))
 -> Test3 :   101, Price :  1234.57
 ```
+
+<br>
+
 
 #### Escape 코드
 ```
@@ -123,6 +137,9 @@ print('\ttap')
 - Sets
 - Dictionaries
 
+<br>
+
+
 ### 기본자료형
 ```
 v_str1 = "Niceman"
@@ -148,6 +165,8 @@ print(type(v_float))
 -> <class 'float'>
 ```
 
+<br>
+
 #### 형 변환
 ```
 a = 5.
@@ -167,6 +186,8 @@ print(int('3'))
 -> 3
 ```
 
+<br>
+
 #### 연산
 ```
 i1 = 39
@@ -185,6 +206,8 @@ print(f1 ** f2)
 result = f3 + i2
 print(result, type(result))
 ```
+
+<br>
 
 #### 수치 연산 관련 함수
 ```
@@ -220,6 +243,8 @@ print(escape_str2)
 -> Tab     Tab
 ```
 
+<br>
+
 #### Raw String
 ```
 raw_s1 = r'C:\Programs\Test\Bin'
@@ -230,6 +255,8 @@ raw_s2 = r"\n\t''"
 print(raw_s2)
 -> \n\t''
 ```
+
+<br>
 
 #### 멀티라인
 ```
@@ -248,6 +275,8 @@ multiline
 test 
 '''
 ```
+
+<br>
 
 #### 문자열 연산
 ```
@@ -269,11 +298,15 @@ print('z' not in str_o4)
 -> True
 ```
 
+<br>
+
 #### 문자열 형변환
 ```
 print(str(77) + 'a') 
 -> 77a
 ```
+
+<br>
 
 #### 문자열 관련 함수
 ```
@@ -295,6 +328,8 @@ print(a.replace('nice','good'))
 print(list(reversed(b)))
 -> ['e', 'g', 'n', 'a', 'r', 'o']
 ```
+
+<br>
 
 #### 문자열 슬라이싱
 - 파이썬에서 immutable은 변경불가능한 자료형을 말한다.
@@ -331,6 +366,8 @@ print(d[::-1])
 ### 리스트와 튜플
 - 리스트(순서o, 중복o, 수정o, 삭제o)
 
+<br>
+
 #### 리스트 선언
 ```
 a = []
@@ -339,6 +376,8 @@ c = [1, 2, 3, 4]
 d = [10, 100, 'Pen', 'Banana', 'Orange']
 e = [10, 100, ['Pen', 'Banana', 'Orange']]
 ```
+
+<br>
 
 #### 리스트 인덱싱
 ```
@@ -358,6 +397,8 @@ print(e[-1][-2])
 -> Banana
 ```
 
+<br>
+
 #### 슬라이싱
 ```
 print(d[0:3])
@@ -366,6 +407,8 @@ print(d[0:3])
 print(e[2][1:3])
 -> ['Banana', 'Orange']
 ```
+
+<br>
 
 #### 연산
 ```
@@ -378,6 +421,8 @@ print(c*3)
 print(str(c[0])+'hi')
 -> 1hi
 ```
+
+<br>
 
 #### 리스트 수정/삭제
 ```
@@ -401,6 +446,8 @@ del c[-1]
 print(c)
 -> [77, 1000, 10000, 3]
 ```
+
+<br>
 
 #### 리스트 함수
 ```
@@ -446,6 +493,8 @@ print(y)
 - 튜플(순서o, 중복o, 수정x, 삭제x)
 - 변경되면 안되는 중요한 값이 저장되는 곳에 쓰임
 
+<br>
+
 #### 튜플의 선언
 ```
 a = ()
@@ -454,6 +503,8 @@ c = (1, 2, 3, 4)
 d = (10, 100, ('a', 'b', 'c'))
 e = tuple()
 ```
+
+<br>
 
 #### 튜플 인덱싱
 ```
@@ -464,6 +515,8 @@ print(d[2][1])
 -> b
 ```
 
+<br>
+
 #### 튜플 슬라이싱
 ```
 print(d[2:])
@@ -472,6 +525,8 @@ print(d[2:])
 print(d[2][0:2])
 -> ('a', 'b')
 ```
+
+<br>
 
 #### 연산
 ```
@@ -482,6 +537,8 @@ print(c*3)
 -> (1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4)
 
 ```
+
+<br>
 
 #### 튜플함수
 ```
@@ -505,6 +562,8 @@ print(e.count(1))
 - 딕셔너리는 순서x, 중복x(key만), 수정o, 삭제o
 - 딕셔너리는 웹 브라우저 데이터 송신에 사용되는 Json 형식과 비슷
 
+<br>
+
 #### 선언
 ```
 a = {'name': 'Lee', 'phone': '010-0000-0000', 'address': '12345'}
@@ -527,6 +586,8 @@ print(c['arr'][1:3])
 -> [2, 3]
 ```
 
+<br>
+
 #### 딕셔너리 추가
 ```
 a['birth'] = '941008'
@@ -538,6 +599,8 @@ a['rank2'] = (1,2,3,)
 print(a)
 -> {'name': 'Lee', 'phone': '010-0000-0000', 'address': '12345', 'birth': '941008', 'rank': [1, 2, 3], 'rank2': (1, 2, 3)}
 ```
+
+<br>
 
 #### keys, values, items
 ```
@@ -566,6 +629,67 @@ print(2 in b)
 print('name' in a)
 -> True
 ```
+<br>[Contents](#Contents)<br><br>
 
+### 집합
+집합(set)은 순서x, 중복x
+```
+a = set()
+b = set([1, 2, 3, 4])
+c = set([1, 4, 6, 6, 6])
 
+print(type(a))
+-> <class 'set'>
 
+print(c)
+-> {1, 4, 6}
+```
+
+<br>
+
+#### set은 주로 변환을 해서 사용한다.
+```
+t = tuple(b)
+print(t)
+-> (1, 2, 3, 4)
+
+l = list(b)
+print(l)
+-> (1, 2, 3, 4)
+
+s1 = set([1, 2, 3, 4, 5, 6])
+s2 = set([4, 5, 6, 7, 8, 9])
+
+print(s1.intersection(s2))
+-> {4, 5, 6}
+
+print(s1 & s2)
+-> {4, 5, 6}
+
+print(s1.union(s2))
+-> {1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+print(s1 | s2)
+-> {1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+print(s1 - s2)
+-> {1, 2, 3}
+
+print(s1.difference(s2))
+-> {1, 2, 3}
+```
+
+<br>
+
+#### 추가/제거
+```
+s3 = set([7, 8, 9, 15])
+s3.add(18)
+s3.add(7)
+print(s3)
+-> {7, 8, 9, 15, 18}
+
+s3.remove(15)
+print(s3)
+-> {7, 8, 9, 18}
+```
