@@ -9,6 +9,7 @@
     - [기본자료형](#기본자료형)
     - [문자열](#문자열)
     - [리스트와 튜플](#리스트와-튜플)
+    - [딕셔너리](#딕셔너리)
 
 <br>[Home](https://github.com/leesh5000/ComputerScience_Study)</br></br>
 
@@ -499,3 +500,72 @@ print(e.count(1))
 ```
 
 <br>[Contents](#Contents)<br><br>
+
+### 딕셔너리
+- 딕셔너리는 순서x, 중복x(key만), 수정o, 삭제o
+- 딕셔너리는 웹 브라우저 데이터 송신에 사용되는 Json 형식과 비슷
+
+#### 선언
+```
+a = {'name': 'Lee', 'phone': '010-0000-0000', 'address': '12345'}
+b = {0: 'Hello Python', 1: 'Hello Java'}
+c = {'arr': [1,2,3,4,5], 'tuple': (1,2,3,4,5,)}
+
+print(type(a))
+-> <class 'dict'>
+
+print(a['name'])
+-> Lee
+
+print(a.get('name'))
+-> Lee
+
+print(a.get('birth'))
+-> None
+
+print(c['arr'][1:3])
+-> [2, 3]
+```
+
+#### 딕셔너리 추가
+```
+a['birth'] = '941008'
+print(a)
+-> {'name': 'Lee', 'phone': '010-0000-0000', 'address': '12345', 'birth': '941008'}
+
+a['rank'] = [1,2,3]
+a['rank2'] = (1,2,3,)
+print(a)
+-> {'name': 'Lee', 'phone': '010-0000-0000', 'address': '12345', 'birth': '941008', 'rank': [1, 2, 3], 'rank2': (1, 2, 3)}
+```
+
+#### keys, values, items
+```
+print(a.keys())
+-> dict_keys(['name', 'phone', 'address', 'birth', 'rank', 'rank2'])
+
+print(a.keys()[2])
+-> 에러
+
+print(list(a.keys())[1:3])
+-> ['phone', 'address']
+
+print(a.values())
+-> dict_values(['Lee', '010-0000-0000', '12345', '941008', [1, 2, 3], (1, 2, 3)])
+
+print(a.items())
+-> dict_items([('name', 'Lee'), ('phone', '010-0000-0000'), ('address', '12345'), ('birth', '941008'), ('rank', [1, 2, 3]), ('rank2', (1, 2, 3))])
+
+temp = list(a.items())
+print(temp)
+-> [('name', 'Lee'), ('phone', '010-0000-0000'), ('address', '12345'), ('birth', '941008'), ('rank', [1, 2, 3]), ('rank2', (1, 2, 3))]
+
+print(2 in b)
+-> False
+
+print('name' in a)
+-> True
+```
+
+
+
