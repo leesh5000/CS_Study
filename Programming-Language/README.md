@@ -14,9 +14,9 @@
 
 <br>[Home](https://github.com/leesh5000/ComputerScience_Study)</br></br>
 
-## Python
+# Python
 
-### 파이썬의 장점
+## 파이썬의 장점
 - 사용하기 쉽다.
 - 파이썬 인터프리터만 있으면 어느 운영체제든지 실행가능하다.
 - 다양한 라이브러리가 존재한다.
@@ -24,7 +24,7 @@
 
 <br>[Contents](#Contents)<br><br>
 
-### 기본출력
+## 기본출력
 
 ```
 print('Hello Python!')
@@ -115,7 +115,7 @@ print('\ttap')
 
 <br>[Contents](#Contents)<br><br>
 
-### 파이썬의 데이터타입
+## 파이썬의 데이터타입
 - Boolean
 - Numbers
 - String
@@ -127,7 +127,7 @@ print('\ttap')
 
 <br>[Contents](#Contents)<br><br>
 
-### 기본자료형
+## 기본자료형
 ```
 v_str1 = "Niceman"
 v_bool = True
@@ -206,7 +206,7 @@ print(math.floor(3.874)) # 3.874보다 작으면서 가장 큰 정수
 
 <br>[Contents](#Contents)<br><br>
 
-### 문자열
+## 문자열
 ```
 str1 = "I am Boy."
 str2 = "NiceMan"
@@ -332,7 +332,7 @@ print(d[::-1])
 
 <br>[Contents](#Contents)<br><br>
 
-### 리스트와 튜플
+## 리스트와 튜플
 - 리스트(순서o, 중복o, 수정o, 삭제o)
 
 #### 리스트 선언
@@ -446,7 +446,7 @@ print(y)
 
 <br>[Contents](#Contents)<br><br>
 
-### 튜플
+## 튜플
 - 튜플(순서o, 중복o, 수정x, 삭제x)
 - 변경되면 안되는 중요한 값이 저장되는 곳에 쓰임
 
@@ -505,7 +505,7 @@ print(e.count(1))
 
 <br>[Contents](#Contents)<br><br>
 
-### 딕셔너리
+## 딕셔너리
 - 딕셔너리는 순서x, 중복x(key만), 수정o, 삭제o
 - 딕셔너리는 웹 브라우저 데이터 송신에 사용되는 Json 형식과 비슷
 
@@ -572,7 +572,7 @@ print('name' in a)
 ```
 <br>[Contents](#Contents)<br><br>
 
-### 집합
+## 집합
 집합(set)은 순서x, 중복x
 ```
 a = set()
