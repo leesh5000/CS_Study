@@ -15,9 +15,9 @@
 
 <br>[Home](https://github.com/leesh5000/ComputerScience_Study)</br></br>
 
-## Introduction
+# Introduction
 
-### 아날로그와 디지털 ###
+## 아날로그와 디지털
 - 아날로그는 연속적인 값
 - 디지털은 이산적인(discrete) 값
 
@@ -33,7 +33,7 @@
 
 <br>
 
-### 이진값과 전압 ###
+## 이진값과 전압
 - 연속적인 전기신호의 전압이 기준값보다 낮을 때는 0, 높을 때는 1로 이진값으로 변환
 - 0->1인 부분을 `Rising Edge`, 1->0인 부분을 `Falling Edge`
 
