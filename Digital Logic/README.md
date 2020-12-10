@@ -3,8 +3,14 @@
 ## Contents
 
 - Ch 1 : [Introduction](#introduction)
+  - [아날로그와 디지털](#아날로그와-디지털)
+  - [이진값과 전압](#이진값과-전압)
+  - [논리회로의 종류](#논리회로의-종류)
 - Ch 2 : [Number System](#number-system)
+  - [부동소수점 수](#부동소수점-수)
 - Ch 3 : [Logic Gate](#logic-gate)
+  - [Buffer](#buffer)
+  - [Inverter](#inverter)
 - Ch 4 : [Boolean Algebra](#boolean-algebra)
 - Ch 5 : [SOP and POS](#sop-and-pos)
 - Ch 6 : [Karnaugh Map](#karnaugh-map)
@@ -45,11 +51,9 @@
 <br>
 
 ## 논리회로의 종류
-- 조합논리회로 (combinational logic circuit)
-  - 기본 게이트의 조합으로 구성되는 회로 
+- 조합논리회로 (combinational logic circuit): 현재입력을 조합하여 출력을 결정하는 논리회로 
   - `ex) 리모컨의 숫자 버튼`
-- 순차논리회로 (sequential logic circuit)
-  - 현재 상태를 저장하는 `저장소자`가 포함된 논리회로 
+- 순차논리회로 (sequential logic circuit): 현재상태와 입력을 조합하여 다음상태와 출력을 결정하는 논리회로 
   - `ex) 리모컨의 채널 +/- 버튼`
 
 #### 저장소자의 종류 ####
