@@ -426,6 +426,8 @@ A+A•B
 |1 0|x x|0 1|reset|
 |1 1|x x|1 0|set|
 
+<br>[Contents](#Contents)<br><br>
+
 ## 플립플롭
 - clock 신호가 변화하는 시점(edge)에 맞추어 동작`(Edge-sensitive)`하는 논리회로
 - 클럭입력과 래치소자로 만듦
@@ -441,8 +443,6 @@ A+A•B
 - 상태표(stable table)은 플립플롭의 상태를 보여줌
 - 여기표(excitation table)은 플립플롭의 상태를 바꾸기 위한 입력값을 알려줌
 - p는 현재상태, n은 다음상태
-
-<br>[Contents](#Contents)<br><br>
 
 ## D F/F
 - C(clock)=0 또는 1이면, 기존값 유지
@@ -475,19 +475,13 @@ A+A•B
 #### State Eq
 - `n=d`
 
-<br>[Contents](#Contents)<br><br>
-
 ## Edge-triggered D F/F
 - `pulse transition detector`를 이용해서 아주 짧은 시간만 D Latch의 EN=1로 만들어 마치 플립플롭 같은 효과를 만들어 냄
 - pulse transition detector + D Lath
 
-<br>[Contents](#Contents)<br><br>
-
 ## Master-Slave D F/F
 - 2개의 D Latch를 사용하여 만든 플립플롭
 - 앞의 두가지 D F/F와 동작이 같다.
-
-<br>[Contents](#Contents)<br><br>
 
 ## JK F/F
 - 카운터를 만들때 유용한 플립플롭
@@ -528,8 +522,6 @@ A+A•B
 #### State Eq
 - `n = jp'+k'p` 
 
-<br>[Contents](#Contents)<br><br>
-
 ### T F/F
 - JK F/F의 J와 K를 AND게이트로 연결하여 T를 입력으로 함
 
@@ -559,8 +551,6 @@ A+A•B
 #### State Eq
 - `n = t'p+tp' = t⊕p`
 
-<br>[Contents](#Contents)<br><br>
-
 ### 비동기 리셋 D F/F (D F/F with Async. Reset)
 - 동기(Synchronous): 클럭신호에 맞추어 값이 변할 경우
 - 비동기(Asynchronous): 클럭신호와 상관업싱 값이 변할 경우
@@ -575,9 +565,7 @@ A+A•B
 |1 ↑ 1|x x|1 0|Set|
 |1 x x|Q<sub>0</sub> Q'<sub>0</sub>|Q<sub>0</sub> Q'<sub>0</sub>|No change|
 
-<br>
-
-### 비동기 셋/리셋 JK F/F (JK F/F with Async. Set and Reset)
+## 비동기 셋/리셋 JK F/F (JK F/F with Async. Set and Reset)
 - 클럭신호와 상관없이 셋,리셋을 할 수 있는 JK F/F
 - 비동기 Set은 `preset`
 - 비동기 Reset은 `clear`
