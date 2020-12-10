@@ -19,13 +19,7 @@
 - Ch 8 : [Combinational Logic Circuit](#combinational-logic-circuit)
 - Ch 9 : [Sequential Logic Circuit](#sequential-logic-circuit)
   - [래치](#래치)
-    - [SR Latch](#sr-latch)
-    - [Gated SR Latch](#gated-sr-latch)
-    - [D Latch](#d-latch)
   - [플립플롭](#플립플롭)
-    - [D F/F](#d-ff)
-    - [J/K F/F](#jk-ff)
-    - [T F/F](#t-ff)
 - [Reference](#reference)
 
 <br>[Home](https://github.com/leesh5000/ComputerScience_Study)</br></br>
@@ -421,12 +415,12 @@ A+A•B
 - 플립플롭이 여러 개 모이면 레지스터가 됨
 - 메모리를 대신 순차회로의 저장소로 사용가능, 하지만 순차회로의 저장소로 대부분은 플립플롭을 사용
 
-<<br>[Contents](#Contents)<br><br>
+<br>[Contents](#Contents)<br><br>
 
 ## 래치
 - clock 신호 값(level)에 맞추어 동작`(level-sensitive)`하는 기억소자
 
-<<br>[Contents](#Contents)<br><br>
+<br>[Contents](#Contents)<br><br>
 
 ## SR Latch
 - S=0을 입력하면 Q=1을 출력 `(Set)`
@@ -444,7 +438,7 @@ A+A•B
 |1 0|x x|0 1|reset|
 |1 1|Q<sub>0</sub> Q'<sub>0</sub>|Q<sub>0</sub> Q'<sub>0</sub>|no change|
 
-<<br>[Contents](#Contents)<br><br>
+<br>[Contents](#Contents)<br><br>
 
 ## Gated SR Latch
 - EN(enable)신호가 있는 SR 래치
@@ -462,7 +456,7 @@ A+A•B
 |1 1 0|x x|x x|set|
 |1 1 1|x x|1 1|`Not allowed`|
 
-<<br>[Contents](#Contents)<br><br>
+<br>[Contents](#Contents)<br><br>
 
 ## D Latch
 - Gated SR Latch의 입력 하나를 인버터로 묶어서 허용되지 않는 값 입력으로 들어갈 수 없도록 만든 래치
@@ -477,7 +471,7 @@ A+A•B
 |1 0|x x|0 1|reset|
 |1 1|x x|1 0|set|
 
-<<br>[Contents](#Contents)<br><br>
+<br>[Contents](#Contents)<br><br>
 
 ## 플립플롭
 - clock 신호가 변화하는 시점(edge)에 맞추어 동작`(Edge-sensitive)`하는 논리회로
@@ -494,7 +488,7 @@ A+A•B
 - 여기표(excitation table)은 플립플롭의 상태를 바꾸기 위한 입력값을 알려줌
 - p는 현재상태, n은 다음상태
 
-<<br>[Contents](#Contents)<br><br>
+<br>[Contents](#Contents)<br><br>
 
 ## D F/F
 - C(clock)=0 또는 1이면, 기존값 유지
@@ -528,19 +522,19 @@ A+A•B
 #### State Eq
 - `n=d`
 
-<<br>[Contents](#Contents)<br><br>
+<br>[Contents](#Contents)<br><br>
 
 ## Edge-triggered D F/F
 - `pulse transition detector`를 이용해서 아주 짧은 시간만 D Latch의 EN=1로 만들어 마치 플립플롭 같은 효과를 만들어 냄
 - pulse transition detector + D Lath
 
-<<br>[Contents](#Contents)<br><br>
+<br>[Contents](#Contents)<br><br>
 
 ## Master-Slave D F/F
 - 2개의 D Latch를 사용하여 만든 플립플롭
 - 앞의 두가지 D F/F와 동작이 같다.
 
-<<br>[Contents](#Contents)<br><br>
+<br>[Contents](#Contents)<br><br>
 
 ## JK F/F
 - 카운터를 만들때 유용한 플립플롭
@@ -580,7 +574,7 @@ A+A•B
 #### State Eq
 - `n = jp'+k'p` 
 
-<<br>[Contents](#Contents)<br><br>
+<br>[Contents](#Contents)<br><br>
 
 ### T F/F
 - JK F/F의 J와 K를 AND게이트로 연결하여 T를 입력으로 함
@@ -611,7 +605,7 @@ A+A•B
 #### State Eq
 - `n = t'p+tp' = t⊕p`
 
-<<br>[Contents](#Contents)<br><br>
+<br>[Contents](#Contents)<br><br>
 
 ### 비동기 리셋 D F/F (D F/F with Async. Reset)
 - 동기(Synchronous): 클럭신호에 맞추어 값이 변할 경우
