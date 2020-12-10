@@ -193,7 +193,7 @@
 - 0, 1, 논리연산(AND,OR,NOT)들을 대수화 한 것
 - 부울대수는 논리회로의 관계를 표현하기에 유용다.
 
-## 부울대수의 법칙
+### 부울대수의 법칙
 - 교환법칙 (Commutative Law)
   - 부울 합 (OR) : A+B = B+A
   - 부울 곱 (AND) : A•B = B•A
@@ -231,7 +231,7 @@ A+A•B
 = A      
 ```
 
-## 드모르간의 법칙
+### 드모르간의 법칙
 - 제 1법칙 (1's Theorem)
   - (A•B)' = A'+B'
   - 변수의 곱에 대한 보수는 각 변수들의 보수의 합과 같다.
@@ -268,7 +268,7 @@ A+A•B
 규칙3) 규칙1,2를 만족시키면서 출력이 1인 모든 셀들을 그룹화해야한다.
 4. 그룹을 논리식으로 표현한다.
 
-## Gray Code
+### Gray Code
 - 수의 크기가 변할 때 인접한 수 사이에 한 자리만 변하게 만들어진 코드
 - 순차적인 진행에 유리, 연산에 불리
 - I/O장치, A/D변환기, 하드디스크 등에 사용
@@ -308,7 +308,7 @@ A+A•B
   - 논리값을 결정하는 연산회로, 논리소자 및 플립플롭으로 구성
   - 조합논리회로와 순차논리회로가 있음
 
-## 논리회로의 종류
+### 논리회로의 종류
 - 조합논리회로 (Combinational Logic Circuit)
   - 현재의 입력을 조합해서 출력이 결정되는 회로  `ex) 리모컨의 숫자 버튼`
   - 기억소자가 없음
@@ -341,28 +341,28 @@ A+A•B
 - [논리게이트](#Logic-Gate)만으로 구성
 - `adder, multiplexer, en/decoder, gates` 등이 있음
 
-## Adder
+### Adder
 - 두 오퍼랜드를 더하는 조합논리회로
 - 반가산기와 전가산기가 있음
 
-## Comparator
+### Comparator
 - 두 수의 크기에 따라 같다,크다,작다의 3가지 상태를 출력하는 조합논리회로이다.
 
-## Decoder & Encoder
+### Decoder & Encoder
 - 디코더는 n비트 이진코드를 2<sup>n</sup>개의 서로다른 출력으로 만들어주는 논리회로를 말한다. 
 - 인코더는 디코더의 반대로, 개별적인 입력을 코드화해서 이진코드로 만들어주는 논리회로이다. 
 
-## Multiplexer (Mux)
+### Multiplexer (Mux)
 - 여러 개의 입력 중 하나를 선택하여 출력으로 내보내는 조합논리회로
 - 일종의 `데이터 선택기` 
 - 입력의 개수에 따라 2-to-1, 4-to-1, .. 등이 있음
 
-## Demultiplexer (DeMux)
+### Demultiplexer (DeMux)
 - 1개의 입력을 2<sup>n</sup>개의 출력선 중 하나로 내보내는 조합논리회로
 - 일종의 `데이터 분배기`
 - 출력선의 개수에 따라 1-to-2, 1-to-4, ..등이 있음
 
-## Parity
+### Parity
 - 패리티는 디지털 신호 전송 시 전송 데이터에 1비트를 추가로 더 보내어 수신측에서 오류를 체크할 수 있게 해주는 조합논리회로
 
 <br>[Contents](#Contents)<br><br>
@@ -379,12 +379,12 @@ A+A•B
 - 플립플롭이 여러 개 모이면 레지스터가 됨
 - 메모리를 대신 순차회로의 저장소로 사용가능, 하지만 순차회로의 저장소로 대부분은 플립플롭을 사용
 
-## 래치
+### 래치
 - 클럭 입력을 받지않음
 - 신호 값(level)에 맞추어 동작`(level-sensitive)`하는 기억소자
 - 입력되는 값을 latch(걸어잠금)하여 기억/저장이 가능
 
-## SR Latch
+### SR Latch
 - S=0을 입력하면 Q=1을 출력 `(Set)`
 - R=0을 입력하면 Q=0을 출력 `(Reset)`
 - S=0,R=0은 허용하지 않음
@@ -400,7 +400,7 @@ A+A•B
 |1 0|x x|0 1|reset|
 |1 1|Q<sub>0</sub> Q'<sub>0</sub>|Q<sub>0</sub> Q'<sub>0</sub>|no change|
 
-## Gated SR Latch
+### Gated SR Latch
 - EN(enable)신호가 있는 SR 래치
 - EN=0이면 기존값 유지
 - EN=1이면 SR 입력값에 따라 변화
@@ -416,7 +416,7 @@ A+A•B
 |1 1 0|x x|x x|set|
 |1 1 1|x x|1 1|`Not allowed`|
 
-## D Latch
+### D Latch
 - Gated SR Latch의 입력 하나를 인버터로 묶어서 허용되지 않는 값 입력으로 들어갈 수 없도록 만든 래치
 - 일반적으로 가장 많이 사용되는 래치
 - EN=1이면 입력D를 그대로 출력하므로 `transparent latch`라고도 함
@@ -431,7 +431,7 @@ A+A•B
 
 <br>[Contents](#Contents)<br><br>
 
-## 플립플롭
+### 플립플롭
 - 클럭 입력을 받아서 값을 출력
 - clock 신호가 변화하는 시점(edge)에 맞추어 동작`(Edge-sensitive)`하는 논리회로
 - 클럭입력과 래치소자로 만듦
@@ -448,7 +448,7 @@ A+A•B
 - 여기표(excitation table)은 플립플롭의 상태를 바꾸기 위한 입력값을 알려줌
 - p는 현재상태, n은 다음상태
 
-## D F/F
+### D F/F
 - C(clock)=0 또는 1이면, 기존값 유지
 - C=0->1로 바뀌는 순간(rising edge))에 D값에 따라 출력이 결정
 
@@ -479,15 +479,15 @@ A+A•B
 #### State Eq
 - `n=d`
 
-## Edge-triggered D F/F
+### Edge-triggered D F/F
 - `pulse transition detector`를 이용해서 아주 짧은 시간만 D Latch의 EN=1로 만들어 마치 플립플롭 같은 효과를 만들어 냄
 - pulse transition detector + D Lath
 
-## Master-Slave D F/F
+### Master-Slave D F/F
 - 2개의 D Latch를 사용하여 만든 플립플롭
 - 앞의 두가지 D F/F와 동작이 같다.
 
-## JK F/F
+### JK F/F
 - 카운터를 만들때 유용한 플립플롭
 - K=1이면, Q=0 (Reset)
 - J=1이면, Q=1 (Set)
@@ -569,7 +569,7 @@ A+A•B
 |1 ↑ 1|x x|1 0|Set|
 |1 x x|Q<sub>0</sub> Q'<sub>0</sub>|Q<sub>0</sub> Q'<sub>0</sub>|No change|
 
-## 비동기 셋/리셋 JK F/F (JK F/F with Async. Set and Reset)
+### 비동기 셋/리셋 JK F/F (JK F/F with Async. Set and Reset)
 - 클럭신호와 상관없이 셋,리셋을 할 수 있는 JK F/F
 - 비동기 Set은 `preset`
 - 비동기 Reset은 `clear`
@@ -590,10 +590,10 @@ A+A•B
 
 <br>[Contents](#Contents)<br><br>
 
-## 카운터
+### 카운터
 - 정해진 순서대로 상태가 변하는 논리회로
   
-## 동기 카운터 vs 비동기 카운터
+### 동기 카운터 vs 비동기 카운터
 - 동기 카운터(Synchronous)
   - 모든 F/F이 동시에 동작
   - 모든 F/F의 clock 단자에 같은 clock 신호가 입력
@@ -607,7 +607,7 @@ A+A•B
 
 <br>[Contents](#Contents)<br><br>
 
-## FSM
+### FSM
 - `Finite State Machine(유한상태머신)`
 - 유한한 개수의 상태를 가짐
 - `입력+현재상태`에 따라 다음상태가 결정
