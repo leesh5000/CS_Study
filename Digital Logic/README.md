@@ -475,8 +475,9 @@ A+A•B
 
 ## 플립플롭
 - clock 신호가 변화하는 시점(edge)에 맞추어 동작`(Edge-sensitive)`하는 논리회로
+- 클럭입력과 래치소자로 만듦
 - 상승/하강 edge 중 동작하는 edge에 따라 rising edge triggered F/F, falling edge triggered F/F가 있음
-- D F/F, 
+- D F/F, JK F/F, .. 등이 있음
 
 #### 플립플롭 동작 특성
 - Propagation delay time (전달 지연 시간) : clock edge로부터 값이 출력되기까지 걸리는 시간
