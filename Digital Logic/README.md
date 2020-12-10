@@ -404,12 +404,11 @@ A+A•B
 
 # Sequential Logic Circuit
   - 현재상태와 입력을 조합해서 다음상태와 출력을 결정하는 회로
-  - `Latch, Flip-Flops, Register, Memory` 등의 소자를 사용하여 현재상태를 저장
-  - 클럭을 사용하여 값을 저장
+  - `Latch, Flip-Flops, Register, Memory` 등의 소자를 사용하여 현재 상태를 저장
+  - 클럭을 사용
   - `counter, register, clock divider, FSM` 등이 있음
 
 #### Latch, Flip-Flops, Register, Memory
-- 순차회로는 저장소로 위 4개를 사용할 수 있음
 - 래치는 쓰기가 어려워 잘 안쓰임
 - 실질적으로 플립플롭이 많이 쓰임
 - 플립플롭이 여러 개 모이면 레지스터가 됨
@@ -419,6 +418,7 @@ A+A•B
 
 ## 래치
 - clock 신호 값(level)에 맞추어 동작`(level-sensitive)`하는 기억소자
+- 입력되는 값을 latch(걸어잠금)하여 기억/저장이 가능
 
 <br>[Contents](#Contents)<br><br>
 
