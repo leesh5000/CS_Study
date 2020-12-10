@@ -37,7 +37,7 @@
 - 데이터의 저장과 가공이 편리
 - 시스템 설계가 편리
 
-<br>
+<br>[Contents](#Contents)<br><br>
 
 ## 이진값과 전압
 - 연속적인 전기신호의 전압이 기준값보다 낮을 때는 0, 높을 때는 1로 이진값으로 변환
@@ -48,7 +48,7 @@
 - 주파수(Frequency, 단위(Hertz)) : 1초에 진동하는 횟수
 -  T = 1 / f
 
-<br>
+<br>[Contents](#Contents)<br><br>
 
 ## 논리회로의 종류
 - 조합논리회로 (combinational logic circuit): 현재입력을 조합하여 출력을 결정하는 논리회로 
