@@ -90,8 +90,6 @@
 - 범용게이트 : NAND, NOR `모든 다른 게이트들은 이 2개의 범용게이트들을 대체하여 표현 가능`
 - 기타게이트 : XOR, XNOR
 
-<br>[Contents](#Contents)<br><br>
-
 ## Buffer
 - 입력과 출력이 같은 논리게이트
 
@@ -193,8 +191,6 @@
 - 0, 1, 논리연산(AND,OR,NOT)들을 대수화 한 것
 - 부울대수는 논리회로의 관계를 표현하기에 유용다.
 
-<br>[Contents](#Contents)<br><br>
-
 ## 부울대수의 법칙
 - 교환법칙 (Commutative Law)
   - 부울 합 (OR) : A+B = B+A
@@ -233,8 +229,6 @@ A+A•B
 = A      
 ```
 
-<br>[Contents](#Contents)<br><br>
-
 ## 드모르간의 법칙
 - 제 1법칙 (1's Theorem)
   - (A•B)' = A'+B'
@@ -271,8 +265,6 @@ A+A•B
 규칙2) 단, 크기는 2,4,8,16 ... 처럼 2의 제곱수를 가져야한다.
 규칙3) 규칙1,2를 만족시키면서 출력이 1인 모든 셀들을 그룹화해야한다.
 4. 그룹을 논리식으로 표현한다.
-
-<br>[Contents](#Contents)<br><br>
 
 ## Gray Code
 - 수의 크기가 변할 때 인접한 수 사이에 한 자리만 변하게 만들어진 코드
@@ -314,8 +306,6 @@ A+A•B
   - 논리값을 결정하는 연산회로, 논리소자 및 플립플롭으로 구성
   - 조합논리회로와 순차논리회로가 있음
 
-<br>[Contents](#Contents)<br><br>
-
 ## 논리회로의 종류
 - 조합논리회로 (Combinational Logic Circuit)
   - 현재의 입력을 조합해서 출력이 결정되는 회로  `ex) 리모컨의 숫자 버튼`
@@ -349,38 +339,26 @@ A+A•B
 - [논리게이트](#Logic-Gate)만으로 구성
 - `adder, multiplexer, en/decoder, gates` 등이 있음
 
-<<br>[Contents](#Contents)<br><br>
-
 ## Adder
 - 두 오퍼랜드를 더하는 조합논리회로
 - 반가산기와 전가산기가 있음
 
-<br>[Contents](#Contents)<br><br>
-
 ## Comparator
 - 두 수의 크기에 따라 같다,크다,작다의 3가지 상태를 출력하는 조합논리회로이다.
-
-<br>[Contents](#Contents)<br><br>
 
 ## Decoder & Encoder
 - 디코더는 n비트 이진코드를 2<sup>n</sup>개의 서로다른 출력으로 만들어주는 논리회로를 말한다. 
 - 인코더는 디코더의 반대로, 개별적인 입력을 코드화해서 이진코드로 만들어주는 논리회로이다. 
-
-<br>[Contents](#Contents)<br><br>
 
 ## Multiplexer (Mux)
 - 여러 개의 입력 중 하나를 선택하여 출력으로 내보내는 조합논리회로
 - 일종의 `데이터 선택기` 
 - 입력의 개수에 따라 2-to-1, 4-to-1, .. 등이 있음
 
-<br>[Contents](#Contents)<br><br>
-
 ## Demultiplexer (DeMux)
 - 1개의 입력을 2<sup>n</sup>개의 출력선 중 하나로 내보내는 조합논리회로
 - 일종의 `데이터 분배기`
 - 출력선의 개수에 따라 1-to-2, 1-to-4, ..등이 있음
-
-<br>[Contents](#Contents)<br><br>
 
 ## Parity
 - 패리티는 디지털 신호 전송 시 전송 데이터에 1비트를 추가로 더 보내어 수신측에서 오류를 체크할 수 있게 해주는 조합논리회로
@@ -399,13 +377,9 @@ A+A•B
 - 플립플롭이 여러 개 모이면 레지스터가 됨
 - 메모리를 대신 순차회로의 저장소로 사용가능, 하지만 순차회로의 저장소로 대부분은 플립플롭을 사용
 
-<br>[Contents](#Contents)<br><br>
-
 ## 래치
 - clock 신호 값(level)에 맞추어 동작`(level-sensitive)`하는 기억소자
 - 입력되는 값을 latch(걸어잠금)하여 기억/저장이 가능
-
-<br>[Contents](#Contents)<br><br>
 
 ## SR Latch
 - S=0을 입력하면 Q=1을 출력 `(Set)`
@@ -423,8 +397,6 @@ A+A•B
 |1 0|x x|0 1|reset|
 |1 1|Q<sub>0</sub> Q'<sub>0</sub>|Q<sub>0</sub> Q'<sub>0</sub>|no change|
 
-<br>[Contents](#Contents)<br><br>
-
 ## Gated SR Latch
 - EN(enable)신호가 있는 SR 래치
 - EN=0이면 기존값 유지
@@ -441,8 +413,6 @@ A+A•B
 |1 1 0|x x|x x|set|
 |1 1 1|x x|1 1|`Not allowed`|
 
-<br>[Contents](#Contents)<br><br>
-
 ## D Latch
 - Gated SR Latch의 입력 하나를 인버터로 묶어서 허용되지 않는 값 입력으로 들어갈 수 없도록 만든 래치
 - 일반적으로 가장 많이 사용되는 래치
@@ -455,8 +425,6 @@ A+A•B
 |0 x|Q<sub>0</sub> Q'<sub>0</sub>|Q<sub>0</sub> Q'<sub>0</sub>|no changes|
 |1 0|x x|0 1|reset|
 |1 1|x x|1 0|set|
-
-<br>[Contents](#Contents)<br><br>
 
 ## 플립플롭
 - clock 신호가 변화하는 시점(edge)에 맞추어 동작`(Edge-sensitive)`하는 논리회로
