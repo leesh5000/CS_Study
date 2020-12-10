@@ -20,6 +20,8 @@
 - Ch 9 : [Sequential Logic Circuit](#sequential-logic-circuit)
   - [래치](#래치)
   - [플립플롭](#플립플롭)
+  - [카운터](#카운터)
+  - [FSM](#fsm)
 - [Reference](#reference)
 
 <br>[Home](https://github.com/leesh5000/ComputerScience_Study)</br></br>
@@ -367,7 +369,7 @@ A+A•B
 
 # Sequential Logic Circuit
   - 현재상태와 입력을 조합해서 다음상태와 출력을 결정하는 회로
-  - `Latch, Flip-Flops, Register, Memory` 등의 소자를 사용하여 현재 상태를 저장
+  - 조합회로 + 저장소자`(Latch, Flip-Flops, Register, Memory)` 사용하여 만듦
   - 클럭을 사용
   - `counter, register, clock divider, FSM` 등이 있음
 
@@ -378,7 +380,8 @@ A+A•B
 - 메모리를 대신 순차회로의 저장소로 사용가능, 하지만 순차회로의 저장소로 대부분은 플립플롭을 사용
 
 ## 래치
-- clock 신호 값(level)에 맞추어 동작`(level-sensitive)`하는 기억소자
+- 클럭 입력을 받지않음
+- 신호 값(level)에 맞추어 동작`(level-sensitive)`하는 기억소자
 - 입력되는 값을 latch(걸어잠금)하여 기억/저장이 가능
 
 ## SR Latch
@@ -429,6 +432,7 @@ A+A•B
 <br>[Contents](#Contents)<br><br>
 
 ## 플립플롭
+- 클럭 입력을 받아서 값을 출력
 - clock 신호가 변화하는 시점(edge)에 맞추어 동작`(Edge-sensitive)`하는 논리회로
 - 클럭입력과 래치소자로 만듦
 - 상승/하강 edge 중 동작하는 edge에 따라 rising edge triggered F/F, falling edge triggered F/F가 있음
@@ -584,7 +588,31 @@ A+A•B
 |1 1 ↑ 1 1|Q<sub>0</sub> Q'<sub>0</sub>|Q'<sub>0</sub> Q<sub>0</sub>|Toggle|
 |1 1 x x x|Q<sub>0</sub> Q'<sub>0</sub>|Q<sub>0</sub> Q'<sub>0</sub>|No change|
 
-<br>
+<br>[Contents](#Contents)<br><br>
+
+## 카운터
+- 정해진 순서대로 상태가 변하는 논리회로
+  
+## 동기 카운터 vs 비동기 카운터
+- 동기 카운터(Synchronous)
+  - 모든 F/F이 동시에 동작
+  - 모든 F/F의 clock 단자에 같은 clock 신호가 입력
+  - 설계가 쉬움
+- 비동기 카운터(Asynchronous)
+  - 모든 F/F이 동시에 동작하지 않음
+  - 모든 F/F의 clock 단자에 같은 clock 신호가 입력되지 않음
+  - 설계가 어려움
+  - 지연시간 떄문에 한 clock에 여러 값이 존재할 수가 있음
+  - 가능하면 쓰지 않고, 동기회로를 쓰는것이 좋음
+
+<br>[Contents](#Contents)<br><br>
+
+## FSM
+- `Finite State Machine(유한상태머신)`
+- 유한한 개수의 상태를 가짐
+- `입력+현재상태`에 따라 다음상태가 결정
+- 현재상태만으로 출력을 결정하면 `Moore machine`
+- `입력+현재상태`로 출력을 결정하면 `Mealy machine`
 
 ## Reference
 - [KOCW 강의 - 디지털 논리 회로 익히기](http://www.kocw.net/home/search/kemView.do?kemId=1319470)
