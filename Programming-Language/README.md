@@ -667,8 +667,8 @@ print(a>=b)
 ```
 
 ### True, False 종류
-- 1. True : "내용", [내용], (내용), {내용}, 1
-- 2. False : "", [], (), {}, 0
+- True : "내용", [내용], (내용), {내용}, 1
+- False : "", [], (), {}, 0
 ```
 str_test = ""
 
@@ -735,7 +735,7 @@ print("1~100 합 :", sum(range(1, 101)))
 print("1~100 짝수합 :", sum(range(0, 101, 2)))
 ```
 
-### 시퀀스 자료형 + 문자열, 리스트, 튜플, 집합, 사전은 반복가능
+### 시퀀스 자료형, 문자열, 리스트, 튜플, 집합, 사전은 반복가능
 - iterable 리턴함수 : range, reversed, enumerate, filter, map, zip, ...
 ```
 names = ["Lee", "Kim", "Park", "Yoo"]
