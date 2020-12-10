@@ -390,6 +390,8 @@ A+A•B
 - 일종의 `데이터 선택기` 
 - 입력의 개수에 따라 2-to-1, 4-to-1, .. 등이 있음
 
+<br>
+
 ### Demultiplexer (DeMux)
 - 1개의 입력을 2<sup>n</sup>개의 출력선 중 하나로 내보내는 조합논리회로
 - 일종의 `데이터 분배기`
@@ -417,7 +419,7 @@ A+A•B
 
 <br>
 
-### SR Latch
+## SR Latch
 - S=0을 입력하면 Q=1을 출력 `(Set)`
 - R=0을 입력하면 Q=0을 출력 `(Reset)`
 - S=0,R=0은 허용하지 않음
@@ -450,7 +452,9 @@ A+A•B
 |1 0 1|x x|x x|reset|
 |1 1 0|x x|x x|set|
 |1 1 1|x x|1 1|`Not allowed`|
-  
+
+<br>
+
 ### D Latch
 - Gated SR Latch의 입력 하나를 인버터로 묶어서 허용되지 않는 값 입력으로 들어갈 수 없도록 만든 래치
 - 일반적으로 가장 많이 사용되는 래치
@@ -466,7 +470,7 @@ A+A•B
 
 <br>
 
-### 플립플롭 개요
+## 플립플롭 개요
 - clock 신호가 변화하는 시점(edge)에 맞추어 동작`(Edge-sensitive)`하는 논리회로
 - 반면에, Latch는 clock 신호 값에 맞추어 동작`(level-sensitive)`
 - 상승/하강 edge 중 동작하는 edge에 따라 rising edge triggered F/F, falling edge triggered F/F가 있음
@@ -477,7 +481,7 @@ A+A•B
 - Setup time : clock edge 전 미리 데이터가 안정되어야하는 최소시간
 - Hold time : clock edge 후 미리 데이터가 유지되고 있어야하는 최소시간 
 
-### 플립플롭의 상태표와 여기표
+#### 플립플롭의 상태표와 여기표
 - 상태표(stable table)은 플립플롭의 상태를 보여줌
 - 여기표(excitation table)은 플립플롭의 상태를 바꾸기 위한 입력값을 알려줌
 - p는 현재상태, n은 다음상태
