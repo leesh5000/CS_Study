@@ -8,14 +8,6 @@
 - Ch 2 : [Number System](#number-system)
   - [부동소수점 수](#부동소수점-수)
 - Ch 3 : [Logic Gate](#logic-gate)
-  - [Buffer](#buffer)
-  - [Inverter](#inverter)
-  - [AND](#and)
-  - [OR](#or)
-  - [NAND](#nand)
-  - [NOR](#nor)
-  - [XOR](#xor)
-  - [XNOR](#xnor)
 - Ch 4 : [Boolean Algebra](#boolean-algebra)
   - [부울대수의 법칙](#부울대수의-법칙)
   - [드모르간의 법칙](#드모르간의-법칙)
@@ -83,7 +75,8 @@
 
 <br>[Contents](#Contents)<br><br>
 
-## 부동소수점 수(Floating Point Number)
+## 부동소수점 수
+- Floating Point Number
 - 컴퓨터가 실수를 표현하는데 쓰는 방법
 - 소수점의 위치를 고정하지 않음
 - 부동소수점 표준은 `단정도(Single Precision)`과 `배정도(Double Precision)`이 있다.
