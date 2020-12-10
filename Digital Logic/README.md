@@ -504,7 +504,6 @@ A+A•B
 | 0 x | Q<sub>0</sub> Q'<sub>0</sub> | Q<sub>0</sub> Q'<sub>0</sub> | No change |
 | 1 x | Q<sub>0</sub> Q'<sub>0</sub> | Q<sub>0</sub> Q'<sub>0</sub> | No change |
 
-#### Stable table (D F/F)
 |d p|n|
 |:---:|:---:|
 |0 0|0|
@@ -554,6 +553,7 @@ A+A•B
 |↑ 1 1|Q<sub>0</sub> Q'<sub>0</sub>|Q'<sub>0</sub> Q<sub>0</sub>|Toggle|
 |x x x|Q<sub>0</sub> Q'<sub>0</sub>|Q<sub>0</sub> Q'<sub>0</sub>|No change|
 
+
 |j k p|n|comments|
 |0 0 0|0|no change|
 |0 0 1|1|no change|
@@ -563,6 +563,7 @@ A+A•B
 |1 0 1|1|set|
 |1 1 0|1|toggle|
 |1 1 1|0|toggle|
+
 
 #### Excitation Table
 |state change p->n|F/F input j k|
