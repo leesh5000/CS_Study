@@ -65,7 +65,7 @@
 
 <br>[Contents](#Contents)<br><br>
 
-## Number System
+# Number System
 - 컴퓨터에서 주로 사용하는 수 체계는 2진수, 16진수
   - 2진수 : 0과1 두 가지 digit으로 수를 표현
   - 16진수 : 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F 16가지 digit으로 수를 표현
@@ -81,7 +81,7 @@
 
 <br>
 
-### 부동소수점 수(Floating Point Number)
+## 부동소수점 수(Floating Point Number)
 - 컴퓨터가 실수를 표현하는데 쓰는 방법
 - 소수점의 위치를 고정하지 않음
 - 부동소수점 표준은 `단정도(Single Precision)`과 `배정도(Double Precision)`이 있다.
@@ -89,7 +89,7 @@
 
 <br>[Contents](#Contents)<br><br>
 
-## Logic Gate
+# Logic Gate
 - 논리연산에 기본이 되는 논리소자
 - `Gate`는 정보흐름을 결정하는 소자를 말한다.
 
@@ -104,7 +104,7 @@
 
 <br>
 
-### Buffer
+## Buffer
 - 입력과 출력이 같은 논리게이트
 
 #### 진리표 (A는 입력, X는 출력)
@@ -115,7 +115,7 @@
 
 <br>
 
-### Inverter
+## Inverter
 - 입력을 반전하여 출력하는 논리게이트
 - NOT게이트 라고도 함
 
@@ -127,7 +127,7 @@
 
 <br>
 
-### AND
+## AND
 - 두 수의 입력이 모두 1일 경우에만 출력이 1인 논리게이트
 - `논리곱(Conjunction)`
 
@@ -141,7 +141,7 @@
 
 <br>
 
-### OR
+## OR
 - 두 수의 입력 중 하나라도 1인 경우에 출력이 1 또는 두 수의 입력이 모두 0일 경우에만 0인 논리게이트
 - `논리합(Disjunction)`
 
@@ -155,7 +155,7 @@
 
 <br>
 
-### NAND
+## NAND
 - 두 수의 입력이 1일 경우에만 출력이 0인 논리게이트
 - AND의 출력을 NOT 시킨 것
 - NAND 게이트는 negative-OR 게이트와 등가
@@ -170,7 +170,7 @@
 
 <br>
 
-### NOR
+## NOR
 - 두 수의 입력 중 하나라도 1인 경우에 출력이 0 또는 두 수의 입력이 모두 0일 경우에만 출력이 1인 논리게이트
 - OR의 출력을 NOT 시킨 것 
 - NOR 게이트는 negative-AND 게이트와 등가
@@ -185,7 +185,7 @@
 
 <br>
 
-### XOR
+## XOR
 - Exlcusive-OR
 - 두 수가 다를 때 출력이 1 또는 1의 개수가 홀수일 때 출력이 1인 논리게이트
 - `홀수(Odd) 함수`
@@ -200,7 +200,7 @@
 
 <br>
 
-### XNOR
+## XNOR
 - Exclusive-NOR
 - 두 수가 같을 때 출력이 1 또는 1의 개수가 짝수일 때 출력이 1인 논리게이트
 - `짝수(Even) 함수`
@@ -215,13 +215,13 @@
 
 <br>[Contents](#Contents)<br><br>
 
-## Boolean Algebra
+# Boolean Algebra
 - 0, 1, 논리연산(AND,OR,NOT)들을 대수화 한 것
 - 부울대수는 논리회로의 관계를 표현하기에 유용다.
 
 <br>
 
-### 부울대수의 법칙
+## 부울대수의 법칙
 - 교환법칙 (Commutative Law)
   - 부울 합 (OR) : A+B = B+A
   - 부울 곱 (AND) : A•B = B•A
@@ -261,7 +261,7 @@ A+A•B
 
 <br>
 
-### De Morgan's Theorem
+## De Morgan's Theorem
 - 제 1법칙 (1's Theorem)
   - (A•B)' = A'+B'
   - 변수의 곱에 대한 보수는 각 변수들의 보수의 합과 같다.
@@ -274,7 +274,7 @@ A+A•B
 
 <br>[Contents](#Contents)<br><br>
 
-## SOP and POS
+# SOP and POS
 - SOP(sum of product) : 변수곱들의 합으로 이루어진 부울수식
   - SOP는 AND, OR 게이트로 이루어짐
   - 모든 부울 수식들은 SOP로 변환 가능
@@ -285,13 +285,13 @@ A+A•B
 
 <br>[Contents](#Contents)<br><br>
 
-## Karnaugh Map
+# Karnaugh Map
 - 부울식을 단순화할 수 있는 체계적인 방법
 - 대수적 방법으로도 부울식을 단순화 할 수 있지만, 식이 복잡해지면 단순화하기 어려움
 
 <br>
 
-### Gray Code
+## Gray Code
 - 수의 크기가 변할 때 인접한 수 사이에 한 자리만 변하게 만들어진 코드
 - 순차적인 진행에 유리, 연산에 불리
 - I/O장치, A/D변환기, 하드디스크 등에 사용
@@ -317,7 +317,7 @@ A+A•B
 
 <br>
 
-### 카르노 맵 그리기
+## 카르노 맵 그리기
 1. 변수의 개수에 따라 2^n 칸을 갖는 테이블을 만든다.
 2. 부울식 SOP, POS에 따라 테이블을 완성시킨다.
 3. 규칙에 따라 그룹화한다.
@@ -328,7 +328,7 @@ A+A•B
 
 <br>[Contents](#Contents)<br><br>
 
-## Logic Circuit
+# Logic Circuit
 - 논리값을 결정하는 연산회로
 - 논리게이트 및 플립플롭으로 구성
 
@@ -344,7 +344,7 @@ A+A•B
 
 <br>
 
-### 논리회로의 종류
+## 논리회로의 종류
 - 조합논리회로 (Combinational Logic Circuit)
   - 현재의 입력을 조합해서 출력이 결정되는 회로
   - 기억소자가 없음
@@ -359,7 +359,7 @@ A+A•B
 
 <br>[Contents](#Contents)<br><br>
 
-## Combinational Logic Circuit
+# Combinational Logic Circuit
 - 현재의 입력을 조합해서 출력이 결정되는 회로
 - 기억소자가 없음
 - 클럭을 사용하지 않음
@@ -368,43 +368,43 @@ A+A•B
 
 <br>
 
-### Adder
+## Adder
 - 두 오퍼랜드를 더하는 조합논리회로
 - 반가산기와 전가산기가 있음
 
 <br>
 
-### Comparator
+## Comparator
 - 두 수의 크기에 따라 같다,크다,작다의 3가지 상태를 출력하는 조합논리회로이다.
 
 <br>
 
-### Decoder & Encoder
+## Decoder & Encoder
 - 디코더는 n비트 이진코드를 2<sup>n</sup>개의 서로다른 출력으로 만들어주는 논리회로를 말한다. 
 - 인코더는 디코더의 반대로, 개별적인 입력을 코드화해서 이진코드로 만들어주는 논리회로이다. 
 
 <br>
 
-### Multiplexer (Mux)
+## Multiplexer (Mux)
 - 여러 개의 입력 중 하나를 선택하여 출력으로 내보내는 조합논리회로
 - 일종의 `데이터 선택기` 
 - 입력의 개수에 따라 2-to-1, 4-to-1, .. 등이 있음
 
 <br>
 
-### Demultiplexer (DeMux)
+## Demultiplexer (DeMux)
 - 1개의 입력을 2<sup>n</sup>개의 출력선 중 하나로 내보내는 조합논리회로
 - 일종의 `데이터 분배기`
 - 출력선의 개수에 따라 1-to-2, 1-to-4, ..등이 있음
 
 <br>
 
-### Parity
+## Parity
 - 패리티는 디지털 신호 전송 시 전송 데이터에 1비트를 추가로 더 보내어 수신측에서 오류를 체크할 수 있게 해주는 조합논리회로
 
 <br>[Contents](#Contents)<br><br>
 
-## Sequential Logic Circuit
+# Sequential Logic Circuit
   - 현재상태와 입력을 조합해서 다음상태와 출력을 결정하는 회로
   - `Latch, Flip-Flops, Register, Memory` 등의 소자를 사용하여 현재상태를 저장
   - 클럭을 사용하여 값을 저장
@@ -437,7 +437,7 @@ A+A•B
 
 <br>
 
-### Gated SR Latch
+## Gated SR Latch
 - EN(enable)신호가 있는 SR 래치
 - EN=0이면 기존값 유지
 - EN=1이면 SR 입력값에 따라 변화
@@ -455,7 +455,7 @@ A+A•B
 
 <br>
 
-### D Latch
+## D Latch
 - Gated SR Latch의 입력 하나를 인버터로 묶어서 허용되지 않는 값 입력으로 들어갈 수 없도록 만든 래치
 - 일반적으로 가장 많이 사용되는 래치
 - EN=1이면 입력D를 그대로 출력하므로 `transparent latch`라고도 함
@@ -470,7 +470,7 @@ A+A•B
 
 <br>
 
-## 플립플롭 개요
+# 플립플롭 개요
 - clock 신호가 변화하는 시점(edge)에 맞추어 동작`(Edge-sensitive)`하는 논리회로
 - 반면에, Latch는 clock 신호 값에 맞추어 동작`(level-sensitive)`
 - 상승/하강 edge 중 동작하는 edge에 따라 rising edge triggered F/F, falling edge triggered F/F가 있음
