@@ -83,7 +83,7 @@
 - 컴퓨터가 음수를 표현할 때 가장많이 쓰는 방법
 - `1의보수 + 1`
 
-<br>
+<br>[Contents](#Contents)<br><br>
 
 ## 부동소수점 수(Floating Point Number)
 - 컴퓨터가 실수를 표현하는데 쓰는 방법
@@ -106,6 +106,8 @@
 - 범용게이트 : NAND, NOR `모든 다른 게이트들은 이 2개의 범용게이트들을 대체하여 표현 가능`
 - 기타게이트 : XOR, XNOR
 
+<br>[Contents](#Contents)<br><br>
+
 ## Buffer
 - 입력과 출력이 같은 논리게이트
 
@@ -114,6 +116,8 @@
 |:---:|:---:|
 | 0 | 0 |
 | 1 | 1 |
+
+<br>[Contents](#Contents)<br><br>
 
 ## Inverter
 - 입력을 반전하여 출력하는 논리게이트
@@ -124,6 +128,8 @@
 |:---:|:---:|
 | 0 | 1 |
 | 1 | 0 |
+
+<br>[Contents](#Contents)<br><br>
 
 ## AND
 - 두 수의 입력이 모두 1일 경우에만 출력이 1인 논리게이트
@@ -137,7 +143,7 @@
 | 0 | 1 | 0 |
 | 1 | 1 | 1 |
 
-<br>
+<br>[Contents](#Contents)<br><br>
 
 ## OR
 - 두 수의 입력 중 하나라도 1인 경우에 출력이 1 또는 두 수의 입력이 모두 0일 경우에만 0인 논리게이트
@@ -151,7 +157,7 @@
 | 0 | 1 | 1 |
 | 1 | 1 | 1 |
 
-<br>
+<br>[Contents](#Contents)<br><br>
 
 ## NAND
 - 두 수의 입력이 1일 경우에만 출력이 0인 논리게이트
@@ -166,7 +172,7 @@
 | 0 | 1 | 1 |
 | 1 | 1 | 0 |
 
-<br>
+<br>[Contents](#Contents)<br><br>
 
 ## NOR
 - 두 수의 입력 중 하나라도 1인 경우에 출력이 0 또는 두 수의 입력이 모두 0일 경우에만 출력이 1인 논리게이트
@@ -181,7 +187,7 @@
 | 0 | 1 | 0 |
 | 1 | 1 | 0 |
 
-<br>
+<br>[Contents](#Contents)<br><br>
 
 ## XOR
 - Exlcusive-OR
@@ -196,7 +202,7 @@
 | 0 | 1 | 1 |
 | 1 | 1 | 0 |
 
-<br>
+<br>[Contents](#Contents)<br><br>
 
 ## XNOR
 - Exclusive-NOR
