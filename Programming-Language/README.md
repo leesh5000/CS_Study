@@ -11,6 +11,13 @@
     - [리스트와 튜플](#리스트와-튜플)
     - [딕셔너리](#딕셔너리)
     - [집합](#집합)
+  - [코드의 흐름제어](#코드의-흐름제어)
+    - [조건문](#조건문)
+    - [반복문](#반복문)
+  - [함수](#함수)
+    - [*args, *kwargs](#args-kwargs)
+    - [중첩함수(클로저)](#중첩함수클로저)
+
 
 <br>[Home](https://github.com/leesh5000/ComputerScience_Study)</br></br>
 
@@ -630,3 +637,264 @@ s3.remove(15)
 print(s3)
 -> {7, 8, 9, 18}
 ```
+
+<br>[Contents](#Contents)<br><br>
+
+# 코드의 흐름제어
+
+## 조건문
+```
+print(type(True))
+print(type(False))
+
+if True:
+    print("Yes")
+
+if False:
+    print("No")
+
+if False:
+    print("No")
+else:
+    print("Yes")
+
+a = 10
+b = 0
+
+print(a==b)
+print(a!=b)
+print(a>=b)
+```
+
+### True, False 종류
+- 1. True : "내용", [내용], (내용), {내용}, 1
+- 2. False : "", [], (), {}, 0
+```
+str_test = ""
+
+if str_test:
+    print("T")
+else:
+    print("F")
+```
+
+### 논리연산자 : and, or, not
+```
+a = 100
+b = 60
+c = 15
+
+print('and :', a>b and b>c)
+print('or :', a>b or c>b)
+print('not :', not a>b)
+```
+
+### 연산자 우선순위
+- 산술(+,-,..), 관계(>,=,<,..), 논리(and,or,not) 연산자 우선순위
+- 산술 > 관계 > 논리
+```
+print('test : ', 5+10>0 and not 7+3==10)
+```
+
+### 다중조건문
+```
+num = 100
+
+if num>=90:
+    print("A", num)
+elif num >=80:
+    print("B", num)
+elif num >=70:
+    print("C", num)
+else:
+    print("F", num)
+```
+
+<br>[Contents](#Contents)<br><br>
+
+## 반복문
+
+### for, while
+```
+v1 = 1
+while v1 < 11:
+    print("v1 is :",v1)
+    v1 += 1
+
+for v2 in range(10):
+    print("v2 is :",v2)
+
+for v3 in range(1,10):
+    print("v3 is :",v3)
+
+sum1 = 0
+for i in range(1,101):
+    sum1 += i
+print("1~100 합 :", sum1)
+print("1~100 합 :", sum(range(1, 101)))
+print("1~100 짝수합 :", sum(range(0, 101, 2)))
+```
+
+### 시퀀스 자료형 + 문자열, 리스트, 튜플, 집합, 사전은 반복가능
+- iterable 리턴함수 : range, reversed, enumerate, filter, map, zip, ...
+```
+names = ["Lee", "Kim", "Park", "Yoo"]
+
+for name in names:
+    print("You are :", name)
+
+word = "dreams"
+
+for s in word:
+    print("Word :",s)
+
+my_info = {
+    "name" : "kim",
+    "age" : "33",
+    "city" : "seoul"
+}
+
+for k in my_info:
+    print("my_info :", k)
+
+for k in my_info.keys():
+    print("my_info :", k)
+
+for v in my_info.values():
+    print("my_info :", v)
+
+for i in my_info.items():
+    print("my_info :", i)
+
+name = "KennRY"
+
+for n in name:
+    if n.isupper():
+        print(n)
+    else:
+        print(n.upper())
+```
+
+### for-else
+```
+numbers = [1,2,3,4,5,6,7,8,9,10]
+
+for i in numbers:
+    if (i==17):
+        print("Found : %d" % i)
+        break
+else:
+    print("Not found 7")
+```
+
+### 자료구조 변환
+```
+name = "helloC"
+print(reversed(name))
+print(list(reversed(name)))
+print(tuple(reversed(name)))
+```
+
+<br>[Contents](#Contents)<br><br>
+
+## 함수
+- 하나의 함수에 하나의 기능만
+
+### 기본문법
+```
+def Hello(word):
+    print("Hello", word)
+
+Hello("python")
+
+def sum_int(a, b):
+    return a+b
+
+print(sum_int(4,6))
+```
+
+### 다중리턴
+```
+def func_mul(x):
+    y1 = x*100
+    y2 = x*200
+    y3 = x*300
+    return y1,y2,y3
+
+val1, val2, val3 = func_mul(5)
+print(val1, val2, val3)
+```
+
+### 데이터타입 반환
+```
+def func_mul2(x):
+    y1 = x*100
+    y2 = x*200
+    y3 = x*300
+    return [y1,y2,y3]
+
+lt = func_mul2(5)
+print(lt)
+```
+
+## *args, *kwargs
+
+### *args : 가변인자
+- 인자를 튜플로 받아줌
+- 매개변수가 몇 개가 될지 모를때
+- 또는, 매개변수에 따라 함수의 작동을 달리할때
+
+```
+def args_func(*args):
+    print(type(args), args)
+
+args_func('kim')
+args_func('kim', 'lee', 'park')
+
+def args_func1(*args):
+    for i,v in enumerate(args):
+        print(type(i), type(v), i, v)
+
+args_func1('kim')
+args_func1('kim', 'lee', 'park')
+```
+
+### *kwargs
+- *가 하나이면 튜플
+- *가 두개이면 딕셔너리
+
+```
+def kwargs_func(**kwargs):
+    print(kwargs)
+
+kwargs_func(name1='kim', name2='lee', name3='park')
+
+def kwargs_func1(**kwargs):
+    for k,v in kwargs.items():
+        print(k, v)
+
+kwargs_func1(name1='kim', name2='lee', name3='park')
+
+# 예제1
+
+# arg1,arg2는 필수인자, *args는 튜플을 받는 가변인자, **kwargs는 딕셔너리를 받는 가변인자
+def ex_fun1(arg1, arg2, *args, **kwargs):
+    print(arg1, arg2, args, kwargs)
+
+ex_fun1(10,20)
+ex_fun1(10,20,30,40)
+ex_fun1(10, 20, 'lee', 'kim', age1=27, age2=24)
+```
+
+### 중첩함수(클로저)
+```
+def nested_func(num):
+    def func_in_func(num):
+        print('>>>',num)
+    print("in func")
+    func_in_func(num + 10000)
+
+nested_func(10000)
+```
+
+<br>[Contents](#Contents)<br><br>
