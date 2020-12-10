@@ -551,7 +551,7 @@ A+A•B
 #### State Eq
 - `n = t'p+tp' = t⊕p`
 
-### 비동기 리셋 D F/F (D F/F with Async. Reset)
+## 비동기 리셋 D F/F (D F/F with Async. Reset)
 - 동기(Synchronous): 클럭신호에 맞추어 값이 변할 경우
 - 비동기(Asynchronous): 클럭신호와 상관업싱 값이 변할 경우
 - 즉, 클럭 엣지와 상관없이 리셋을 할 수 있는 D 플립플롭
