@@ -80,10 +80,11 @@ Deletion : O(1)
 </br>[Contents](#Contents)</br></br>
 
 ## Stack
+- LIFO(Last-In First-Out)
+- 프로세스 스택에 응용
+- Top, Push, Pop, Peek
 
-스택은 LIFO(Last-In First-Out) 순서를 따르는 선형 자료구조이다. 일반적인 스택의 ADT는 스택의 맨 위를 나타내는 자료형인  `Top`과 스택의 데이터 삽입/삭제를 하는 `Push`, `Pop` 연산, 그리고 스택의 Top을 조회하는 `Peek` 연산이 있다. 
-
-스택의 시간복잡도는 다음과 같다.
+#### 스택의 시간복잡도
 ```
 Access : O(n) [Sequential Access]
 Search : O(n)
@@ -91,22 +92,12 @@ Insertion : O(1) [Top에서 삽입이 이루어지므로]
 Deletion : O(1) [Top에서 삭제가 이루어지므로]
 ```
 
-### Implementation ###
-스택은 배열과 연결리스트를 이용하여 구현할 수 있다.
-- 배열을 이용하여 스택 구현 [C](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C/Stack/StackUsingArray.c)
-- 연결리스트를 이용하여 스택 구현
-
-### Applications ###
-스택은 LIFO 순서 따르는 특징때문에 메모리의 스택영역, CPU 인터럽트 사이클, Redo/Undo, String Reversal, 계산기 구현 등에 응용된다.
-1. 연산순서를 따르는 계산기
-2. 스택을 이용한 트리 순회
-3. Infix to Postfix/Prefix Conversion
-
 </br>[Contents](#Contents)</br></br>
 
 ## Queue
 - FIFO(First-In First-Out)
-- 운영체제, 네트워크와 관련되어 응용(cpu스케줄링, 디스크스케줄링, ...)
+- Enqueue, Dequeue
+- 운영체제, 네트워크에 많이 사용(cpu스케줄링, 디스크스케줄링, ...)
 
 #### 큐의 시간복잡도
 ```
