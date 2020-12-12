@@ -105,28 +105,16 @@ Deletion : O(1) [Top에서 삭제가 이루어지므로]
 </br>[Contents](#Contents)</br></br>
 
 ## Queue
+- FIFO(First-In First-Out)
+- 운영체제, 네트워크와 관련되어 응용(cpu스케줄링, 디스크스케줄링, ...)
 
-큐는 FIFO(First-In First-Out) 순서를 따르는 선형 자료구조이다. 일반적인 큐의 ADT는 큐의 맨 앞과 맨 뒤를 나타내는 `Front`, `Rear` 자료형과 큐의 데이터 삽입/삭제를 하는 `Enqueu` 와 `Dequeue`  연산이 있다.
-
-큐의 시간 복잡도는 다음과 같다.
+#### 큐의 시간복잡도
 ```
 Access : O(n)
 Search : O(n)
 Insertion : O(1) [Front에서 삭제이 이루어지므로]
 Deletion : O(1) [Rear에서 가 이루어지므로]
 ```
-
-### Implementation ####
-큐는 배열과 연결리스트로 구현할 수 있다. 배열로 큐를 구현할때는 배열이 비어있게(empty) 되는 문제 때문에 주로 원형 큐를 구현한다.
-- 배열을 이용한 큐의 구현 [Cpp](https://github.com/leesh5000/ComputerScience_Study/blob/master/Data%20Structure/C%2B%2B/Queue/QueueUsingArray.cpp)
-- 연결리스트를 이용한 큐의 구현
-- 원형 큐 구현
-
-### Applications ###
-큐는 선형 자료구조로 데이터가 즉시 처리될 필요는 없지만, LIFO 순서로 처리되야 할 때 사용된다. 예를들어, 여러 소비자가 자원을 공유하는 경우와 두 프로세스 간에 데이터가 비동기적으로 전송되는 경우(데이터가 반드시 동시에 처리될 필요가 없을때)가 있다. 첫번째 경우는  `CPU 스케줄링` 이나 `디스크 스케줄링` 등이 있고, 두번째 경우는 `IO버퍼`, `파이프`, `서버` 등이 있다. 이와 같이 큐는 운영체제와 네트워크와 관련된 소프트웨어 구현에 있어서 중요한 역할을 하는 자료구조이다.
-1. LRU 캐시
-2. 데크
-3. Queuing Theory Simulation
 
 </br>[Contents](#Contents)</br></br>
 
