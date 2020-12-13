@@ -6,17 +6,30 @@
   - [파이썬의 장점](#파이썬의-장점)
   - [기본출력](#기본출력)
   - [파이썬의 데이터타입](#파이썬의-데이터타입)
-    - [기본자료형](#기본자료형)
-    - [문자열](#문자열)
-    - [리스트와 튜플](#리스트와-튜플)
-    - [딕셔너리](#딕셔너리)
-    - [집합](#집합)
+    1. [기본자료형](#1-기본자료형)
+    2. [문자열](#2-문자열)
+    3. [리스트](#3-리스트)
+    4. [튜플](#4-튜플)
+    5. [딕셔너리](#5-딕셔너리)
+    6. [집합](#6-집합)
   - [코드의 흐름제어](#코드의-흐름제어)
-    - [조건문](#조건문)
-    - [반복문](#반복문)
+    1. [조건문](#1-조건문)
+    2. [반복문](#2-반복문)
   - [함수](#함수)
-    - [*args, *kwargs](#args-kwargs)
-    - [중첩함수(클로저)](#중첩함수클로저)
+    1. [기본문법](#1-기본문법)
+    2. [*args,**kwargs](#2-args-kwargs)
+    3. [중첩함수](#3-중첩함수클로저)
+    4. [힌트](#4-힌트)
+    5. [람다식](#5-람다식)
+  - [클래스](#클래스)
+    1. [기본문법](#1-기본문법)
+    2. [클래스매소드와 인스턴스매소드](#2-클래스매소드와-인스턴스매소드)
+    3. [클래스변수와 인스턴스변수](#3-클래스변수-인스턴스변수self)
+    4. [상속](#4-상속)
+    5. [오버라이딩](#5-오버라이딩)
+    6. [다중상속](#6-다중상속)
+  - [모듈과 패키지](#모듈과-패키지)
+  - [파일 I/O](#파일-입출력)
 
 
 <br>[Home](https://github.com/leesh5000/ComputerScience_Study)</br></br>
@@ -33,6 +46,7 @@
 
 ## 기본출력
 
+#### 기본문법
 ```
 print('Hello Python!')
 -> Hello Python!
@@ -132,9 +146,8 @@ print('\ttap')
 - Sets
 - Dictionaries
 
-<br>[Contents](#Contents)<br><br>
 
-## 기본자료형
+## 1. 기본자료형
 ```
 v_str1 = "Niceman"
 v_bool = True
@@ -213,7 +226,7 @@ print(math.floor(3.874)) # 3.874보다 작으면서 가장 큰 정수
 
 <br>[Contents](#Contents)<br><br>
 
-## 문자열
+## 2. 문자열
 ```
 str1 = "I am Boy."
 str2 = "NiceMan"
@@ -339,7 +352,7 @@ print(d[::-1])
 
 <br>[Contents](#Contents)<br><br>
 
-## 리스트와 튜플
+## 3. 리스트
 - 리스트(순서o, 중복o, 수정o, 삭제o)
 
 #### 리스트 선언
@@ -453,7 +466,7 @@ print(y)
 
 <br>[Contents](#Contents)<br><br>
 
-## 튜플
+## 4. 튜플
 - 튜플(순서o, 중복o, 수정x, 삭제x)
 - 변경되면 안되는 중요한 값이 저장되는 곳에 쓰임
 
@@ -512,7 +525,7 @@ print(e.count(1))
 
 <br>[Contents](#Contents)<br><br>
 
-## 딕셔너리
+## 5. 딕셔너리
 - 딕셔너리는 순서x, 중복x(key만), 수정o, 삭제o
 - 딕셔너리는 웹 브라우저 데이터 송신에 사용되는 Json 형식과 비슷
 
@@ -579,7 +592,7 @@ print('name' in a)
 ```
 <br>[Contents](#Contents)<br><br>
 
-## 집합
+## 6. 집합
 집합(set)은 순서x, 중복x
 ```
 a = set()
@@ -642,7 +655,9 @@ print(s3)
 
 # 코드의 흐름제어
 
-## 조건문
+## 1. 조건문
+
+#### 기본문법
 ```
 print(type(True))
 print(type(False))
@@ -666,7 +681,7 @@ print(a!=b)
 print(a>=b)
 ```
 
-### True, False 종류
+#### True, False 종류
 - True : "내용", [내용], (내용), {내용}, 1
 - False : "", [], (), {}, 0
 ```
@@ -678,7 +693,7 @@ else:
     print("F")
 ```
 
-### 논리연산자 : and, or, not
+#### 논리연산자 : and, or, not
 ```
 a = 100
 b = 60
@@ -689,14 +704,14 @@ print('or :', a>b or c>b)
 print('not :', not a>b)
 ```
 
-### 연산자 우선순위
+#### 연산자 우선순위
 - 산술(+,-,..), 관계(>,=,<,..), 논리(and,or,not) 연산자 우선순위
 - 산술 > 관계 > 논리
 ```
 print('test : ', 5+10>0 and not 7+3==10)
 ```
 
-### 다중조건문
+#### 다중조건문
 ```
 num = 100
 
@@ -712,9 +727,9 @@ else:
 
 <br>[Contents](#Contents)<br><br>
 
-## 반복문
+## 2. 반복문
 
-### for, while
+#### for, while
 ```
 v1 = 1
 while v1 < 11:
@@ -735,7 +750,7 @@ print("1~100 합 :", sum(range(1, 101)))
 print("1~100 짝수합 :", sum(range(0, 101, 2)))
 ```
 
-### 시퀀스 자료형, 문자열, 리스트, 튜플, 집합, 사전은 반복가능
+#### 시퀀스 자료형, 문자열, 리스트, 튜플, 집합, 사전은 반복가능
 - iterable 리턴함수 : range, reversed, enumerate, filter, map, zip, ...
 ```
 names = ["Lee", "Kim", "Park", "Yoo"]
@@ -775,7 +790,7 @@ for n in name:
         print(n.upper())
 ```
 
-### for-else
+#### for-else
 ```
 numbers = [1,2,3,4,5,6,7,8,9,10]
 
@@ -787,7 +802,7 @@ else:
     print("Not found 7")
 ```
 
-### 자료구조 변환
+#### 자료구조 변환
 ```
 name = "helloC"
 print(reversed(name))
@@ -800,7 +815,7 @@ print(tuple(reversed(name)))
 ## 함수
 - 하나의 함수에 하나의 기능만
 
-### 기본문법
+## 1. 기본문법
 ```
 def Hello(word):
     print("Hello", word)
@@ -813,7 +828,7 @@ def sum_int(a, b):
 print(sum_int(4,6))
 ```
 
-### 다중리턴
+#### 다중리턴
 ```
 def func_mul(x):
     y1 = x*100
@@ -825,7 +840,7 @@ val1, val2, val3 = func_mul(5)
 print(val1, val2, val3)
 ```
 
-### 데이터타입 반환
+#### 데이터타입 반환
 ```
 def func_mul2(x):
     y1 = x*100
@@ -837,9 +852,9 @@ lt = func_mul2(5)
 print(lt)
 ```
 
-## *args, *kwargs
+## 2. *args, *kwargs
 
-### *args : 가변인자
+#### *args : 가변인자
 - 인자를 튜플로 받아줌
 - 매개변수가 몇 개가 될지 모를때
 - 또는, 매개변수에 따라 함수의 작동을 달리할때
@@ -859,7 +874,7 @@ args_func1('kim')
 args_func1('kim', 'lee', 'park')
 ```
 
-### *kwargs
+#### *kwargs
 - *가 하나이면 튜플
 - *가 두개이면 딕셔너리
 
@@ -886,7 +901,7 @@ ex_fun1(10,20,30,40)
 ex_fun1(10, 20, 'lee', 'kim', age1=27, age2=24)
 ```
 
-### 중첩함수(클로저)
+## 3. 중첩함수(클로저)
 ```
 def nested_func(num):
     def func_in_func(num):
@@ -895,6 +910,373 @@ def nested_func(num):
     func_in_func(num + 10000)
 
 nested_func(10000)
+```
+
+## 4. 힌트
+```
+def func_mul3(x : int) -> list:
+    y1 = x * 100
+    y2 = x * 200
+    y3 = x * 300
+    return [y1, y2, y3]
+```
+
+## 5. 람다식
+- 장점 : 메모리절약, 가독성 향상
+- 함수는 객체생성 -> 메모리 할당
+- 람다는 즉시 실행(heap 초기화) -> 메모리초기화
+```
+# 일반함수 -> 변수할당
+def mul_10(num:int)->int:
+    return num*10
+
+var_func = mul_10
+print(var_func)
+print(mul_10)
+print(type(var_func))
+
+print(var_func(10))
+
+# 람다이름 = lambda 입력 : 출력
+lambda_mul_10 = lambda num : num*10
+
+print(lambda_mul_10(10))
+
+def func1(x, y, func):
+    print(x*y*func(10))
+
+func1(10,10,lambda_mul_10)
+func1(10,10,lambda num:num*10)
+``` 
+
+<br>[Contents](#Contents)<br><br>
+
+## 클래스
+
+## 1. 기본문법
+#### 선언
+- __init__은 c언어의 생성자 같은 것
+- self는 클래스의 인스턴스 변수
+- 클래스 : 붕어빵 틀
+- 객체 : 소프트웨어에서 구현할 실제대상
+- 인스턴스 : 붕어빵, 객체를 메모리에 할당한 것
+
+```
+class UserInfo:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        print("Class Initiated!")
+    def Print_Info(self):
+        print("Name : %s\nAge : %d\n" % (self.name, self.age))
+
+user1 = UserInfo("LSH", 27)
+user1.Print_Info()
+
+user2 = UserInfo("KYJ", 24)
+user2.Print_Info()
+```
+
+#### 클래스의 네임스페이스
+
+```
+print(id(user1))
+print(id(user2))
+print(user1.__dict__)
+print(user2.__dict__)
+```
+
+## 2. 클래스매소드와 인스턴스매소드 
+- 클래스매소드 : 클래스에서 직접사용 가능
+- 인스턴스매소드 : 인스턴스마다 별도로 존재, 인스턴스 생성 후 사용
+
+```
+class SelfTest:
+    # 클래스 매소드
+    def func1():
+        print('func1 called!')
+    # 인스턴스 매소드
+    def func2(self):
+        print('func2 called!')
+        print(id(self))
+
+self_Test1 = SelfTest()
+self_Test1.func2()
+SelfTest.func1()
+
+print(id(self_Test1))
+SelfTest.func2(self_Test1)
+```
+
+## 3. 클래스변수 인스턴스변수(self)
+- 클래스변수 : 모든 인스턴스 변수가 공유, 네임스페이스는 클래스명
+- 인스턴스변수 : 인스턴스마다 별도로 존재, 네임스페이스는 인스턴스명
+
+```
+class Warehouse:
+    # 클래스 변수, 각각 인스턴스 변수가 공유, static변수와 같은것?
+    num = 0
+    def __init__(self, name):
+        self.name = name
+        Warehouse.num += 1
+    def __del__(self):
+        Warehouse.num -= 1
+
+user1 = Warehouse('Lee')
+user2 = Warehouse('Kim')
+user3 = Warehouse('Park')
+
+print(user1.__dict__)
+print(user2.__dict__)
+print(user3.__dict__)
+print(Warehouse.__dict__)
+
+print(user1.num)
+print(user2.num)
+print(user3.num)
+
+del user1
+
+print(user2.num)
+print(user3.num)
+```
+
+## 4. 상속
+- 파이썬은 다중상속 지원
+- 자바는 인터페이스 지원, 다중상속 지원x
+- 코드의 재사용, 생산성 향상
+- 부모클래스의 모든 속성,메소드 사용 가능
+- 부모클래스 = 상위클래스 = 슈퍼클래스
+- 자식클래스 = 하위클래스 = 서브클래스
+
+```
+class Car:
+    """Parent Class"""
+    def __init__(self, tp, color):
+        self.type = tp
+        self.color = color
+
+    def Show_Info(self) -> None:
+        return 'Car Class "Show Method!"'
+
+class BMW(Car):
+    """Child Class"""
+    def __init__(self, name, tp, color):
+        super().__init__(tp, color)
+        self.name = name
+    
+    def Show_Name(self) -> None:
+        return "Your Car Name : %s" % self.name
+
+car1 = BMW('520d', 'sedan', 'red')
+print(car1.color)
+print(car1.type)
+print(car1.name)
+print(car1.Show_Info())
+print(car1.Show_Name())
+
+print(car1.__dict__)
+```
+
+## 5. 오버라이딩
+
+```
+class Benz(Car):
+    """Child Class"""
+    def __init__(self, name, tp, color):
+        super().__init__(tp, color)
+        self.name = name
+    
+    def Show_Name(self) -> None:
+        return "Your Car Name : %s" % self.name
+
+    def Show_Info(self) -> None:
+        print(super().Show_Info())
+        return "Benz Overriding"
+
+car2 = Benz('220d', 'suv', 'white')
+print(car2.Show_Info())
+
+# Inheritance Info
+# - 상속 정보를 리스트 형태로 반환해주는 매소드
+# - 왼쪽에서 오른쪽으로 상위 클래스 이름이 나옴
+print(BMW.mro())
+print(Benz.mro())
+```
+
+## 6. 다중상속
+
+```
+class X():
+    pass
+
+class Y():
+    pass
+
+class A(X,Y):
+    pass
+
+print(A.mro())
+```
+
+<br>[Contents](#Contents)<br><br>
+
+## 모듈과 패키지
+- .. : 상위 디렉토리
+- . : 현재 디렉토리
+
+#### 사용1
+from pkg_Test.fibonacci import Fibo
+Fibo.fib1(300)
+print(Fibo.fib2(300))
+print(Fibo().title)
+
+#### 사용2
+- from pkg_Test.fibonacci import *
+
+#### 사용3 (alias)
+from pkg_Test.fibonacci import Fibo as fb
+print(fb.fib2(1000))
+
+#### 사용4 (함수가져오기)
+import pkg_Test.cal as c
+print(c.add(1,10))
+
+#### 사용5 (필요한 함수만 가져오기)
+from pkg_Test.cal import add as a
+print(a(1,10))
+
+#### 예제
+import pkg_Test.prints as p
+import builtins # 파이썬 stl
+p.prt1()
+p.prt2()
+print(dir(builtins))
+
+<br>[Contents](#Contents)<br><br>
+
+## 파일 I/O
+- 읽기모드 : r
+- 쓰기모드(덮어쓰기) : w
+- 추가모드 : a
+
+## 1. 파일 읽기
+
+#### 파일읽기1
+
+```
+f = open('./resource/review.txt', 'r')
+contents = f.read()
+print(contents)
+f.close()
+```
+
+#### 파일읽기2
+- with는 close를 안해도 자동으로 close 해준다.
+
+```
+with open('./resource/review.txt', 'r') as f:
+    c = f.read()
+    print(c)
+    print(list(c))
+```
+
+#### 파일읽기3
+
+```
+with open('./resource/review.txt', 'r') as f:
+    for c in f:
+        print(c.strip())
+```
+
+#### 파일읽기4 
+- 한번 read를 하면 커서가 파일 끝으로 가서 더 읽을게 없음
+
+```
+with open('./resource/review.txt', 'r') as f:
+    contents1 = f.read()
+    contents2 = f.read()
+    print("c1>>", contents1)
+    print("c2>>", contents2)
+```
+
+#### 파일읽기5
+- 한줄씩 읽어오기
+
+```
+with open('./resource/review.txt', 'r') as f:
+    line = f.readline()
+    print(line)
+    while line:
+        print(line, end=' #### ')
+        line = f.readline()
+```
+
+#### 파일읽기6
+- readlines는 list를 반환
+
+```
+with open('./resource/review.txt', 'r') as f:
+    c1 = f.readlines()
+    print(c1)
+    for c in c1:
+        print(c, end= ' #### ')
+
+
+print('\n\n')
+```
+
+#### 예제
+- score파일 읽어서 평균내기
+
+``` 
+score = []
+with open('./resource/score.txt', 'r') as f:
+    for line in f:
+        score.append(int(line))
+    print(score)
+
+print("Average : {:6.3}".format(sum(score)/len(score)))
+```
+
+## 2. 파일 쓰기
+
+#### 파일쓰기1
+
+```
+with open('./resource/text1.txt', 'w') as f:
+    f.write("Nice man!\n")
+
+with open('./resource/text1.txt', 'a') as f:
+    f.write("Good man!\n")
+```
+
+#### 파일쓰기2
+
+```
+from random import randint
+with open('./resource/text2.txt', 'w') as f:
+    for cnt in range(6):
+        f.write(str(randint(1, 50)))
+        f.write('\n')
+```
+
+#### 파일쓰기3 
+- 리스트형태를 파일로 쓰기
+
+```
+with open('./resource/text3.txt', 'w') as f:
+    list = ['lee\n', 'kim\n', 'park\n']
+    f.writelines(list)
+```
+
+#### 파일쓰기4
+- print문으로 파일쓰기
+
+```
+with open('./resource/text2.txt', 'w') as f:
+    print('Test1', file=f)
+    print('Test2', file=f)
 ```
 
 <br>[Contents](#Contents)<br><br>

@@ -85,3 +85,37 @@ def nested_func(num):
     func_in_func(num + 10000)
 
 nested_func(10000)
+
+# 6. 힌트
+def func_mul3(x : int) -> list:
+    y1 = x * 100
+    y2 = x * 200
+    y3 = x * 300
+    return [y1, y2, y3]
+
+# 람다식 예제
+# 장점 : 메모리절약, 가독성 향상
+# 함수는 객체생성 -> 메모리 할당
+# 람다는 즉시 실행(heap 초기화) -> 메모리초기화
+
+# 일반함수 -> 변수할당
+def mul_10(num:int)->int:
+    return num*10
+
+var_func = mul_10
+print(var_func)
+print(mul_10)
+print(type(var_func))
+
+print(var_func(10))
+
+# 람다이름 = lambda 입력 : 출력
+lambda_mul_10 = lambda num : num*10
+
+print(lambda_mul_10(10))
+
+def func1(x, y, func):
+    print(x*y*func(10))
+
+func1(10,10,lambda_mul_10)
+func1(10,10,lambda num:num*10)
