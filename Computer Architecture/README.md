@@ -2,12 +2,48 @@
 
 ## Contents
 
-- Ch1 : Introduction 
-    - [What is the Computer?](#What-is-the-Computer?)
-    - [데이터]
+- Ch1 : Introduction
 
-## What is the Computer?
-컴퓨터란 무엇일까? 무엇이 다른 여러 기계들과 컴퓨터를 
+# Introduction
+
+### 1. Computer
+- 컴퓨터와 다른 전자장치와 구별되는 특징 : 컴퓨터는 프로그램 할 수 있다.
+- 컴퓨터는 `Programmable Digital System`
+
+### 2. CPU의 역할
+1. `Fetch` instruction from Memory, one by one
+2. `Decode` instruction
+3. `Execute` the operation
+4. `Update` machine state
+
+### 3. Intel I7 processor
+- 3GHz
+  - 1초에 3*10^9번 진동하는 신호
+  - 주기 한번에 F/F이 작동하여 명령어 실행 -> 1초에 3*10^9번 명령어 실행가능
+- quad-core
+  - 코어 4개가 각각 명령어 실행
+- 4-issue superscalar processor
+  - 한번에 4개 명령어 가져와서 해석 후 실행
+- Hyperthreading
+  - 매 cycle마다 2개 프로그램을 가져옴
+- 3GHz * 4 * 4 * 2 -> 1초에 96*10^9번 명령어(instruction) 실행가능
+
+### 4. Memory
+- 메모리 중 일부는 I/O 장치에 맵핑되어 있음 -> `I/O port`
+
+### 5. 컴퓨터의 내부
+1. Processor(s)
+   - CPU라고도 함
+   - Fetches instruction from memory
+   - Executes instructions
+     - `Execute` : decodes, perform operation, specify by the instruction, update machine state
+   - Transfer data from/to memory
+2. Memory
+   - 여러 종류가 있음 `(caches, main memory, HDD, CD-ROM, DVD, ROM, FLASH, ...)`
+     - volatile memory : caches, main memory
+       - cach는 SRAM
+     - non-volatile memory : HDD, CD-ROM, DVD, ROM, FLASH, ...
+   
 
 # Data-Structure
 
