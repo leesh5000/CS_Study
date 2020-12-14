@@ -74,7 +74,7 @@ with open('./resource/text2.txt', 'w') as f:
         f.write(str(randint(1, 50)))
         f.write('\n')
 
-# 파일쓰기3 
+# 파일쓰기3
 # - 리스트형태를 파일로 쓰기
 with open('./resource/text3.txt', 'w') as f:
     list = ['lee\n', 'kim\n', 'park\n']
