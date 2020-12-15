@@ -1,20 +1,30 @@
 # Computer Architecture
 
 ## Contents
-
-- Ch1 : Introduction
+- Ch1 : [Introduction](#introduction)
+  1. [Computer](#1-computer)
+  2. [CPU의 역할](#2-cpu의-역할)
+  3. [Intel i7 Processor](#3-intel-i7-processor)
+  4. [Memory](#4-memory)
+  5. [컴퓨터 내부](#5-컴퓨터의-내부)
+  6. [x86 architecture](#6-x86-architecture)
+  7. [32비트 프로세서, 64비트 프로세서](#7-32비트-프로세서-64비트-프로세서)
 
 # Introduction
 
 ### 1. Computer
 - 컴퓨터와 다른 전자장치와 구별되는 특징 : 컴퓨터는 프로그램 할 수 있다.
-- 컴퓨터는 `Programmable Digital System`
+- 컴퓨터는 `Programmable Digital System`이다.
+- 컴퓨터는 Sequential Machine이므로 State를 갖는다.
+- CPU는 NAND,NOR(AND,OR,NOT) 게이트들의 집합이다.
+- CMOS NAND Gate : NAND,NOR 게이트는 AND,OR,NOT게이트 대신에 4개의 트랜지스터(2 n-mos, 2 p-mos)로도 만들 수 있다.
+- 따라서, 게이트들의 집합인 CPU는 다시말하면, 트랜지스터들의 집합이다. 
 
 ### 2. CPU의 역할
-1. `Fetch` instruction from Memory, one by one
-2. `Decode` instruction
-3. `Execute` the operation
-4. `Update` machine state
+1. Fetch instruction from Memory, one by one
+2. Decode instruction
+3. Execute the operation : decode, perform operation, specify by the instruction, update machine state
+4. Update machine state
 
 ### 3. Intel I7 processor
 - 3GHz
@@ -29,6 +39,12 @@
 - 3GHz * 4 * 4 * 2 -> 1초에 96*10^9번 명령어(instruction) 실행가능
 
 ### 4. Memory
+- 여러 종류가 있음 `(caches, main memory, HDD, CD-ROM, DVD, ROM, FLASH, ...)`
+- 캐쉬는 SRAM (파워가 공급되는한 계속 상태를 유지가능)
+- 주메모리는 DRAM (상태유지를 위해 리프레쉬를 해줘야함)
+- SRAM은 래치(2개의 nand게이트)로 구성, 6개의 트랜지스터
+- DRAM은 트랜지스터 한 개로 구성
+- SRAM이 DRAM보다 더 빠르고, 더 크고, 더 비쌈
 - 메모리 중 일부는 I/O 장치에 맵핑되어 있음 -> `I/O port`
 
 ### 5. 컴퓨터의 내부
@@ -36,14 +52,103 @@
    - CPU라고도 함
    - Fetches instruction from memory
    - Executes instructions
-     - `Execute` : decodes, perform operation, specify by the instruction, update machine state
    - Transfer data from/to memory
 2. Memory
    - 여러 종류가 있음 `(caches, main memory, HDD, CD-ROM, DVD, ROM, FLASH, ...)`
-     - volatile memory : caches, main memory
-       - cach는 SRAM
-     - non-volatile memory : HDD, CD-ROM, DVD, ROM, FLASH, ...
-   
+   - 프로그램과 데이터를 저장
+   - 컴퓨터의 CPU+Memory = 인간의 뇌
+3. I/O Devices
+4. Interconnects
+5. Motherboard
+
+### 6. x86 architecture
+- 인간이 한국어, 영어, 일본어, 등등이 있는것처럼 컴퓨터들도 모두 그들만의 언어가 있다.
+- 가장 많이 쓰이는 인간 언어인 영어는 가장 많이 쓰이는 컴퓨터언어(machine language)의 x86에 비유할 수 있다.
+- x86은 IA32(Intel 32bit instruction set Architecture)라고도 한다.
+- x86은 machine language이지만, x86 architecture라고도 한다.
+- 또 다른 컴퓨터 언어는 ARM, MIPS, SPARC, IA64, ... 등이 있다.
+- x86(Intel pantium, i, AMD)은 주로 PC 프로세서가 사용하는 언어이다.
+- x86(IA32)는 IA64와 완전히 다른 언어이다.
+- MIPS 프로세서는 주로 임베디드(프린트)에 사용된다.
+- ARM도 임베디드에서 자주 쓰이는 프로세서였지만 요즘에는 주로 스마트폰 프로세서가 사용하는 언어이다.
+
+### 7. 32비트 프로세서, 64비트 프로세서
+- 명령어의 길이로 구분하는 것 아님
+- 32 vs 64 구분 : `Basic Unit of data for computation is xx bit`
+- x86-64는 x86과 같은 macine language를 사용하지만 데이터 사이즈가 64비트로 증가했다.
+- 32비트 프로세서는 최대 메모리 주소가 4GB이므로 최대 프로그램 사이즈가 4GB를 넘지못한다. 
+
+### 8. ISA
+- Define machine instruction(simply, machine language) 
+- Define machine states such as regsiters and memory
+- 컴퓨터를 설계하기 위해서는 컴퓨터가 쓰는 언어(machine language)를 먼저 개발해야한다.
+- EX) `x86(IA32): 386 ~ Pentium III, Pentium IV`, `IA64: Itanium, ...`, 그 밖에 ARM, MIPS, 등등이 있다.
+
+### 9. micro-architecture
+- 같은 기계어를 사용하는 프로세서라도 그들의 내부 디자인은 다르다.
+- 마이크로아키텍처는 내부디자인, 구현을 말한다. (cache, pipelining, ...)
+- so, micro-architecture means processor internal design or implementation
+- 인텔 x86 프로세서의 마이크로아키텍쳐는 80386(1st.Gen), 80486(2nd.Gen), Pentium(3rd.Gen), Pentium Pro(4th.Gen), Pentium 4(5th.Gen) 등이 있다.
+  
+### 10. CISC vs RISC
+- ISA는 설계방법에 따라 CISC와 RISC로 나눌수 있다.
+- CISC(complex instruction set computer)
+  - 명령어 형식이 많음
+  - 명령어의 크기가 각각 다름
+  - complex operation
+  - 따라서, 프로세서 설계가 어렵고 그로인해 컴퓨터 시스템이 느려짐
+- RISC(redeuced instruction set computer)
+  - CISC의 문제를 해결하기 위해 새로운 instruction set design인 RISC가 나옴
+  - 명령어 형식이 적음
+  - 명령어의 크기가 모두 같음
+  - simple operation
+  - Load-Stroe architectures
+  - 따라서, 컴퓨터 설계가 쉬워지고 그로인해 속도도 빨라짐
+  - RISC가 본격적으로 도입되는 1996년부터 컴퓨터의 성능이 거의 무어의 법칙을 따라감
+  - -> 2002년부터 전력소모문제때문에 점차 성능향상 폭이 줄어듦(2002년 인텔 Pentium4 3.0GHz가 130W를 소비 -> 130W가 에어쿨링으로 제어할 수 있는 발열 마지노선, 많은 전력을 소비하므로 발열 발생)
+  - -> CPU내부에 코어를 여러개 두면서 단일 CPU의 성능향상은 줄어들었지만 체감 성능은 훨씬 향상됨
+
+### 11. Word
+- Default data size for computation
+  - cpu register size same as word size
+ 
+### 12. Address
+- point to a byte in memory
+
+### 11. function of processor
+- fetch instruction
+- decode instruction
+- read input
+- do the computation
+- store the result(update machin states)
+
+### 12. Pipelining
+- 명령어를 실행하는 하드웨어를 여러개의 독립적인 단계로 나누고, 이 하드웨어가 여러개의 서로다른 명령어들을 동시에 처리하도록 하는 기술
+- 단계가 많아질수록 처리 속도가 높아질 수 있다.
+- 이 프로세스를 여러 단계로 나눌 수 있다.
+- 파이프라이닝이 없는 인텔 80386 프로세서는 한번에 한 가지 명령어만 처리한다. (sequentially)
+
+### 13. Superscalar
+- cpu 처리 속도를 높이기 위해 내부에 두개 혹은 그 이상의 명령어 파이프라인들을 포함시킨 구조
+- 두 명령어 간에 레지스터와 기억장치에 대한 충돌이 없도록하기위해 하드웨어도 그 만큼 추가되어야하기 때문에 실제속도향상은 이론적인 속도향상 보다는 낮다.
+
+### 13. 무어의 법칙
+- the number of trasistors that can be integrated on a chip, will be double every 18 month.
+- 3년마다 4배씩 증가
+
+### Micro-processor
+- 마이크로프로세서는 single chip processor를 말한다.
+- 1998년 이전에는 하나의 칩에 프로세서 전체 회로를 설계하기에는 직접수준이 충분하지 않아서 프로세서를 회로가 프린트된 마더보드에 만들었다.
+- 요즘에는 마이크로프로세서라고 불리는 single IC chip에 모든 프로세서 내부 회로들을 집어넣어 제조한다. -> 컴퓨터 크기 감소 및 가격하락
+- 또한, 하나의 single IC에 여러개의 프로세서를 집어넣는다. (multicore)
+
+### 14. ~nm
+- the minimum featured size (length and width) of semiconductor process technolgy
+
+### 15. Hyperthreading
+- each core is two-way multi-threading, it has two PC(program counter), it can execute two programs every cycle
+- 6core 12threading : 12 program can run in parelle
+
 
 # Data-Structure
 
