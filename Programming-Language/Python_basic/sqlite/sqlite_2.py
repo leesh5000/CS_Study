@@ -76,3 +76,5 @@ with conn:
         for line in conn.iterdump():
             f.write('%s\n' % line)
         print('Dump Print Complete')
+
+conn.close()
