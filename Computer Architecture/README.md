@@ -227,4 +227,5 @@
 - static local variable은 static data영역에 assign되어있음. static local variable은 scope는 이 함수 안에라서 다른 곳에서는 못사용하는데, life는 static이라서 함수가 끝나고 값을 계속 유지하고있음. 그래서 이 함수를 호출할때마다 이 값은 계속 예전값을 잃어ㅓ버리지 않고 기억하고있음
 - 그럼이제, static variables는 static local variables랑 다른건데, 이건 뭐냐면 static variables는 global variables랑 똑같이 static data 영역에 할당되지만, 글로벌변수가 링킹된 모든 파일에서 액세스 가능하다면 static 변수는 이 파일 안에서만 액세스 가능하다. 즉, file scope 또는 module scope, module 이란 그 파일을 의미
 - 링커가 관심있는 것은 함수와 모든 글로벌, static 변수들. dynamic data는 런타임에 정해지므로 링커는 관심없음
-- 함수들은 기본적으로 file scope
+- 함수는 기본적으로 global scope
+
