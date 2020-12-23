@@ -1,3 +1,5 @@
+# from queue import Queue
+
 # 십진수 기수정렬
 def radix_sort(lt: list, maxElem_len: int, lt_len: int):
     # 십진수 기수 정렬이므로 버킷은 10개 필요함 (0-9까지)
@@ -27,6 +29,7 @@ def radix_sort(lt: list, maxElem_len: int, lt_len: int):
 
         # divisor * 10을 해서 다음 n번째 자리의 기수를 구하기
         divisor *= 10
+        print(lt)
 
     
 lt = [13, 212, 14, 7141, 10987, 6, 15, 6, 1, 1, 9999]
