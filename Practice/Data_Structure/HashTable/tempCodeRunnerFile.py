@@ -1,0 +1,2 @@
+
+print(ht.search('LSH'))

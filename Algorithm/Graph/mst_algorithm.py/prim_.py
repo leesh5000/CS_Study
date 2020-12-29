@@ -80,10 +80,49 @@ def prim(start_node, edges):
 # 대부분의 경우 정점보다 간선이 더 많음
 # 일반적인 프림알고리즘은 간선이 중심, 개선된 프림 알고리즘은 노드가 중심
 
+# heapdict는 우선순위큐인데, 안의 데이터의 키 값이 바뀌어도 우선순위 큐를 유지하게 해줌
 from heapdict import heapdict
+def advanced_prim(graph, start):
+    mst = list()
+    # 노드들의 키 값을 담는 자료구조 keys
+    keys = heapdict()
+    # 어느 노드로 들어온 간선에서 키 값이 업데이트 되었는지 저장하는 자료구조
+    pi = dict()
+    total_weight = 0
 
-def advanced_prim(graph, start_node):
-    mst, keys, pi, total_weight = list(), heapdi
+    for node in graph.keys():
+        # 먼저, 노드들의 키 값을 무한대로 만듦
+        keys[node] = float('inf')
+        # 어디서 업데이트 되었느지는 아직 None
+        pi[node] = None
 
+    # 처음 노드의 키값을 0, pi값은 start로 초기화
+    keys[start], pi[start] = 0, start
 
+    while keys:
+        current_node, current_key = keys.popitem()
+        mst.append([pi[current_node], current_node, current_key])
+        total_weight += current_key
+
+        # 그래프의 현재 노드 정보를 가져와서
+        for adjacent, weight in graph[current_node].items():
+            # 인접한 노드가 keys에 있고, 
+            if adjacent in keys and weight < keys[adjacent]:
+                keys[adjacent] = weight
+                pi[adjacent] = current_node
+    
+    return mst, total_weight
+
+graph = {
+    'A': {'B': 7, 'D': 5},
+    'B': {'A': 7, 'C': 8, 'D': 9, 'E': 7},
+    'C': {'B': 8, 'E': 5},
+    'D': {'A': 5, 'B': 9, 'E': 7, 'F': 6},
+    'E': {'B': 7, 'C': 5, 'D': 7, 'F': 8, 'G': 9},
+    'F': {'D': 6, 'E': 8, 'G': 11},
+    'G': {'E': 9, 'F': 11},
+}
+
+mst, total_weight = advanced_prim(graph, 'A')
+print('MST: {}, Total Weight: {}'.format(mst, total_weight) )
 print(prim('A', edges))
