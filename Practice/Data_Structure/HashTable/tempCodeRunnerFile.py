@@ -1,2 +1,0 @@
-
-print(ht.search('LSH'))
