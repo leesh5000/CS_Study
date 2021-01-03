@@ -19,7 +19,6 @@ for i in range(1,6):
                 if j+1!=t:
                     f2.write('\n')
 
-
             """ file comparison """
             if cmp('./PS/my_out{}.txt'.format(i), './PS/out{}.txt'.format(i)):
                 print('Test #%d: right' % (i))
