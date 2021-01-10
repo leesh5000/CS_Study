@@ -1,20 +1,21 @@
 # Selection Sort
 # 시간복잡도 O(N^2)
 
-def selection_sort(lt: []) -> []:
-    # i번 인덱스를 바꿀차례
+def selection_sort(lt):
     for i in range(len(lt)-1):
+        # 최소값을 가지는 인덱스
         min_idx = i
         for j in range(i+1, len(lt)):
-            if lt[min_idx] > lt[j]:
+            if lt[j] < lt[min_idx]:
                 min_idx = j
-        lt[i], lt[min_idx] = lt[min_idx], lt[i]
+        if lt[i] > lt[min_idx]:
+            lt[i], lt[min_idx] = lt[min_idx], lt[i]
 
 def test(n):
     import random as r
     cnt = 0
     while cnt < n:
-        lt = r.sample(range(1000), 20)
+        lt = r.sample(range(100), 30)
         print('original :', lt)
         selection_sort(lt)
         for i in range(len(lt)-1):
@@ -24,7 +25,7 @@ def test(n):
         cnt+=1
     return print('sorting success')
 
-test(10)
+test(1000)
 
                 
 

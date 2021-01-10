@@ -11,43 +11,50 @@
 # - 재귀용법 사용
 
 def merge_sort(lt, start, end):
-    if start < end:
-        mid = int((start+end) / 2)
-        # 분할과정
-        merge_sort(lt, start, mid)
-        merge_sort(lt, mid+1, end)
-
-        ## Merge
-        left = start
-        right = mid+1
-        temp = []
-
-        # 만약, left가 mid보다 작고, right도 end보다 작은 상태에서
-        while left <= mid and right <= end:
-            if lt[left] <= lt[right]:
-                temp.append(lt[left])
-                left += 1
-            else:
-                temp.append(lt[right])
-                right += 1
-        
-        # left > mid 라는것은 아직 right 쪽에 남은 값들이 있다는 것, =는 안나온다.
-        if left > mid:
-            for i in range(right, end+1):
-                temp.append(lt[i])
+    if start >= end:
+        return
+    # 작은문제로 나누기
+    mid = (start + end) // 2
+    merge_sort(lt, start, mid)
+    merge_sort(lt, mid+1, end)
+    # merge
+    left = start
+    right = mid+1
+    a = []
+    while left <= mid and right <= end:
+        if lt[left] < lt[right]:
+            a.append(lt[left])
+            left += 1
         else:
-            for i in range(left, mid+1):
-                temp.append(lt[i])
+            a.append(lt[right])
+            right += 1
+    # 여기까지 오면, left, right 중 어느하나는 mid, end를 넘었다.
+    if left > mid:
+        for i in range(right, end+1):
+            a.append(lt[i])
+    else:
+        for i in range(left, mid+1):
+            a.append(lt[i])
+    # 정렬된 리스트를 원래 리스트로 넣어주기
+    for i in range(start, end+1):
+        lt[i] = a.pop(0)
 
-        idx = 0
-        for i in range(start, end+1):
-            lt[i] = temp[idx]
-            idx += 1
+def test(n):
+    import random as r
+    cnt = 0
+    while cnt < n:
+        sample_lt = r.sample(range(100), 30)
+        lt = [r.choice(sample_lt) for i in range(30)]
+        print('original :', lt)
+        merge_sort(lt, 0, len(lt)-1)
+        for i in range(len(lt)-1):
+            if lt[i] > lt[i+1]:
+                return print('sorting failed :', lt)
+        print('sorted :', lt)
+        cnt+=1
+    return print('sorting success')
 
-import random
-lt = random.sample(range(1000), 30)
-merge_sort(lt, 0, len(lt)-1)
-print(lt)
+test(1000)
 
             
 

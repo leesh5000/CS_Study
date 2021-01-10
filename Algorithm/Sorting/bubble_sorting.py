@@ -5,7 +5,6 @@ def bubble_sort(lt):
                 lt[j], lt[j+1] = lt[j+1], lt[j]
     return lt
 
-
 import random as r
 
 lt = r.sample(range(100), 100)
