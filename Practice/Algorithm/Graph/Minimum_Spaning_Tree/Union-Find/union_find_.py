@@ -1,29 +1,7 @@
-# Spanning Tree
-# - 원래 그래프의 모든 노드가 연결되어 있으면서 트리의 속성을 만족하는 그래프
-
-# Spanning Tree의 조건
-# - 모든 노드가 서로 연결
-# - 사이클이 존재하지 않음
-# - 원래 그래프의 모든 노드를 포함해야함
-
-# Minimum Spanning Tree
-# - Spanning Tree 중에서, 간선의 가중치 합이 최소인 Spanning Tree
-
-# Minimum Spanning Tree의 구현
-# - Kruskal's Algorithm
-# - Prim's Algorithm
-
 # Union-Find Algorithm
-# - Disjoint Set을 나타내기 위한 알고리즘
-# - Disjoint Set이란, 서로소 집합 자료구조
-# - 트리를 이용하면, 루트노드로 서로 같은 집합인지 확인할 수 있으며, 하나의 트리가 하나의 집합을 뜻함
-# - make-set, union, find ADT를 제공
-# - make-set(n) : n개의 노드들을 각각 서로소 집합으로 만드는 연산
-# - union(a,b) : 두 개별 집합(a,b)을 하나의 집합으로 합치는 연산
-# - find(a) : 인자로 받은 개별 집합(a)의 루트노드를 반환하는 연산(루트노드가 같으면, 같은 집합에 속한 것)
-
-# Kruskal's Algorithm의 구현
-# - Union-Find Algorithm을 이용하여, 두 집합(트리)를 연결했을때, 사이클 유무를 판단함
+# - 서로소집합 자료구조를 나타내기 위한 알고리즘
+# - 각 집합을 트리로 표현
+# - make-set, find, union 연산
 
 """ Union-Find Algorithm """
 class disjoint_set:
@@ -91,4 +69,40 @@ s.union('A','B')
 s.union('A','C')
 print(s.parents, s.items)
 s.union('B', 'D')
-print(s.parents, s.items)
+print(s.parents, s.items, s.rank)
+
+parents = dict()
+ranks = dict()
+
+def make_set(item):
+    parents[item] = item
+    ranks[item] = 0
+
+def find(item):
+    if parents[item] != item:
+        parents[item] = find(parents[item])
+        return parents[item]
+    else:
+        return item
+
+def union(item1, item2):
+    root1 = find(item1)
+    root2 = find(item2)
+    if ranks[root1] > ranks[root2]:
+        parents[root2] = root1
+    elif ranks[root1] < ranks[root2]:
+        parents[root1] = root2
+    else:
+        ranks[root1] += 1
+        parents[root2] = root1
+
+make_set('A')
+make_set('B')
+make_set('C')
+make_set('D')
+make_set('E')
+make_set('F')
+union('A','B')
+union('B','C')
+print(parents)
+
