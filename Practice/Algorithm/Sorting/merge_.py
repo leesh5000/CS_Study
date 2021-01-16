@@ -10,34 +10,59 @@
 # - 하향식 접근법
 # - 재귀용법 사용
 
+# def merge_sort(lt, start, end):
+#     if start >= end:
+#         return
+#     # 작은문제로 나누기
+#     mid = (start + end) // 2
+#     merge_sort(lt, start, mid)
+#     merge_sort(lt, mid+1, end)
+#     # merge
+#     left = start
+#     right = mid+1
+#     a = []
+#     while left <= mid and right <= end:
+#         if lt[left] < lt[right]:
+#             a.append(lt[left])
+#             left += 1
+#         else:
+#             a.append(lt[right])
+#             right += 1
+#     # 여기까지 오면, left, right 중 어느하나는 mid, end를 넘었다.
+#     if left > mid:
+#         for i in range(right, end+1):
+#             a.append(lt[i])
+#     else:
+#         for i in range(left, mid+1):
+#             a.append(lt[i])
+#     # 정렬된 리스트를 원래 리스트로 넣어주기
+#     for i in range(start, end+1):
+#         lt[i] = a.pop(0)
+
 def merge_sort(lt, start, end):
     if start >= end:
         return
-    # 작은문제로 나누기
-    mid = (start + end) // 2
+    mid = (start+end)//2
     merge_sort(lt, start, mid)
     merge_sort(lt, mid+1, end)
-    # merge
+    temp = []
     left = start
     right = mid+1
-    a = []
     while left <= mid and right <= end:
         if lt[left] < lt[right]:
-            a.append(lt[left])
+            temp.append(lt[left])
             left += 1
         else:
-            a.append(lt[right])
+            temp.append(lt[right])
             right += 1
-    # 여기까지 오면, left, right 중 어느하나는 mid, end를 넘었다.
     if left > mid:
         for i in range(right, end+1):
-            a.append(lt[i])
+            temp.append(lt[i])
     else:
         for i in range(left, mid+1):
-            a.append(lt[i])
-    # 정렬된 리스트를 원래 리스트로 넣어주기
+            temp.append(lt[i])
     for i in range(start, end+1):
-        lt[i] = a.pop(0)
+        lt[i] = temp.pop(0)
 
 def test(n):
     import random as r
