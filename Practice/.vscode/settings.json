@@ -4,6 +4,7 @@
         "__string": "cpp",
         "string": "cpp",
         "string_view": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "algorithm": "c"
     }
 }
