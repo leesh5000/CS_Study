@@ -1,28 +1,20 @@
 import sys
-from collections import deque
 #sys.stdin=open("input.txt", "r")
-need=input()
-n=int(input())
-for i in range(n):
-    plan=input()
-    dq=deque(need)
-    for x in plan:
-        if x in dq:
-            if x!=dq.popleft():
-                print("#%d NO" %(i+1))
-                break
+def DFS(v):
+    if v==n+1:
+        for i in range(1, n+1):
+            if ch[i]==1:
+                print(i, end=' ')
+        print()
     else:
-        if len(dq)==0:
-            print("#%d YES" %(i+1))
-        else:
-            print("#%d NO" %(i+1))
+        ch[v]=1
+        DFS(v+1)
+        ch[v]=0
+        DFS(v+1)
 
-
-
-
-
-
-
-
-
+if __name__=="__main__":
+    n=int(input())
+    ch=[0]*(n+1)
+    DFS(1)
+    
 
