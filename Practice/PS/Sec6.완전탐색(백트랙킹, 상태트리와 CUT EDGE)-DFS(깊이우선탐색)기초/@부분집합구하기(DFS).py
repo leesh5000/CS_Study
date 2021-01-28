@@ -19,6 +19,19 @@
 #         use = [False for _ in range(n+1)]
 #         dfs(1, n, use)
 
-lt = [1,2,3]
-a,b,c = lt
-print(a,b,c)
+def dfs(v):
+    if v > n:
+        for i in range(n+1):
+            if use[i]:
+                print(i, end=' ')
+        print()
+    else:
+        use[v] = True
+        dfs(v+1)
+        use[v] = False
+        dfs(v+1)
+
+if __name__ == "__main__":
+    n = int(input())
+    use = [False for _ in range(n+1)]
+    dfs(1)
