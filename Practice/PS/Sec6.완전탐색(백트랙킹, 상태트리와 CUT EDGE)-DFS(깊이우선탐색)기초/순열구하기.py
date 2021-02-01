@@ -1,3 +1,6 @@
+'''
+라이브러리 itertools 사용해서 풀어보기
+'''
 import sys
 for i in range(1,6):
     sys.stdin = open("./PS/source/in{}.txt".format(i))
