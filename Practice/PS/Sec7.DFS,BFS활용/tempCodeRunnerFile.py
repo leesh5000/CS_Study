@@ -1,0 +1,1 @@
+    check[start[0]][start[1]] = 1
