@@ -1,32 +1,21 @@
-# from filecmp import cmp
+import sys
+for i in range(1, 6):
+    sys.stdin = open("./PS/source/in{}.txt".format(i))
 
-# # in{}의 개수만큼 for문
-# for q in range(1,6):
-#     with open('./PS/in{}.txt'.format(q), 'r') as f1:
-#         with open('./PS/my_out{}.txt'.format(q), 'w') as f2:
-#             """ solution """
-#             n, m = map(int, f1.readline().split())
-#             lt = list(map(int, f1.readline().split()))
-            
-#             ans_set = set()
-#             for i in range(len(lt)-2):
-#                 for j in range(i+1, len(lt)-1):
-#                     for k in range(j+1, len(lt)):
-#                         s = lt[i] + lt[j] + lt[k]
-#                         ans_set.add(s)
+    def DFS(L, S):
+        global ans
+        if L == 3:
+            ans.append(sum(res))
+        else:
+            for i in range(S, n):
+                res[L] = a[i]
+                DFS(L+1, i+1)
 
-#             ans_lt = list(ans_set)
-#             ans_lt.sort(reverse=True)
-#             print(ans_lt[m-1])
-
-#             """ file write """
-#             f2.write("%d" % ans_lt[m-1])
-
-#         """ file comparison """
-#         if cmp('./PS/my_out{}.txt'.format(q), './PS/out{}.txt'.format(q)):
-#             print('Test #%d: right' % (q))
-#         else:
-#             print('Test #%d: wrong' % (q))
-
-f1 = open('./PS/source/out1.txt')
-print(f1.readline())
+    if __name__ == "__main__":
+        f1 = open('./PS/source/in{}.txt'.format(i), 'r')
+        n, k = map(int, input().split())
+        a = list(map(int, input().split()))
+        res = [0] * 3
+        ans = []
+        DFS(0, 0)
+        print(list(sorted(set(ans), reverse=True))[k-1])
