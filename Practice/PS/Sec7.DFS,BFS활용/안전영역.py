@@ -3,6 +3,7 @@ import sys
 
 for i in range(1, 6):
     sys.stdin = open("./PS/source/in{}.txt".format(i))
+    sys.setrecursionlimit(10**6)
 
     def DFS(r, c):
         global check, cnt
@@ -26,16 +27,11 @@ for i in range(1, 6):
         n = int(input())
         board = [list(map(int, input().split())) for _ in range(n)]
         check = [[1 for _ in range(n)] for _ in range(n)]
-        largest = -2147000000
         cnt = 0
         res = []
         dr = [-1, 0, 1, 0]
         dc = [0, 1, 0, -1]
-        for i in range(n):
-            for j in range(n):
-                if largest < board[i][j]:
-                    largest = board[i][j]
-        for i in range(largest+1):
+        for i in range(100):
             cnt = 0
             for j in range(n):
                 for k in range(n):
@@ -49,6 +45,7 @@ for i in range(1, 6):
                 for m in range(n):
                     if check[l][m]:
                         BFS(l, m)
+                        # DFS(l, m)
                         cnt += 1
             # print("%d post" % i, "\n".join(map(str, check)), sep="\n")
             # print("count: %d" % cnt)
