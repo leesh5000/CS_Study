@@ -1,2 +1,6 @@
-10
-3 2 5 4 1 6 10 9 7 8 
+5
+level
+moon
+abcba
+soon
+gooG

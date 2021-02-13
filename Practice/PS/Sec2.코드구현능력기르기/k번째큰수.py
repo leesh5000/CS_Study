@@ -2,20 +2,23 @@ import sys
 for i in range(1, 6):
     sys.stdin = open("./PS/source/in{}.txt".format(i))
 
-    def DFS(L, S):
-        global ans
-        if L == 3:
-            ans.append(sum(res))
-        else:
-            for i in range(S, n):
-                res[L] = a[i]
-                DFS(L+1, i+1)
+    n = int(input())
+    a = list(map(int, input().split()))
 
-    if __name__ == "__main__":
-        f1 = open('./PS/source/in{}.txt'.format(i), 'r')
-        n, k = map(int, input().split())
-        a = list(map(int, input().split()))
-        res = [0] * 3
-        ans = []
-        DFS(0, 0)
-        print(list(sorted(set(ans), reverse=True))[k-1])
+    mean = round(sum(a)/n)
+    min = [2147000000, 0, 0]
+
+    for i in range(len(a)):
+        dist = [abs(a[i]-mean), a[i]]
+        if dist[0] < min[0]:
+            min[0] = dist[0]
+            min[1] = dist[1]
+            min[2] = i+1
+        elif dist[0] == min[0]:
+            if dist[1] > min[1]:
+                min[1] = dist[1]
+                min[2] = i+1
+        else:
+            continue
+
+    print(mean, min[2])
