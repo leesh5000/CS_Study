@@ -11,4 +11,12 @@
     // "python.defaultInterpreterPath": "/usr/bin/python3",
     // "python.terminal.launchArgs": [
     // ]
+
+    "workbench.colorCustomizations": {
+        "editorCursor.foreground": "#ffff4d",
+        "terminalCursor.foreground": "#ffff4d",
+    },
+
+    "editor.cursorStyle":"line",
+    "editor.cursorWidth":100,
 }

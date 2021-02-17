@@ -8,9 +8,12 @@ for i in range(1, 6):
 
     n = int(input())
     for i in range(n):
-        s = input().strip()
+        s = input().strip().lower()
         for j in range(len(s)//2):
             if s[j] != s[len(s)-1-j]:
-                print("#%d NO" % i+1)
+                print("#%d NO" % (i+1))
                 break
-        print("#%d YES" % i+1)
+        else:
+            print("#%d YES" % (i+1))
+
+    print()
