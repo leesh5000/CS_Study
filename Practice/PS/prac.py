@@ -1,17 +1,35 @@
 import sys
 from collections import deque
 
-for f in range(1, 6):
+for f in range(1, 2):
     sys.stdin = open("./PS/source/in{}.txt".format(f))
 
     if __name__ == "__main__":
-        n = int(input())
-        coins = list(map(int, input().split()))
-        m = int(input())
+        n, m = map(int, input().split())
+        graph = [[0] * (n+1) for _ in range(n+1)]
 
-        dy = [i for i in range(m+1)]
-        for coin in coins:
-            for i in range(coin, len(dy)):
-                dy[i] = min(dy[i], dy[i-coin]+1)
+        degree = [0] * (n+1)
+        Q = deque()
 
-        print(dy[m])
+        for _ in range(m):
+            u, v = map(int, input().split())
+            degree[v] += 1
+            print(u, v)
+            print(degree)
+            print()
+            graph[u][v] = 1
+
+        for i in range(1, len(degree)):
+            if degree[i] == 0:
+                Q.append(i)
+
+        print(Q)
+
+        while Q:
+            start = Q.popleft()
+            print(start, end=' ')
+            for end in range(1, len(graph[start])):
+                if graph[start][end] == 1:
+                    degree[end] -= 1
+                    if degree[end] == 0:
+                        Q.append(end)
