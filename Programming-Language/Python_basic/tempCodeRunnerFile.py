@@ -1,0 +1,6 @@
+basket1 = Basket(['Apple', 'Bag', 'TV', 'Snack', 'Water'], ('a', 'b', 'c'))
+# basket2 = copy.copy(basket1)
+# basket3 = copy.deepcopy(basket1)
+# print(id(basket1), id(basket1._products), id(basket1._products2))
+# print(id(basket2), id(basket2._products), id(basket2._products2))
+# print(id(basket3), id(basket3._products), id(basket3._products2))

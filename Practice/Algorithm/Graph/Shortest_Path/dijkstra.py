@@ -5,6 +5,8 @@
 # - 탐욕 알고리즘의 일종(?)
 
 from heapq import heappop, heappush
+
+
 def dijkstra(graph, start):
     # 시작 정점부터 각 정점까지의 거리를 담는 리스트, 처음엔 무한대로 초기화
     distances = {vertex: float('inf') for vertex in graph}
@@ -30,6 +32,7 @@ def dijkstra(graph, start):
                 distances[adjacent_vertex] = adjacent_distance
                 heappush(pq, [adjacent_distance, adjacent_vertex])
     return distances
+
 
 graph = {
     'A': {'B': 8, 'C': 1, 'D': 2},

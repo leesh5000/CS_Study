@@ -1,5 +1,5 @@
 import sys
-for i in range(1,6):
+for i in range(1, 6):
     sys.stdin = open("./PS/source/in{}.txt".format(i))
     s = str(input())
     stack = []
@@ -7,15 +7,15 @@ for i in range(1,6):
         if x.isdecimal():
             stack.append(x)
         else:
-            if x=='+':
+            if x == '+':
                 b = int(stack.pop())
                 a = int(stack.pop())
                 stack.append(a+b)
-            elif x=='-':
+            elif x == '-':
                 b = int(stack.pop())
                 a = int(stack.pop())
                 stack.append(a-b)
-            elif x=='*':
+            elif x == '*':
                 b = int(stack.pop())
                 a = int(stack.pop())
                 stack.append(a*b)

@@ -1,22 +1,39 @@
 {
-    "files.associations": {
-        "__locale": "cpp",
-        "__string": "cpp",
-        "string": "cpp",
-        "string_view": "cpp",
-        "utility": "cpp",
-        "algorithm": "c"
-    },
-    // "workbench.colorTheme": "Monokai",
-    // "python.defaultInterpreterPath": "/usr/bin/python3",
-    // "python.terminal.launchArgs": [
-    // ]
+  "files.associations": {
+    "*.html": "html",
+    "__locale": "cpp",
+    "__string": "cpp",
+    "string": "cpp",
+    "string_view": "cpp",
+    "utility": "cpp",
+    "algorithm": "c",
+    "iostream": "cpp"
+  },
+  // "workbench.colorTheme": "Dracula Soft",
+  // "workbench.colorTheme": "Monokai",
+  "python.defaultInterpreterPath": "/usr/bin/python3",
+  "python.terminal.launchArgs": [
+  ],
 
-    "workbench.colorCustomizations": {
-        "editorCursor.foreground": "#ffff4d",
-        "terminalCursor.foreground": "#ffff4d",
-    },
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#ffff4d",
+    "terminalCursor.foreground": "#ffff4d"
+  },
 
-    "editor.cursorStyle":"line",
-    "editor.cursorWidth":100,
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 100,
+  "python.formatting.provider": "autopep8",
+
+  // "editor.acceptSuggestionOnCommitCharacter": false,
+  // "editor.acceptSuggestionOnEnter": "off",
+  // "editor.hover.enabled": false,
+  // "editor.minimap.enabled": false,
+  // "editor.parameterHints.enabled": false,
+  // "editor.quickSuggestions": false,
+  // "editor.quickSuggestionsDelay": 10,
+  // "editor.suggest.snippetsPreventQuickSuggestions": false,
+  // "editor.suggestOnTriggerCharacters": false,
+  // "editor.wordBasedSuggestions": false,
+
+  "editor.autoClosingQuotes": "never",
 }

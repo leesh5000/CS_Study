@@ -1,0 +1,26 @@
+{
+    "files.associations": {
+        "*.html": "html",
+        "__locale": "cpp",
+        "__string": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "utility": "cpp",
+        "algorithm": "c",
+        "iostream": "cpp"
+    },
+    // "workbench.colorTheme": "Dracula Soft",
+    // "workbench.colorTheme": "Monokai",
+    // "python.defaultInterpreterPath": "/usr/bin/python3",
+    // "python.terminal.launchArgs": [
+    // ]
+
+    "workbench.colorCustomizations": {
+        "editorCursor.foreground": "#ffff4d",
+        "terminalCursor.foreground": "#ffff4d",
+    },
+
+    "editor.cursorStyle":"block",
+    "editor.cursorWidth": 100,
+    // "python.formatting.provider": "autopep8",
+}

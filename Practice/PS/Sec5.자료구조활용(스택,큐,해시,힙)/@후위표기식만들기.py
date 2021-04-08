@@ -5,27 +5,28 @@
 # -> 안전하게 변환하려면 isdecimal() 쓰기
 
 import sys
-for i in range(1,6):
-    sys.stdin = open("./PS/source/in{}.txt".format(i))
-    s = str(input())
-    stack = []
-    ans = ''
-    for x in s:
-        if x.isdecimal():
-            ans += x
-        else:
-            if x=='+' or x=='-':
-                while stack and stack[-1]!='(':
-                    ans += stack.pop()
-            elif x=='*' or x=='/':
-                while stack and (stack[-1]!='(' and stack[-1]!='+' and stack[-1]!='-'):
-                    ans += stack.pop()
-            elif x==')':
-                while stack and stack[-1]!='(':
-                    ans += stack.pop()
-                stack.pop()
-                continue
+sys.stdin = open("input.txt", "r")
+a = input()
+stack = []
+res = ''
+for x in a:
+    if x.isdecimal():
+        res += x
+    else:
+        if x == '(':
             stack.append(x)
-    while stack:
-        ans += stack.pop()
-    print(ans)
+        elif x == '*' or x == '/':
+            while stack and (stack[-1] == '*' or stack[-1] == '/'):
+                res += stack.pop()
+            stack.append(x)
+        elif x == '+' or x == '-':
+            while stack and stack[-1] != '(':
+                res += stack.pop()
+            stack.append(x)
+        elif x == ')':
+            while stack and stack[-1] != '(':
+                res += stack.pop()
+            stack.pop()
+while stack:
+    res += stack.pop()
+print(res)
