@@ -1,7 +1,6 @@
 # ComputerScience_Study
 
 ## Contents
-w
 - [디지털논리](https://github.com/leesh5000/ComputerScience_Study/tree/master/Digital%20Logic)
 - [컴퓨터구조](https://github.com/leesh5000/CS_Study/tree/master/Computer%20Architecture)
 - [운영체제](https://github.com/leesh5000/CS_Study/tree/master/Operating-System)
